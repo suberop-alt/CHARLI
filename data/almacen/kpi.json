@@ -1,0 +1,23 @@
+{
+  "operaciones": 61257,
+  "mensual": { "ENE": 7988, "FEB": 10164, "MAR": 12499, "ABR": 10363, "MAY": 11510, "JUN": 8733 },
+  "actividades": { "BDP": 21115, "DESP": 14541, "ACT_DIV": 9731, "ODA": 5716, "P_ENVIOS": 6583, "RECP": 3571 },
+  "top_auxiliar": { "nombre": "Luis Gavidia", "operaciones": 13710 },
+  "almacenistas": [
+    { "nombre": "Luis Gavidia", "total": 13710, "mensual": { "ENE": 1707, "FEB": 2278, "MAR": 2693, "ABR": 2256, "MAY": 2756, "JUN": 2020 } },
+    { "nombre": "Mauricio Sevilla", "total": 13618, "mensual": { "ENE": 1933, "FEB": 2228, "MAR": 2693, "ABR": 2279, "MAY": 2506, "JUN": 1979 } },
+    { "nombre": "Eduardo Bonilla", "total": 11763, "mensual": { "ENE": 1974, "FEB": 2065, "MAR": 2366, "ABR": 1871, "MAY": 1813, "JUN": 1674 } },
+    { "nombre": "Nestor Rodriguez", "total": 10991, "mensual": { "ENE": 1574, "FEB": 1648, "MAR": 2341, "ABR": 1866, "MAY": 2121, "JUN": 1441 } },
+    { "nombre": "Luis Miguel", "total": 9664, "mensual": { "ENE": 548, "FEB": 1693, "MAR": 2148, "ABR": 1839, "MAY": 2068, "JUN": 1368 } }
+  ],
+  "inventarios_ciclicos": {
+    "cantidad": 2959,
+    "porcentaje": 53.2,
+    "sku_diferencias": 61,
+    "efectividad": 97.9,
+    "sku_activos_odoo": 5565,
+    "marcas": ["Hikvision","HiLook","EZVIZ","Dahua","Nexxt","Forza","TP-Link","Mercusys","Wireplus","Onlink","Exceline","Mikrotik","STC","Owire","Power-Fiber","Ruijie/Reyee","Igoto","Beconnect","Ubiquiti","Maxiprint/Epson","Xtech","CDP","Marsriva","Astra","APC","Fantech","Kingston","Western Digital","Seagate","Crucial","Adata","Lucerna","Panduit","Wiretech","Blink","Linksys","Littman","Aksi","Logitech","Primus","Senhaix","Metalnet","Tenda","Logan","DuraLED","Ledplus"],
+    "mensual": { "ENE": 399, "FEB": 191, "MAR": 464, "ABR": 566, "MAY": 391, "JUN": 948 }
+  },
+  "sku_activos": 5565
+}
