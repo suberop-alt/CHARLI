@@ -1,0 +1,25 @@
+{
+  "total_ventas": 2422546,
+  "total_netas": 1933160,
+  "total_netas_2025": 1900651,
+  "total_pedidos": 13618,
+  "variacion_pct": 1.7,
+  "mensual": { "ENE": 184742, "FEB": 367956, "MAR": 402573, "ABR": 330939, "MAY": 331356, "JUN": 315594 },
+  "mensual_2025": { "ENE": 268784, "FEB": 301945, "MAR": 304694, "ABR": 323664, "MAY": 332556, "JUN": 369008 },
+  "top_asesor": {
+    "nombre": "Igor Rivas",
+    "ventas": 543404,
+    "ventas_netas": 429736,
+    "pedidos": 2811,
+    "tasa_conversion": 62.5,
+    "tasa_conversion_mensual": { "ENE": 60.5, "FEB": 61.3, "MAR": 61.4, "ABR": 63.0, "MAY": 64.6, "JUN": 64.2 },
+    "factura_promedio": 175.47,
+    "factura_promedio_mensual": { "ENE": 163.36, "FEB": 205.47, "MAR": 188.86, "ABR": 155.42, "MAY": 144.19, "JUN": 195.54 }
+  },
+  "top_asesores": [
+    { "nombre": "Igor Rivas", "ventas": 543404, "ventas_netas": 429736, "pedidos": 2811, "tasa_conversion": 62.5, "factura_promedio": 175.47 },
+    { "nombre": "Alejandro Betancourt", "ventas": 348916, "ventas_netas": 273952, "pedidos": 1814, "tasa_conversion": 73.6, "factura_promedio": 165.91 },
+    { "nombre": "Jose Javyer Sanabria", "ventas": 266889, "ventas_netas": 209041, "pedidos": 1386, "tasa_conversion": 72.8, "factura_promedio": 136.36 }
+  ],
+  "periodo": "ENE-JUN 2026"
+}
