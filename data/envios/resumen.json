@@ -1,0 +1,9 @@
+{
+  "total_general": 6583,
+  "meta": 5000,
+  "cashea": { "total": 3385, "porcentaje": 51.4, "color": "#0ea5e9", "analistas": [ { "nombre": "Maybeli Rojas", "total": 1772, "mensual": { "ENE": 177, "FEB": 291, "MAR": 298, "ABR": 299, "MAY": 431, "JUN": 276 } }, { "nombre": "Valentina Castillo", "total": 1613, "mensual": { "ENE": 246, "FEB": 268, "MAR": 461, "ABR": 290, "MAY": 195, "JUN": 153 } } ] },
+  "mercado_libre": { "total": 3198, "porcentaje": 48.6, "color": "#0284c7", "analistas": [ { "nombre": "Maybeli Rojas", "total": 1301, "mensual": { "ENE": 172, "FEB": 188, "MAR": 208, "ABR": 256, "MAY": 276, "JUN": 201 } }, { "nombre": "Valentina Castillo", "total": 1897, "mensual": { "ENE": 251, "FEB": 274, "MAR": 304, "ABR": 374, "MAY": 402, "JUN": 292 } } ] },
+  "mejor_analista": { "nombre": "Valentina Castillo", "operaciones": 3510 },
+  "periodo": "ENE-JUN 2026",
+  "actualizado": "2026-07-08"
+}
