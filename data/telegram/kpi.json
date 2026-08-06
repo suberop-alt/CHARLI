@@ -1,20 +1,20 @@
 {
-  "total_mensajes": 4820,
-  "dias_activos": 115,
+  "total_mensajes": 5654,
+  "dias_activos": 137,
   "participantes": 10,
-  "rango_fechas": { "inicio": "2026-01-08", "fin": "2026-06-29" },
+  "rango_fechas": { "inicio": "2026-01-08", "fin": "2026-07-30" },
   "asesores": [
-    { "nombre": "Jose Sanabria", "total_mensajes": 988 },
-    { "nombre": "Luis Daboin", "total_mensajes": 479 },
-    { "nombre": "Alejandro Betancourt", "total_mensajes": 442 }
+    { "nombre": "Jose Sanabria", "total_mensajes": 1162 },
+    { "nombre": "Luis Daboin", "total_mensajes": 559 },
+    { "nombre": "Alejandro Betancourt", "total_mensajes": 524 }
   ],
   "mensajes_compras": {
-    "Yonathan Suniaga": { "total": 1733, "pct": 85.0 },
-    "Maria Gabriela Molina": { "total": 305, "pct": 15.0 }
+    "Yonathan Suniaga": { "total": 2049, "pct": 85.2 },
+    "Maria Gabriela Molina": { "total": 357, "pct": 14.8 }
   },
-  "tiempos_respuesta": { "promedio_min": 6.2, "mediana_min": 2.6, "muestras": 1456 },
-  "disponibilidad_confirmada": { "total": 511, "mensual": { "ENE": 62, "FEB": 103, "MAR": 107, "ABR": 60, "MAY": 94, "JUN": 85 } },
-  "solicitudes_concretadas": { "total": 17, "mensual": { "ENE": 2, "FEB": 2, "MAR": 5, "ABR": 1, "MAY": 1, "JUN": 6 } },
-  "solicitudes_con_producto": 311,
-  "efectividad": 5.5
+  "tiempos_respuesta": { "promedio_min": 6.8, "mediana_min": 3.0, "muestras": 1645 },
+  "disponibilidad_confirmada": { "total": 599, "mensual": { "ENE": 62, "FEB": 103, "MAR": 107, "ABR": 60, "MAY": 94, "JUN": 85, "JUL": 88 } },
+  "solicitudes_concretadas": { "total": 32, "mensual": { "ENE": 2, "FEB": 2, "MAR": 5, "ABR": 1, "MAY": 1, "JUN": 6, "JUL": 15 } },
+  "solicitudes_con_producto": 498,
+  "efectividad": 6.4
 }

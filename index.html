@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -176,6 +176,14 @@
         .ventas-speedo-wrap .tooltip-val { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #1e293b; color: #fff; font-size: 13px; font-weight: 800; padding: 6px 14px; border-radius: 8px; white-space: nowrap; z-index: 20; box-shadow: 0 4px 12px rgba(0,0,0,0.25); margin-bottom: 6px; }
         .ventas-speedo-wrap .tooltip-val::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #1e293b; }
         .ventas-speedo-wrap:hover .tooltip-val { display: block; }
+        .ventas-speedo-wrap.top-month { border-radius: 12px; }
+        .ventas-speedo-wrap.top-month .month-label { color: #b45309; }
+        .ventas-speedo-wrap.top-month .value { color: #b45309; }
+        .ventas-speedo-wrap .top-medal { font-size: 15px; line-height: 1; margin-bottom: 2px; display: none; }
+        .ventas-speedo-wrap.top-month .top-medal { display: block; }
+        .ventas-speedo-wrap.top-month .arc { border-color: #f59e0b; }
+        .ventas-speedo-wrap.top-month .fill { background: #f59e0b; }
+        .ventas-speedo-wrap.top-month .needle { background: #b45309; }
         .bar-chart { display: flex; justify-content: space-around; align-items: flex-end; padding: 20px 10px 0; height: 140px; }
         .bar-item { display: flex; flex-direction: column; align-items: center; width: 14%; }
         .bar-value { font-size: 13px; font-weight: 900; color: var(--text-main); margin-bottom: 4px; }
@@ -204,7 +212,7 @@
             <img src="data:image/png;base64,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" style="height:38px; width:auto;" alt="Onprotec" onerror="this.style.display='none'">
             <div>
                 <h1>Tablero Central de Operaciones</h1>
-                <span>Onprotec · Corte Operativo Q1-Q2-2026 | Datos Consolidados Enero-Junio 2026</span>
+                <span>Onprotec · Corte Operativo Q1-Q2-2026 | Datos Consolidados Enero-Julio 2026</span>
             </div>
         </div>
         <div style="display: flex; align-items: center; gap: 15px;">
@@ -227,20 +235,64 @@
         <div class="slide active" id="slide-1">
             <div class="slide-tag">Performance Global</div>
             <div class="slide-title-text">Gestión Operacional 📊 (Balance Score Card)</div>
-            <div class="grid-2" style="align-items: center;">
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #155e75 60%, #0891b2 100%); border-radius: 18px; padding: 26px 30px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(8,145,178,0.25); position: relative; overflow: hidden;">
+                <div style="position:absolute; top:-40px; right:-30px; width:220px; height:220px; border-radius:50%; background:rgba(255,255,255,0.06);"></div>
+                <div style="position:absolute; bottom:-60px; left:40%; width:180px; height:180px; border-radius:50%; background:rgba(255,255,255,0.05);"></div>
                 <div>
-                    <p style="font-size: 15px; line-height: 1.6; color: var(--text-sub); margin-bottom: 15px;">
-Balance del rendimiento operativo de las Unidades Adscritas a la Jefatura de Operaciones. Período evaluado: <strong>Enero a Junio 2026</strong>.
-                    </p>
-                    <p style="font-size: 14px; line-height: 1.6; color: var(--text-main);">
-Este tablero sintetiza las operaciones clave de la organización para el modelo de negocio de Onprotec. (Retail)
-                    </p>
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #a5f3fc; margin-bottom: 8px;">🏆 Balance Score Card · Jefatura de Operaciones</div>
+                    <div style="font-size: 24px; font-weight: 900; line-height: 1.3;">Rendimiento Operativo Onprotec</div>
+                    <div style="font-size: 13px; color: #cffafe; margin-top: 6px; max-width: 620px; line-height: 1.6;">Balance del rendimiento de las Unidades Adscritas a la Jefatura de Operaciones, consolidando las operaciones clave del modelo de negocio Retail.</div>
                 </div>
-                <div class="grid-2">
-                    <div class="kpi-box accent"><div class="kpi-sub">💰 COMPRAS DE INVERSIÓN</div><div class="kpi-val" id="resumen-compras-total">$1,330K</div></div>
-                    <div class="kpi-box success"><div class="kpi-sub">🎯 INDICE DE EXACTITUD DE LOS INV</div><div class="kpi-val">97.9%</div></div>
-                    <div class="kpi-box purple"><div class="kpi-sub">🚚 ENVIOS DESPACHADOS</div><div class="kpi-val" data-envios-vol>6,583</div></div>
-                    <div class="kpi-box rose"><div class="kpi-sub">📈 VENTAS NETAS</div><div class="kpi-val" id="resumen-ventas-total">$—</div></div>
+                <div style="text-align:center; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); padding: 16px 26px; border-radius: 14px; backdrop-filter: blur(4px);">
+                    <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #a5f3fc;">Período Evaluado</div>
+                    <div style="font-size: 22px; font-weight: 900; margin-top: 4px;">Enero-Julio</div>
+                    <div style="font-size: 12px; font-weight: 700; color: #a5f3fc;">2026</div>
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;">
+                <div class="hover-zoom" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:20px 18px; position:relative; overflow:hidden; border-top:4px solid #0891b2;">
+                    <div style="position:absolute; top:14px; right:14px; font-size:22px;">💰</div>
+                    <div style="font-size:10px; font-weight:800; color:#64748b; letter-spacing:1px; text-transform:uppercase;">Compras de Inversión</div>
+                    <div style="font-size:32px; font-weight:900; color:var(--text-main); margin:8px 0 2px;" id="resumen-compras-total">$1,792K</div>
+                    <div style="font-size:11px; color:var(--text-sub); font-weight:600;">519 órdenes de compra</div>
+                    <div style="margin-top:10px; display:flex; align-items:center; gap:6px; background:#e0f2fe; color:#0369a1; border-radius:6px; padding:4px 10px; width:fit-content; font-size:11px; font-weight:700;">▲ Ene-Jul 2026</div>
+                </div>
+                <div class="hover-zoom" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:20px 18px; position:relative; overflow:hidden; border-top:4px solid #10b981;">
+                    <div style="position:absolute; top:14px; right:14px; font-size:22px;">🎯</div>
+                    <div style="font-size:10px; font-weight:800; color:#64748b; letter-spacing:1px; text-transform:uppercase;">Exactitud Inventarios</div>
+                    <div style="font-size:32px; font-weight:900; color:var(--success); margin:8px 0 2px;">98.2%</div>
+                    <div style="font-size:11px; color:var(--text-sub); font-weight:600;">IRA · 4,192 SKU contados</div>
+                    <div style="margin-top:10px; display:flex; align-items:center; gap:6px; background:#dcfce7; color:#15803d; border-radius:6px; padding:4px 10px; width:fit-content; font-size:11px; font-weight:700;">▲ +0.3% en julio</div>
+                </div>
+                <div class="hover-zoom" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:20px 18px; position:relative; overflow:hidden; border-top:4px solid #8b5cf6;">
+                    <div style="position:absolute; top:14px; right:14px; font-size:22px;">🚚</div>
+                    <div style="font-size:10px; font-weight:800; color:#64748b; letter-spacing:1px; text-transform:uppercase;">Envíos Despachados</div>
+                    <div style="font-size:32px; font-weight:900; color:var(--text-main); margin:8px 0 2px;" data-envios-vol>7,723</div>
+                    <div style="font-size:11px; color:var(--text-sub); font-weight:600;">Ene-Jul 2026</div>
+                    <div style="margin-top:10px; display:flex; align-items:center; gap:6px; background:#ede9fe; color:#6d28d9; border-radius:6px; padding:4px 10px; width:fit-content; font-size:11px; font-weight:700;">▲ P. Envíos 1,135 en jul</div>
+                </div>
+                <div class="hover-zoom" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:20px 18px; position:relative; overflow:hidden; border-top:4px solid #f43f5e;">
+                    <div style="position:absolute; top:14px; right:14px; font-size:22px;">📈</div>
+                    <div style="font-size:10px; font-weight:800; color:#64748b; letter-spacing:1px; text-transform:uppercase;">Ventas Netas</div>
+                    <div style="font-size:32px; font-weight:900; color:var(--text-main); margin:8px 0 2px;" id="resumen-ventas-total">$—</div>
+                    <div style="font-size:11px; color:var(--text-sub); font-weight:600;">Ene-Jul 2026</div>
+                    <div style="margin-top:10px; display:flex; align-items:center; gap:6px; background:#ffe4e6; color:#be123c; border-radius:6px; padding:4px 10px; width:fit-content; font-size:11px; font-weight:700;">▲ Tendencia comercial</div>
+                </div>
+            </div>
+            <div style="margin-top:24px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:18px 22px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+                <div style="display:flex; align-items:center; gap:14px;">
+                    <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,#0891b2,#0e7490); display:flex; align-items:center; justify-content:center; color:#fff; font-size:18px;">📊</div>
+                    <div>
+                        <div style="font-size:12px; font-weight:800; color:var(--text-main);">4 áreas operativas en seguimiento</div>
+                        <div style="font-size:11px; color:var(--text-sub);">Compras · Ventas · ATC y Digital · Almacén y Transporte</div>
+                    </div>
+                </div>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                    <span style="background:#e0f2fe; color:#0369a1; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700;">Compras</span>
+                    <span style="background:#fce7f3; color:#be185d; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700;">Ventas</span>
+                    <span style="background:#ede9fe; color:#6d28d9; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700;">ATC / Digital</span>
+                    <span style="background:#d1fae5; color:#047857; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700;">Almacén / Despacho</span>
+                    <span style="background:#fef3c7; color:#b45309; padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700;">Transporte</span>
                 </div>
             </div>
             <div class="footer-note">Tablero elaborado por: Julio Subero — Jefe de Operaciones — Onprotec 2026</div>
@@ -252,39 +304,52 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 Gestión de Compras
                 <button class="btn-update" onclick="actualizar('compras')"><span class="ico-upd">&#x1f504;</span>Actualizar</button>
             </div>
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #155e75 60%, #0891b2 100%); border-radius: 18px; padding: 22px 28px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(8,145,178,0.25); position: relative; overflow: hidden;">
+                <div style="position:absolute; top:-40px; right:-30px; width:200px; height:200px; border-radius:50%; background:rgba(255,255,255,0.06);"></div>
+                <div>
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #a5f3fc; margin-bottom: 8px;">🛒 Gestión de Abastecimiento</div>
+                    <div style="font-size: 22px; font-weight: 900; line-height: 1.3;">Compras e Inversión Ene-Jul 2026</div>
+                    <div style="font-size: 13px; color: #cffafe; margin-top: 6px; max-width: 620px; line-height: 1.6;">Seguimiento de órdenes de compra, principales proveedores, canal de solicitudes Telegram y registro en Odoo.</div>
+                </div>
+                <div style="text-align:center; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); padding: 14px 22px; border-radius: 14px; backdrop-filter: blur(4px);">
+                    <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #a5f3fc;">Compras Acumuladas</div>
+                    <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">$1,792K</div>
+                    <div style="font-size: 11px; font-weight: 700; color: #a5f3fc;">519 órdenes</div>
+                </div>
+            </div>
             <div class="grid-custom-compras">
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div class="kpi-box accent" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
                         <div class="kpi-sub" id="compras-inv-label">COMPRAS DE INVERSIÓN</div>
-                        <div class="kpi-val" id="compras-inv-total">$1,471K</div>
+                        <div class="kpi-val" id="compras-inv-total">$1,792K</div>
                     </div>
                     <div class="kpi-box" style="flex: 1; display: flex; flex-direction: column; justify-content: center; border-left-color: #64748b;">
                         <div class="kpi-sub">ORDENES DE COMPRA</div>
-                        <div class="kpi-val" id="compras-ops-total">349</div>
+                        <div class="kpi-val" id="compras-ops-total">519</div>
                     </div>
                 </div>
                 <div style="background: #f1f5f9; padding: 20px; border-radius: 12px;" id="compras-proveedores">
                     <div style="font-size: 12px; font-weight: 700; color: var(--text-sub); margin-bottom: 12px;">PRINCIPALES PROVEEDORES NACIONALES</div>
                     <div class="data-list">
                         <div>
-                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>SEINTEC</span><span id="prov-0-monto" style="color:var(--accent-blue); font-weight:700;">$436K</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>SEINTEC</span><span id="prov-0-monto" style="color:var(--accent-blue); font-weight:700;">$483K</span></div>
                             <div class="bar-container"><div id="prov-0-bar" class="bar" style="width:100%; background:var(--accent-blue);"></div></div>
                         </div>
                         <div>
-                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>INV. HAOVISION</span><span id="prov-1-monto" style="color:#0891b2; font-weight:700;">$301K</span></div>
-                            <div class="bar-container"><div id="prov-1-bar" class="bar" style="width:70%; background:#0891b2;"></div></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>INV. HAOVISION</span><span id="prov-1-monto" style="color:#0891b2; font-weight:700;">$411K</span></div>
+                            <div class="bar-container"><div id="prov-1-bar" class="bar" style="width:85%; background:#0891b2;"></div></div>
                         </div>
                         <div>
-                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>VENEPAC 2020</span><span id="prov-2-monto" style="color:#0d9488; font-weight:700;">$172K</span></div>
-                            <div class="bar-container"><div id="prov-2-bar" class="bar" style="width:40%; background:#0d9488;"></div></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>VENEPAC 2020</span><span id="prov-2-monto" style="color:#0d9488; font-weight:700;">$225K</span></div>
+                            <div class="bar-container"><div id="prov-2-bar" class="bar" style="width:47%; background:#0d9488;"></div></div>
                         </div>
                         <div>
-                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>Grupo Plus</span><span id="prov-3-monto" style="color:#8b5cf6; font-weight:700;">$145K</span></div>
-                            <div class="bar-container"><div id="prov-3-bar" class="bar" style="width:31%; background:#8b5cf6;"></div></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>Nexusm2</span><span id="prov-3-monto" style="color:#8b5cf6; font-weight:700;">$203K</span></div>
+                            <div class="bar-container"><div id="prov-3-bar" class="bar" style="width:42%; background:#8b5cf6;"></div></div>
                         </div>
                         <div>
-                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>Nexusm2</span><span id="prov-4-monto" style="color:#f59e0b; font-weight:700;">$88K</span></div>
-                            <div class="bar-container"><div id="prov-4-bar" class="bar" style="width:19%; background:#f59e0b;"></div></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span data-prov-name>Grupo Plus</span><span id="prov-4-monto" style="color:#f59e0b; font-weight:700;">$156K</span></div>
+                            <div class="bar-container"><div id="prov-4-bar" class="bar" style="width:32%; background:#f59e0b;"></div></div>
                         </div>
                     </div>
                 </div>
@@ -295,24 +360,24 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                         <div style="font-size: 11px; color: var(--text-sub);">Analista Sr.</div>
                     </div>
                     <div style="background: #f1f5f9; padding: 20px; border-radius: 10px; flex:1; display:flex; flex-direction:column; justify-content:center;">
-                        <div style="font-size: 12px; font-weight: 800; color: var(--text-sub); text-transform: uppercase; letter-spacing:0.5px; margin-bottom: 10px;">Registro en Odoo</div>
+                        <div style="font-size: 12px; font-weight: 800; color: var(--text-sub); text-transform: uppercase; letter-spacing:0.5px; margin-bottom: 10px;">Registro en Odoo · Ene-Jul 2026</div>
                         <div style="font-size: 15px; line-height: 1.6;">
-                            <div style="color: var(--success); font-weight:700;">J. Suniaga: <span id="odoo-jonathan-ops" style="font-weight:900; font-size:20px;">365</span> ord.</div>
-                            <div style="color: #d946ef; font-weight:700; margin-top:4px;">M. Molina: <span id="odoo-maria-ops" style="font-weight:900; font-size:20px;">56</span> ord.</div>
+                            <div style="color: var(--success); font-weight:700;">J. Suniaga: <span id="odoo-jonathan-ops" style="font-weight:900; font-size:20px;">449</span> ord.</div>
+                            <div style="color: #d946ef; font-weight:700; margin-top:4px;">M. Molina: <span id="odoo-maria-ops" style="font-weight:900; font-size:20px;">66</span> ord.</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div style="margin-top:20px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:20px;">
                 <div class="kpi-sub" style="font-weight:800; font-size:14px; margin-bottom:4px;">CANAL DE SOLICITUDES Y EFECTIVIDAD</div>
-                <div style="font-size:11px; color:var(--text-sub); margin-bottom:14px;">Telegram Compras · Ene–Jun 2026</div>
+                <div style="font-size:11px; color:var(--text-sub); margin-bottom:14px;">Telegram Compras · Ene-Jul 2026</div>
                 <div style="display:grid; grid-template-columns:1.2fr 0.9fr 1.2fr; gap:14px;">
                     <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
                         <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:10px;">SOLICITUDES POR VENDEDOR</div>
                         <div id="chat-solicitudes" style="display:flex; flex-direction:column; gap:5px; font-size:11px;"></div>
                         <div style="margin-top:10px; display:flex; justify-content:center; gap:14px; font-size:13px; font-weight:700;">
-                            <span style="color:var(--success);">📨 4,820 mensajes</span>
-                            <span style="color:var(--accent);">📅 115 días activos</span>
+                            <span style="color:var(--success);">📨 5,654 mensajes</span>
+                            <span style="color:var(--accent);">📅 137 días activos</span>
                         </div>
                     </div>
                     <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
@@ -349,29 +414,42 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 Tendencia de nuestras Ventas
                 <button class="btn-update" onclick="actualizar('ventas')"><span class="ico-upd">&#x1f504;</span>Actualizar</button>
             </div>
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #155e75 60%, #0891b2 100%); border-radius: 18px; padding: 22px 28px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(8,145,178,0.25); position: relative; overflow: hidden;">
+                <div style="position:absolute; top:-40px; right:-30px; width:200px; height:200px; border-radius:50%; background:rgba(255,255,255,0.06);"></div>
+                <div>
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #a5f3fc; margin-bottom: 8px;">📈 Performance Comercial</div>
+                    <div style="font-size: 22px; font-weight: 900; line-height: 1.3;">Ventas Netas Ene-Jul 2026</div>
+                    <div style="font-size: 13px; color: #cffafe; margin-top: 6px; max-width: 620px; line-height: 1.6;">Tendencia mensual de ventas, cumplimiento y variación interanual del negocio Retail.</div>
+                </div>
+                <div style="text-align:center; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); padding: 14px 22px; border-radius: 14px; backdrop-filter: blur(4px);">
+                    <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #a5f3fc;">Ventas Netas</div>
+                    <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">$2,376,069</div>
+                    <div style="font-size: 11px; font-weight: 700; color: #a5f3fc;">+25.2% vs 2025</div>
+                </div>
+            </div>
             <div class="grid-2">
                 <div style="display:flex; flex-direction:column; gap:12px;">
                     <div class="kpi-box rose" style="display:flex; flex-direction:column; justify-content:center; padding:16px 20px;">
-                <div class="kpi-sub">VENTAS NETAS ENE-JUN 2026</div>
-                <div class="kpi-val" id="ventas-total" style="font-size:38px;">$1,933,160</div>
-                <div id="ventas-dif" style="font-size:13px; color:var(--text-sub); margin-top:2px;">2025: $1,900,651 <span style="color:var(--success);font-weight:700;">+1.7%</span></div>
+                <div class="kpi-sub">VENTAS NETAS ENE-JUL 2026</div>
+                <div class="kpi-val" id="ventas-total" style="font-size:38px;">$2,376,069</div>
+                <div id="ventas-dif" style="font-size:13px; color:var(--text-sub); margin-top:2px;">2025: $1,898,126 <span style="color:var(--success);font-weight:700;">+25.2%</span></div>
                 <div style="margin-top:6px; padding-top:6px; border-top:1px dashed #fecaca;">
-                    <span id="ventas-pedidos" style="font-size:13px; font-weight:700; color:var(--accent-rose);">13,618 pedidos</span>
+                    <span id="ventas-pedidos" style="font-size:13px; font-weight:700; color:var(--accent-rose);">17,401 pedidos</span>
                 </div>
                     </div>
                     <div class="kpi-box accent" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:14px 20px; text-align:center;">
                         <div class="kpi-sub">🏅 MEJOR ASESOR DE VENTAS</div>
                         <div id="ventas-top-nombre" style="font-size:18px; font-weight:800; color:var(--text-main); margin:4px 0;">🥇 Igor Rivas</div>
-                <div id="ventas-top-netas" style="font-size:12px; color:var(--text-sub);">$429,736 netos ajustados</div>
-                <div id="ventas-top-detalle" style="font-size:11px; color:var(--text-sub);">$543,404 nominal | 2,811 pedidos</div>
+                <div id="ventas-top-netas" style="font-size:12px; color:var(--text-sub);">$536,046 netos ajustados</div>
+                <div id="ventas-top-detalle" style="font-size:11px; color:var(--text-sub);">$677,835 nominal | 3,397 pedidos</div>
                         <div style="display:flex; gap:30px; margin-top:10px; justify-content:center;">
                             <div style="text-align:center;">
-                        <span id="ventas-top-tc" style="font-size:20px; font-weight:900; color:var(--accent);">62.5%</span>
-                        <div id="ventas-top-tc-var" style="font-size:10px; color:var(--accent-rose);">▼ -0.4% vs MAY</div>
+                        <span id="ventas-top-tc" style="font-size:20px; font-weight:900; color:var(--accent);">63%</span>
+                        <div id="ventas-top-tc-var" style="font-size:10px; color:var(--accent-rose);">▲ +4.3% vs JUN</div>
                         <div style="font-size:9px; color:var(--text-sub);">Tasa Conversión</div>
                     </div>
                     <div style="text-align:center;">
-                        <span id="ventas-top-fp" style="font-size:20px; font-weight:900; color:var(--accent);">$175</span>
+                        <span id="ventas-top-fp" style="font-size:20px; font-weight:900; color:var(--accent);">$178</span>
                                 <div style="font-size:9px; color:var(--text-sub);">Factura Promedio</div>
                             </div>
                     </div>
@@ -379,9 +457,9 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 <div style="background:#f1f5f9; padding:12px 16px; border-radius:10px; text-align:center;">
                     <div class="kpi-sub" style="margin-bottom:8px;">🏆 TOP 3 ASESORES DE VENTAS</div>
                     <div style="display:flex; flex-direction:column; gap:5px; align-items:center;">
-                        <div id="ventas-top-1" style="font-size:14px; font-weight:800; color:#fbbf24;">🥇 Igor Rivas · <span style="color:#fbbf24;">$429,736 netos</span></div>
-                        <div id="ventas-top-2" style="font-size:13px; font-weight:700; color:#94a3b8;">🥈 Alejandro Betancourt · <span style="color:#94a3b8;">$273,952 netos</span></div>
-                        <div id="ventas-top-3" style="font-size:12px; font-weight:700; color:#b45309;">🥉 Jose Javyer Sanabria · <span style="color:#b45309;">$209,041 netos</span></div>
+                        <div id="ventas-top-1" style="font-size:14px; font-weight:800; color:#fbbf24;">🥇 Igor Rivas · <span style="color:#fbbf24;">$536,046 netos</span></div>
+                        <div id="ventas-top-2" style="font-size:13px; font-weight:700; color:#94a3b8;">🥈 Alejandro Betancourt · <span style="color:#94a3b8;">$393,967 netos</span></div>
+                        <div id="ventas-top-3" style="font-size:12px; font-weight:700; color:#b45309;">🥉 Jose Javyer Sanabria · <span style="color:#b45309;">$304,259 netos</span></div>
                     </div>
                 </div>
             </div>
@@ -389,8 +467,9 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                     <div class="kpi-sub" style="margin-bottom:10px; font-weight:700; text-align:center;">VARIACIÓN MENSUAL VS 2025</div>
                     <div style="display:flex; justify-content:space-around; align-items:center; flex:1;">
                         <div class="ventas-speedo-wrap">
-                            <div class="tooltip-val">$184,742</div>
+                            <div class="tooltip-val" id="v-tip-ENE">$184,742 vs 2025: $222,801</div>
                             <div class="month-label">ENE</div>
+                            <div class="top-medal" id="v-medal-ENE"></div>
                             <div class="ventas-speedo">
                                 <div class="bg"></div>
                                 <div class="fill" id="v-fill-ENE" style="clip-path:polygon(0 100%,50% 100%,50% 0,0 0)"></div>
@@ -399,11 +478,12 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                                 <div class="center"></div>
                                 <div class="value" id="v-val-ENE">$185K</div>
                             </div>
-                            <div class="variacion" id="v-var-ENE" style="color:#dc2626;">▼ -31.3%</div>
+                            <div class="variacion" id="v-var-ENE" style="color:#dc2626;">▼ -17.1%</div>
                         </div>
                         <div class="ventas-speedo-wrap">
-                            <div class="tooltip-val">$367,956</div>
+                            <div class="tooltip-val" id="v-tip-FEB">$367,956 vs 2025: $296,672</div>
                             <div class="month-label">FEB</div>
+                            <div class="top-medal" id="v-medal-FEB"></div>
                             <div class="ventas-speedo">
                                 <div class="bg"></div>
                                 <div class="fill" id="v-fill-FEB" style="clip-path:polygon(0 100%,50% 100%,50% 0,0 0)"></div>
@@ -412,11 +492,12 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                                 <div class="center"></div>
                                 <div class="value" id="v-val-FEB">$368K</div>
                             </div>
-                            <div class="variacion" id="v-var-FEB" style="color:#10b981;">▲ +21.9%</div>
+                            <div class="variacion" id="v-var-FEB" style="color:#10b981;">▲ +24.0%</div>
                         </div>
-                        <div class="ventas-speedo-wrap">
-                            <div class="tooltip-val">$402,573</div>
+                        <div class="ventas-speedo-wrap top-month">
+                            <div class="tooltip-val" id="v-tip-MAR">$402,573 vs 2025: $249,022</div>
                             <div class="month-label">MAR</div>
+                            <div class="top-medal" id="v-medal-MAR"></div>
                             <div class="ventas-speedo">
                                 <div class="bg"></div>
                                 <div class="fill" id="v-fill-MAR" style="clip-path:polygon(0 100%,50% 100%,50% 0,0 0)"></div>
@@ -425,11 +506,12 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                                 <div class="center"></div>
                                 <div class="value" id="v-val-MAR">$403K</div>
                             </div>
-                            <div class="variacion" id="v-var-MAR" style="color:#10b981;">▲ +32.1%</div>
+                            <div class="variacion" id="v-var-MAR" style="color:#10b981;">▲ +61.7%</div>
                         </div>
                         <div class="ventas-speedo-wrap">
-                            <div class="tooltip-val">$330,939</div>
+                            <div class="tooltip-val" id="v-tip-ABR">$330,939 vs 2025: $304,999</div>
                             <div class="month-label">ABR</div>
+                            <div class="top-medal" id="v-medal-ABR"></div>
                             <div class="ventas-speedo">
                                 <div class="bg"></div>
                                 <div class="fill" id="v-fill-ABR" style="clip-path:polygon(0 100%,50% 100%,50% 0,0 0)"></div>
@@ -438,11 +520,12 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                                 <div class="center"></div>
                                 <div class="value" id="v-val-ABR">$331K</div>
                             </div>
-                            <div class="variacion" id="v-var-ABR" style="color:#10b981;">▲ +2.2%</div>
+                            <div class="variacion" id="v-var-ABR" style="color:#10b981;">▲ +8.5%</div>
                         </div>
                 <div class="ventas-speedo-wrap">
-                    <div class="tooltip-val">$331,356</div>
+                    <div class="tooltip-val" id="v-tip-MAY">$331,356 vs 2025: $310,769</div>
                     <div class="month-label">MAY</div>
+                    <div class="top-medal" id="v-medal-MAY"></div>
                     <div class="ventas-speedo">
                         <div class="bg"></div>
                         <div class="fill" id="v-fill-MAY" style="clip-path:polygon(0 100%,50% 100%,50% 0,0 0)"></div>
@@ -451,42 +534,51 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                         <div class="center"></div>
                         <div class="value" id="v-val-MAY">$331K</div>
                     </div>
-                    <div class="variacion" id="v-var-MAY" style="color:#dc2626;">▼ -0.4%</div>
+                    <div class="variacion" id="v-var-MAY" style="color:#10b981;">▲ +6.6%</div>
                 </div>
                 <div class="ventas-speedo-wrap">
-                    <div class="tooltip-val">$315,594</div>
+                    <div class="tooltip-val" id="v-tip-JUN">$329,617 vs 2025: $246,355</div>
                     <div class="month-label">JUN</div>
+                    <div class="top-medal" id="v-medal-JUN"></div>
                     <div class="ventas-speedo">
                         <div class="bg"></div>
                         <div class="fill" id="v-fill-JUN" style="clip-path:polygon(0 100%,50% 100%,50% 0,0 0)"></div>
                         <div class="arc"></div>
                         <div class="needle" id="v-needle-JUN" style="transform:translateX(-50%) rotate(-90deg)"></div>
                         <div class="center"></div>
-                        <div class="value" id="v-val-JUN">$316K</div>
+                        <div class="value" id="v-val-JUN">$330K</div>
                     </div>
-                    <div class="variacion" id="v-var-JUN" style="color:#dc2626;">▼ -14.5%</div>
+                    <div class="variacion" id="v-var-JUN" style="color:#10b981;">▲ +33.8%</div>
+                </div>
+                <div class="ventas-speedo-wrap top-month">
+                    <div class="tooltip-val" id="v-tip-JUL">$428,886 vs 2025: $267,508</div>
+                    <div class="month-label">JUL</div>
+                    <div class="top-medal" id="v-medal-JUL"></div>
+                    <div class="ventas-speedo">
+                        <div class="bg"></div>
+                        <div class="fill" id="v-fill-JUL" style="clip-path:polygon(0 100%,50% 100%,50% 0,0 0)"></div>
+                        <div class="arc"></div>
+                        <div class="needle" id="v-needle-JUL" style="transform:translateX(-50%) rotate(-90deg)"></div>
+                        <div class="center"></div>
+                        <div class="value" id="v-val-JUL">$429K</div>
+                    </div>
+                    <div class="variacion" id="v-var-JUL" style="color:#10b981;">▲ +60.3%</div>
                 </div>
                     </div>
                     <div style="margin-top:10px; font-size:11px; color:var(--text-sub); line-height:1.5; text-align:left;">
-                        <div style="font-weight:700; color:var(--text-main); font-size:12px; margin-bottom:6px;">Análisis del Semestre</div>
+                        <div style="font-weight:700; color:var(--text-main); font-size:12px; margin-bottom:6px;">Análisis del Periodo</div>
                         <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:8px;">
                             <div style="background:#f1f5f9; border-radius:6px; padding:6px 10px;">
-                                Arranque débil en enero (−31.3%), pero recuperación notable en febrero (+21.9%) y marzo (+32.1%) impulsada por la estabilización del tipo de cambio y la reposición de inventarios post-cierre anual.
-                            </div>
-                            <div style="background:#f1f5f9; border-radius:6px; padding:6px 10px;">
-                                Abril y mayo mostraron una etapa con variaciones marginales (+2.2% y −0.4%), reflejando una tímida y moderada intención de compra de parte del cliente final y menor dinámica comercial.
-                            </div>
-                            <div style="background:#f1f5f9; border-radius:6px; padding:6px 10px;">
-                                Junio cayó −14.5% vs 2025, afectado por menor cantidad de días operativos, restricciones presupuestarias de clientes institucionales y el contexto de brecha cambiaria.
+                                Resumen del análisis: enero arrancó débil (−17.1%), con fuerte recuperación en feb/mar (+24% y +61.7%) por el tipo de cambio y la reposición de inventarios; abr/may se estabilizaron (+8.5%, +6.6%) con demanda constante; y jun/jul aceleraron (+33.8%, +60.3%) por la dinámica de venta en productos primium.
                             </div>
                         </div>
                         <div style="font-weight:700; color:var(--text-main); font-size:12px; margin-bottom:4px;">Recomendaciones</div>
                         <div style="display:flex; flex-wrap:wrap; gap:6px;">
-                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">📦 Paquetizar productos de alto margen con accesorios para aumentar ticket promedio</span>
-                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">📱 Fortalecer canales digitales (Cashea/ML) con promociones cruzadas</span>
-                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">🎯 Clasificar a los clientes según cada cuánto compran (ej. semanal, mensual, trimestral, inactivos) para diseñar campañas distintas para cada grupo</span>
-                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">🚀 Impulsar ventas de proyectos y soluciones completas</span>
-                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">📊 Capacitar asesores en técnicas de up-selling y venta consultiva</span>
+                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">🎯 Se debe crear e institucionalizar un Plan de Ventas con objetivos y metas claras. (Urgente)</span>
+                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">📊 Verificación diaria del cumplimiento mínimo del punto de equilibrio</span>
+                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">🚀 La venta de productos premium garantiza la estabilidad que aceleró jun-jul (+33.8% y +60.3%) se debe cuidar con mayor énfasis</span>
+                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">📊 Impulsar a través de estrategias y técnicas de venta a los asesores de menor cierre en up-selling</span>
+                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:4px 8px; font-size:10px;">🎯 Clasificar a los clientes según cada cuánto compran (semanal, mensual, trimestral, inactivos) para diseñar campañas distintas por diferentes medios y métodos</span>
                         </div>
                     </div>
                 </div>
@@ -499,6 +591,19 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             <div class="slide-title-text">
                 Record de Operaciones de Almacén
                 <button class="btn-update" onclick="actualizar('almacen')"><span class="ico-upd">&#x1f504;</span>Actualizar</button>
+            </div>
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #155e75 60%, #0891b2 100%); border-radius: 18px; padding: 22px 28px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(8,145,178,0.25); position: relative; overflow: hidden;">
+                <div style="position:absolute; top:-40px; right:-30px; width:200px; height:200px; border-radius:50%; background:rgba(255,255,255,0.06);"></div>
+                <div>
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #a5f3fc; margin-bottom: 8px;">📦 Logística Interna</div>
+                    <div style="font-size: 22px; font-weight: 900; line-height: 1.3;">Operaciones de Almacén y Despacho</div>
+                    <div style="font-size: 13px; color: #cffafe; margin-top: 6px; max-width: 620px; line-height: 1.6;">Actividad logística por operación, inventarios y análisis de diferencias, control de existencias y ranking de auxiliares.</div>
+                </div>
+                <div style="text-align:center; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); padding: 14px 22px; border-radius: 14px; backdrop-filter: blur(4px);">
+                    <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #a5f3fc;">Operaciones Ene-Jul</div>
+                    <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">72,203</div>
+                    <div style="font-size: 11px; font-weight: 700; color: #a5f3fc;">IRA 98.2%</div>
+                </div>
             </div>
             <div class="sub-tab">
                 <button class="sub-tab-btn active" onclick="mostrarSubTab(5, 'actividades')">Actividad Logística por Operación</button>
@@ -519,25 +624,25 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                                 <span><strong style="color:#475569;">RECP</strong> Recepción</span>
                             </div>
                             <div class="chart-3d" id="chart-actividades-3d" style="min-height:170px; border-bottom:none; padding:8px 2px 0; gap:8px; flex:1;">
-                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">21,115</div><div class="bar-3d-body" style="height:150px; width:44px; background:linear-gradient(180deg,#a78bfa,#7c3aed);"></div><div class="bar-3d-label" style="font-size:10px;">BDP</div><div style="font-size:10px; font-weight:700; color:#7c3aed;">34.5%</div></div>
-                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">14,541</div><div class="bar-3d-body" style="height:108px; width:44px; background:linear-gradient(180deg,#60a5fa,#2563eb);"></div><div class="bar-3d-label" style="font-size:10px;">DESP</div><div style="font-size:10px; font-weight:700; color:#2563eb;">24.3%</div></div>
-                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">9,731</div><div class="bar-3d-body" style="height:72px; width:44px; background:linear-gradient(180deg,#fbbf24,#d97706);"></div><div class="bar-3d-label" style="font-size:10px;">ACT.DIV</div><div style="font-size:10px; font-weight:700; color:#d97706;">16.3%</div></div>
-                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">5,716</div><div class="bar-3d-body" style="height:42px; width:44px; background:linear-gradient(180deg,#34d399,#059669);"></div><div class="bar-3d-label" style="font-size:10px;">ODA</div><div style="font-size:10px; font-weight:700; color:#059669;">9.6%</div></div>
-                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">6,583</div><div class="bar-3d-body" style="height:44px; width:44px; background:linear-gradient(180deg,#f87171,#dc2626);"></div><div class="bar-3d-label" style="font-size:10px;">P.ENV</div><div style="font-size:10px; font-weight:700; color:#dc2626;">11.0%</div></div>
-                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">3,571</div><div class="bar-3d-body" style="height:26px; width:44px; background:linear-gradient(180deg,#94a3b8,#475569);"></div><div class="bar-3d-label" style="font-size:10px;">RECP</div><div style="font-size:10px; font-weight:700; color:#475569;">6.0%</div></div>
+                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">24,712</div><div class="bar-3d-body" style="height:150px; width:44px; background:linear-gradient(180deg,#a78bfa,#7c3aed);"></div><div class="bar-3d-label" style="font-size:10px;">BDP</div><div style="font-size:10px; font-weight:700; color:#7c3aed;">34.2%</div></div>
+                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">17,159</div><div class="bar-3d-body" style="height:104px; width:44px; background:linear-gradient(180deg,#60a5fa,#2563eb);"></div><div class="bar-3d-label" style="font-size:10px;">DESP</div><div style="font-size:10px; font-weight:700; color:#2563eb;">23.8%</div></div>
+                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">11,857</div><div class="bar-3d-body" style="height:72px; width:44px; background:linear-gradient(180deg,#fbbf24,#d97706);"></div><div class="bar-3d-label" style="font-size:10px;">ACT.DIV</div><div style="font-size:10px; font-weight:700; color:#d97706;">16.4%</div></div>
+                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">6,485</div><div class="bar-3d-body" style="height:39px; width:44px; background:linear-gradient(180deg,#34d399,#059669);"></div><div class="bar-3d-label" style="font-size:10px;">ODA</div><div style="font-size:10px; font-weight:700; color:#059669;">9.0%</div></div>
+                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">7,723</div><div class="bar-3d-body" style="height:47px; width:44px; background:linear-gradient(180deg,#f87171,#dc2626);"></div><div class="bar-3d-label" style="font-size:10px;">P.ENV</div><div style="font-size:10px; font-weight:700; color:#dc2626;">10.7%</div></div>
+                                <div class="bar-3d" style="width:44px;"><div class="bar-3d-val" style="font-size:10px;">4,272</div><div class="bar-3d-body" style="height:26px; width:44px; background:linear-gradient(180deg,#94a3b8,#475569);"></div><div class="bar-3d-label" style="font-size:10px;">RECP</div><div style="font-size:10px; font-weight:700; color:#475569;">5.9%</div></div>
                             </div>
                         </div>
                         <div class="kpi-box accent" style="margin-top:6px; padding:14px 20px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                             <div class="kpi-sub">📊 TOTAL GENERAL ALMACÉN</div>
-                            <div class="kpi-val" style="font-size:34px;"><span data-almacen-total>61,257</span></div>
-                            <div style="font-size:11px; color:var(--text-sub); margin-top:2px;">operaciones procesadas · Ene–Jun 2026</div>
+                            <div class="kpi-val" style="font-size:34px;"><span data-almacen-total>72,203</span></div>
+                            <div style="font-size:11px; color:var(--text-sub); margin-top:2px;">operaciones procesadas · Ene-Jul 2026</div>
                         </div>
                     </div>
                     <div style="display:grid; grid-template-rows:auto 1fr; gap:12px;">
                         <div class="kpi-box purple" style="padding: 14px; text-align:center; margin:0;">
                             <div class="kpi-sub" style="color:var(--accent);">CANTIDAD TOTAL DE ENVIOS PROCESADOS</div>
-                            <div class="kpi-val" id="envios-vol-acum" data-envios-vol style="font-size: 36px;">6,583</div>
-                            <div style="font-size: 10px; color: var(--text-main); font-weight:700; margin-top: 2px;">Envíos Despachados a empresas nacionales (Ene-Jun 2026)</div>
+                            <div class="kpi-val" id="envios-vol-acum" data-envios-vol style="font-size: 36px;">7,723</div>
+                            <div style="font-size: 10px; color: var(--text-main); font-weight:700; margin-top: 2px;">Envíos Despachados a empresas nacionales (Ene-Jul 2026)</div>
                         </div>
                         <div style="background: #f1f5f9; padding: 12px; border-radius: 12px;">
                             <div style="font-size: 11px; font-weight: 700; color: var(--accent); margin-bottom: 2px; text-align:center;">OPERACIONES POR MES</div>
@@ -548,6 +653,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                                 <div class="bar-3d"><div class="bar-3d-val" id="val-alm-ABR">10,363</div><div class="bar-3d-body" id="bar-3d-ABR" style="height:83px; background:linear-gradient(180deg,#34d399,#059669);"></div><div class="bar-3d-label">Abr</div></div>
                                 <div class="bar-3d"><div class="bar-3d-val" id="val-alm-MAY">11,510</div><div class="bar-3d-body" id="bar-3d-MAY" style="height:92px; background:linear-gradient(180deg,#f87171,#dc2626);"></div><div class="bar-3d-label">May</div></div>
                                 <div class="bar-3d"><div class="bar-3d-val" id="val-alm-JUN">8,733</div><div class="bar-3d-body" id="bar-3d-JUN" style="height:70px; background:linear-gradient(180deg,#38bdf8,#0284c7);"></div><div class="bar-3d-label">Jun</div></div>
+                                <div class="bar-3d"><div class="bar-3d-val" id="val-alm-JUL">10,946</div><div class="bar-3d-body" id="bar-3d-JUL" style="height:87px; background:linear-gradient(180deg,#a855f7,#7c3aed);"></div><div class="bar-3d-label">Jul</div></div>
                             </div>
                             <div style="font-size: 10px; color: var(--text-sub); text-align:center; margin-top: 4px; font-weight:600;">🏆 <span style="color:#fbbf24;">Marzo</span> — mes de mayor actividad: <span style="color:#fbbf24; font-weight:800;">12,499 ops</span></div>
                         </div>
@@ -557,14 +663,14 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                     <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: center; display:flex; flex-direction:column; justify-content:center;">
                         <span class="kpi-sub" style="color:var(--accent-purple);">🏅 RENDIMIENTO EXCEPCIONAL POR AUXILIAR</span>
                         <strong data-auxiliar-nombre style="font-size: 18px; color:var(--text-main); display:block; margin:5px 0;">🥇 Luis Gavidia</strong>
-                        <span data-auxiliar-ops style="font-size: 13px; color:var(--text-sub); font-weight:700;">13,710 operaciones acumuladas</span>
+                        <span data-auxiliar-ops style="font-size: 13px; color:var(--text-sub); font-weight:700;">16,384 operaciones acumuladas</span>
                     </div>
                     <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; text-align:center;">
                         <span class="kpi-sub" style="display:block; margin-bottom:8px;">TOP AUXILIARES DE ALMACÉN (TOP 3)</span>
                         <div style="display:flex; flex-direction:column; gap:6px; align-items:center;">
-                            <div style="font-size: 15px; font-weight: 800; color: #fbbf24;">🥇 Luis Gavidia · <span style="color:#fbbf24;">13,710 ops</span></div>
-                            <div style="font-size: 14px; font-weight: 700; color: #94a3b8;">🥈 Mauricio Sevilla · <span style="color:#94a3b8;">13,618 ops</span></div>
-                            <div style="font-size: 13px; font-weight: 700; color: #b45309;">🥉 Eduardo Bonilla · <span style="color:#b45309;">11,763 ops</span></div>
+                            <div style="font-size: 15px; font-weight: 800; color: #fbbf24;">🥇 Luis Gavidia · <span style="color:#fbbf24;">16,384 ops</span></div>
+                            <div style="font-size: 14px; font-weight: 700; color: #94a3b8;">🥈 Mauricio Sevilla · <span style="color:#94a3b8;">16,075 ops</span></div>
+                            <div style="font-size: 13px; font-weight: 700; color: #b45309;">🥉 Eduardo Bonilla · <span style="color:#b45309;">13,777 ops</span></div>
                         </div>
                     </div>
                 </div>
@@ -572,36 +678,37 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             <div id="sub-panel-5-inventarios" class="sub-panel">
                 <div class="kpi-box success" style="display: flex; flex-direction: column; justify-content: center; padding: 16px 20px;">
                     <div class="kpi-sub" style="font-size:11px;">ÍNDICE DE EXACTITUD DE INVENTARIO (IRA)</div>
-                    <div class="kpi-val" style="font-size:36px; color:var(--success);">97.9%</div>
+                    <div class="kpi-val" style="font-size:36px; color:var(--success);">98.2%</div>
                     <div style="font-size: 11px; color: var(--text-main); margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 5px 14px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; align-self:center;">
-                        <span data-almacen-total style="display:none;">61,257</span>
+                        <span data-almacen-total style="display:none;">72,203</span>
                         <span style="background:#16a34a; color:#fff; font-size:9px; font-weight:800; padding:2px 7px; border-radius:4px; letter-spacing:0.5px;">CONTROLADO</span>
-                        <span>2,959 Conteos Cíclicos</span>
+                        <span>4,192 Conteos Cíclicos</span>
                         <span style="color:#94a3b8;">/</span>
                         <span><span id="almacen-sku">5,565</span> Activos de Stock</span>
                     </div>
                 </div>
                 <div style="margin-top:16px; background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:22px;">
-                    <div class="hover-zoom" style="font-size:15px; font-weight:800; color:var(--accent); margin-bottom:16px; letter-spacing:0.3px;">Índice de Exactitud de Inventarios — Corte Enero a Junio 2026</div>
+                    <div class="hover-zoom" style="font-size:15px; font-weight:800; color:var(--accent); margin-bottom:16px; letter-spacing:0.3px;">Índice de Exactitud de Inventarios — Corte Enero a Julio 2026</div>
                     <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:12px; margin-bottom:16px;">
                         <div style="background:#f1f5f9; border-radius:10px; padding:16px 10px; text-align:center;">
                             <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">Efectividad</div>
-                            <div style="font-size:30px; font-weight:900; color:var(--success);">97.9%</div>
-                            <div style="font-size:10px; color:var(--text-sub);">antes 98.8%</div>
+                            <div style="font-size:30px; font-weight:900; color:var(--success);">98.2%</div>
+                            <div style="font-size:10px; color:var(--text-sub);">antes 97.9%</div>
+                            <div style="font-size:10px; color:#16a34a; font-weight:700; margin-top:4px;">↑ +0.3% con la toma física de julio</div>
                         </div>
                         <div style="background:#f1f5f9; border-radius:10px; padding:16px 10px; text-align:center;">
                             <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">SKU Contados</div>
-                            <div style="font-size:30px; font-weight:900; color:var(--accent);">2,959</div>
-                            <div style="font-size:10px; color:var(--text-sub);">en 6 meses</div>
+                            <div style="font-size:30px; font-weight:900; color:var(--accent);">4,192</div>
+                            <div style="font-size:10px; color:var(--text-sub);">en 7 meses</div>
                         </div>
                         <div style="background:#f1f5f9; border-radius:10px; padding:16px 10px; text-align:center;">
                             <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">SKU Exactos</div>
-                            <div style="font-size:30px; font-weight:900; color:var(--success);">2,898</div>
+                            <div style="font-size:30px; font-weight:900; color:var(--success);">4,118</div>
                             <div style="font-size:10px; color:var(--text-sub);">del total</div>
                         </div>
                         <div style="background:#f1f5f9; border-radius:10px; padding:16px 10px; text-align:center;">
                             <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">SKU Diferencias</div>
-                            <div style="font-size:30px; font-weight:900; color:#e11d48;">61</div>
+                            <div style="font-size:30px; font-weight:900; color:#e11d48;">74</div>
                             <div style="font-size:10px; color:var(--text-sub);">por ajustar</div>
                         </div>
                     </div>
@@ -614,11 +721,12 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                             <span style="background:#d1fae5; color:#047857; padding:5px 14px; border-radius:6px; font-size:13px; font-weight:700;">ABR 566</span>
                             <span style="background:#fce7f3; color:#be185d; padding:5px 14px; border-radius:6px; font-size:13px; font-weight:700;">MAY 391</span>
                             <span style="background:#e0e7ff; color:#4338ca; padding:5px 14px; border-radius:6px; font-size:13px; font-weight:700;">JUN 948</span>
+                            <span style="background:#fffbeb; color:#d97706; padding:5px 14px; border-radius:6px; font-size:13px; font-weight:700; border:1px solid #fcd34d;">JUL 1,233</span>
                         </div>
                         <div style="font-size:12px; color:var(--text-sub); font-weight:600; background:#f1f5f9; padding:4px 12px; border-radius:6px;">SKU activos Odoo: <strong style="color:var(--accent-purple);">5,565</strong></div>
                     </div>
                     <div style="border-top:1px solid #e2e8f0; padding-top:12px;">
-                        <div style="font-weight:700; color:var(--text-main); font-size:13px; margin-bottom:10px;">Marcas contabilizadas <span style="color:var(--accent-purple); font-size:14px;">(46)</span></div>
+                        <div style="font-weight:700; color:var(--text-main); font-size:13px; margin-bottom:10px;">Marcas contabilizadas <span style="color:var(--accent-purple); font-size:14px;">(51)</span></div>
                         <div style="display:flex; gap:5px; flex-wrap:wrap;">
                             <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Hikvision</span>
                             <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">HiLook</span>
@@ -666,14 +774,25 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                             <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Logan</span>
                             <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">DuraLED</span>
                             <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Ledplus</span>
+                            <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Vigi by TP-Link</span>
+                            <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Hiksemi</span>
+                            <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Maxiprint</span>
+                            <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Imexx</span>
+                            <span style="background:#f1f5f9; color:#475569; padding:4px 11px; border-radius:5px; font-size:11px; font-weight:600;">Nexxt Home</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="sub-panel-5-diferencias" class="sub-panel">
                 <div style="margin-top:16px; background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:22px;">
-                    <div style="font-weight:800; color:var(--text-main); font-size:15px; margin-bottom:16px;">Análisis de Diferencias de Inventario <span style="color:#e11d48;">(54 SKU)</span></div>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                    <div style="font-weight:800; color:var(--text-main); font-size:15px; margin-bottom:16px;">Análisis de Diferencias de Inventario — Corte Enero a Julio 2026 <span style="color:#e11d48;">(74 SKU)</span></div>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+                        <span style="background:#e0e7ff; color:#4338ca; padding:5px 14px; border-radius:6px; font-size:13px; font-weight:700;">ENE-JUN 54 SKU</span>
+                        <span style="background:#fffbeb; color:#d97706; padding:5px 14px; border-radius:6px; font-size:13px; font-weight:700; border:1px solid #fcd34d;">JULIO 20 SKU</span>
+                        <span style="background:#f0fdf4; color:#047857; padding:5px 14px; border-radius:6px; font-size:13px; font-weight:700;">TOTAL 74 SKU</span>
+                    </div>
+                    <div style="font-size:13px; font-weight:800; color:var(--accent); margin-bottom:10px;">▸ Período Enero a Junio (acumulado)</div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
                         <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:10px; padding:12px;">
                             <div style="font-size:13px; font-weight:800; color:#dc2626; margin-bottom:6px;">FALTANTES — 10 SKU</div>
                             <div style="font-size:11px; color:#475569; line-height:1.5; margin-bottom:6px;">El inventario físico es inferior al registrado en sistema por un total de <strong>—55 unidades</strong>.</div>
@@ -716,10 +835,79 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                             </table>
                         </div>
                     </div>
-                    <div style="background:#f1f5f9; border-radius:8px; padding:10px; margin-top:12px;">
+                    <div style="font-size:13px; font-weight:800; color:var(--accent); margin-bottom:10px;">▸ Julio 2026 (4 tomas físicas)</div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:12px; margin-bottom:16px;">
+                        <div style="background:#f1f5f9; border-radius:10px; padding:12px 10px; text-align:center;">
+                            <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">S1 · MIKROTIK · 7/7</div>
+                            <div style="font-size:22px; font-weight:900; color:var(--accent);">327</div>
+                            <div style="font-size:10px; color:var(--text-sub);">SKU contados · 6 dif.</div>
+                        </div>
+                        <div style="background:#f1f5f9; border-radius:10px; padding:12px 10px; text-align:center;">
+                            <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">S2 · PANDUIT-VIGI · 14/7</div>
+                            <div style="font-size:22px; font-weight:900; color:var(--accent);">239</div>
+                            <div style="font-size:10px; color:var(--text-sub);">SKU contados · 3 dif.</div>
+                        </div>
+                        <div style="background:#f1f5f9; border-radius:10px; padding:12px 10px; text-align:center;">
+                            <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">S3 · SWITCH/P · 23/7</div>
+                            <div style="font-size:22px; font-weight:900; color:var(--accent);">301</div>
+                            <div style="font-size:10px; color:var(--text-sub);">SKU contados · 2 dif.</div>
+                        </div>
+                        <div style="background:#f1f5f9; border-radius:10px; padding:12px 10px; text-align:center;">
+                            <div style="font-size:11px; color:var(--text-sub); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;">S4 · MAXIPRINT · 30/7</div>
+                            <div style="font-size:22px; font-weight:900; color:var(--accent);">366</div>
+                            <div style="font-size:10px; color:var(--text-sub);">SKU contados · 9 dif.</div>
+                        </div>
+                    </div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
+                        <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:10px; padding:12px;">
+                            <div style="font-size:13px; font-weight:800; color:#dc2626; margin-bottom:6px;">FALTANTES — 5 SKU</div>
+                            <div style="font-size:11px; color:#475569; line-height:1.5; margin-bottom:6px;">El inventario físico es inferior al registrado en sistema por un total de <strong>—126 unidades</strong>.</div>
+                            <table style="width:100%; font-size:11px; border-collapse:collapse;">
+                                <tr style="border-bottom:1px solid #fecaca; font-weight:700; color:#dc2626;">
+                                    <td style="padding:3px 4px;">Sem</td>
+                                    <td style="padding:3px 4px;">SKU</td>
+                                    <td style="padding:3px 4px;">Producto</td>
+                                    <td style="padding:3px 4px; text-align:right;">Dif.</td>
+                                </tr>
+                                <tr><td style="padding:2px 4px;">S2</td><td style="padding:2px 4px;">[070219]</td><td style="padding:2px 4px;">Wireplus Canaleta PVC 20x10<div style="font-size:9px; color:#64748b; font-weight:400;">Error de ubicación · ubicación final Almacén II</div></td><td style="padding:2px 4px; text-align:right; color:#dc2626;">—100</td></tr>
+                                <tr><td style="padding:2px 4px;">S1</td><td style="padding:2px 4px;">[090300]</td><td style="padding:2px 4px;">Hikvision Tarjeta RFID 125 kHz</td><td style="padding:2px 4px; text-align:right; color:#dc2626;">—20</td></tr>
+                                <tr><td style="padding:2px 4px;">S3</td><td style="padding:2px 4px;">[040068]</td><td style="padding:2px 4px;">Hikvision Contacto Magnético Metálico</td><td style="padding:2px 4px; text-align:right; color:#dc2626;">—3</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[011165]</td><td style="padding:2px 4px;">Dahua Video Balun Transceptores</td><td style="padding:2px 4px; text-align:right; color:#dc2626;">—2</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[020189]</td><td style="padding:2px 4px;">Wireplus Patch Cord CAT5e Gris</td><td style="padding:2px 4px; text-align:right; color:#dc2626;">—1</td></tr>
+                            </table>
+                        </div>
+                        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:12px;">
+                            <div style="font-size:13px; font-weight:800; color:#16a34a; margin-bottom:6px;">SOBRANTES — 15 SKU</div>
+                            <div style="font-size:11px; color:#475569; line-height:1.5; margin-bottom:6px;">El inventario físico supera al registrado por un total de <strong>+76 unidades</strong>.</div>
+                            <table style="width:100%; font-size:11px; border-collapse:collapse;">
+                                <tr style="border-bottom:1px solid #bbf7d0; font-weight:700; color:#16a34a;">
+                                    <td style="padding:2px 4px;">Sem</td>
+                                    <td style="padding:2px 4px;">SKU</td>
+                                    <td style="padding:2px 4px;">Producto</td>
+                                    <td style="padding:2px 4px; text-align:right;">Dif.</td>
+                                </tr>
+                                <tr><td style="padding:2px 4px;">S1</td><td style="padding:2px 4px;">[090176]</td><td style="padding:2px 4px;">Hikvision Tarjeta Proximidad EM</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+28</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[080097]</td><td style="padding:2px 4px;">Conector 12V Macho 2.1mm</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+24</td></tr>
+                                <tr><td style="padding:2px 4px;">S2</td><td style="padding:2px 4px;">[020556]</td><td style="padding:2px 4px;">Wireplus Patch Cord Fibra</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+5</td></tr>
+                                <tr><td style="padding:2px 4px;">S3</td><td style="padding:2px 4px;">[040069]</td><td style="padding:2px 4px;">Hikvision Contacto Magnético Madera</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+3</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[080099]</td><td style="padding:2px 4px;">Conector 12V Hembra 2.1mm</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+3</td></tr>
+                                <tr><td style="padding:2px 4px;">S1</td><td style="padding:2px 4px;">[020847]</td><td style="padding:2px 4px;">Ubiquiti UFiber Acoplador SC/APC</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+2</td></tr>
+                                <tr><td style="padding:2px 4px;">S1</td><td style="padding:2px 4px;">[040069]</td><td style="padding:2px 4px;">Hikvision Contacto Magnético Madera</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+2</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[021190]</td><td style="padding:2px 4px;">Beconnect Conector RJ45 Blindado</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+2</td></tr>
+                                <tr><td style="padding:2px 4px;">S1</td><td style="padding:2px 4px;">[010477]</td><td style="padding:2px 4px;">Hikvision Montaje de Poste PTZ</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+1</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[010477]</td><td style="padding:2px 4px;">Hikvision Montaje de Poste PTZ</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+1</td></tr>
+                                <tr><td style="padding:2px 4px;">S1</td><td style="padding:2px 4px;">[020770]</td><td style="padding:2px 4px;">Nexxt Patch Cord CAT6A</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+1</td></tr>
+                                <tr><td style="padding:2px 4px;">S2</td><td style="padding:2px 4px;">[010437]</td><td style="padding:2px 4px;">Hikvision DVR 1080P 4 Canales</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+1</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[010002]</td><td style="padding:2px 4px;">Wireplus Video Balun Bornera</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+1</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[021226]</td><td style="padding:2px 4px;">Owire Patch Cord CAT6 Gris</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+1</td></tr>
+                                <tr><td style="padding:2px 4px;">S4</td><td style="padding:2px 4px;">[021177]</td><td style="padding:2px 4px;">Beconnect Conector RJ45 CAT6E</td><td style="padding:2px 4px; text-align:right; color:#16a34a;">+1</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="background:#f1f5f9; border-radius:8px; padding:10px;">
                         <div style="font-size:12px; font-weight:700; color:var(--text-main); margin-bottom:4px;">Recomendación</div>
                         <div style="font-size:11px; color:#475569; line-height:1.5;">
-                            <div style="margin-bottom:6px;"><strong>Casos detectados:</strong> (1) [020222]/[020875] Cable UTP CAT6 (±2) — corregido; (2) [020457]/[020456] Rack Onlink (±2) — corregido; (3) [070219]/[070748] Canaleta 20x10 (±18) — pendiente de revisión.</div>
+                            <div style="margin-bottom:6px;"><strong>Casos detectados:</strong> (1) [020222]/[020875] Cable UTP CAT6 (±2) — corregido; (2) [020457]/[020456] Rack Onlink (±2) — corregido; (3) [070219]/[070748] Canaleta 20x10 (±18) — pendiente de revisión; (4) Julio: [070219] Canaleta Wireplus (—100) — pendiente de revisión; (5) Julio: [090300]/[090176] Tarjetas acceso (—20/+28) — contrapartida de tarjetas; (6) Julio: [080097]/[080099] Conectores 12V (+24/+3) — revisar conteo de decenas; (7) Julio: [040068]/[040069] Contactos Magnéticos (±3/+5) — revisar ubicación.</div>
                             <div style="margin-bottom:4px;"><strong>Recomendaciones:</strong></div>
                             <ol style="margin:0; padding-left:18px;">
                                 <li>Reforzar la supervisión del etiquetado de productos mediante muestreo aleatorio.</li>
@@ -737,7 +925,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 </div>
             </div>
 
-            <div class="footer-note">Balance del rendimiento operativo de las Unidades Adscritas a la Jefatura de Operaciones. Período evaluado: <strong>Enero a Junio 2026</strong>.<br>Este tablero sintetiza las operaciones clave de la organización para el modelo de negocio de Onprotec. (Retail)</div>
+            <div class="footer-note">Balance del rendimiento operativo de las Unidades Adscritas a la Jefatura de Operaciones. Período evaluado: <strong>Enero a Julio 2026</strong>.<br>Este tablero sintetiza las operaciones clave de la organización para el modelo de negocio de Onprotec. (Retail)</div>
         </div>
 
         <div class="slide" id="slide-4">
@@ -746,6 +934,19 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 Rendimiento de Operaciones ATC y Canales Digitales
                 <button class="btn-update" onclick="actualizar('envios'); actualizar('atc')"><span class="ico-upd">&#x1f504;</span>Actualizar</button>
             </div>
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #155e75 60%, #0891b2 100%); border-radius: 18px; padding: 22px 28px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(8,145,178,0.25); position: relative; overflow: hidden;">
+                <div style="position:absolute; top:-40px; right:-30px; width:200px; height:200px; border-radius:50%; background:rgba(255,255,255,0.06);"></div>
+                <div>
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #a5f3fc; margin-bottom: 8px;">🛍️ Comercio Omnicanal</div>
+                    <div style="font-size: 22px; font-weight: 900; line-height: 1.3;">ATC y Canales Digitales Ene-Jul 2026</div>
+                    <div style="font-size: 13px; color: #cffafe; margin-top: 6px; max-width: 620px; line-height: 1.6;">Rendimiento del equipo ATC, mix de canales digitales (Cashea, Mercado Libre) y operaciones de envío gestionadas.</div>
+                </div>
+                <div style="text-align:center; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); padding: 14px 22px; border-radius: 14px; backdrop-filter: blur(4px);">
+                    <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #a5f3fc;">Envíos Gestionados</div>
+                    <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">7,723</div>
+                    <div style="font-size: 11px; font-weight: 700; color: #a5f3fc;">Ene-Jul 2026</div>
+                </div>
+            </div>
             <div class="sub-tab">
                 <button class="sub-tab-btn active" onclick="mostrarSubTab(4, 'indicadores')">Indicadores y Tendencia</button>
                 <button class="sub-tab-btn" onclick="mostrarSubTab(4, 'analisis')">Análisis del Período y recomendaciones</button>
@@ -753,8 +954,8 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             <div id="sub-panel-4-indicadores" class="sub-panel active">
                 <div class="grid-2">
                     <div class="kpi-box accent" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:16px 20px;">
-                        <div class="kpi-sub" style="font-size:12px;">🎯 EJECUCIÓN PRIMER SEMESTRE 2026</div>
-                        <div class="kpi-val" style="font-size:38px; color:var(--success);" id="digital-cumplimiento-pct">6,583</div>
+                        <div class="kpi-sub" style="font-size:12px;">🎯 EJECUCIÓN ENERO-JULIO 2026</div>
+                        <div class="kpi-val" style="font-size:38px; color:var(--success);" id="digital-cumplimiento-pct">7,723</div>
                         <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:4px 14px; margin-top:6px; display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:600; color:var(--text-main);">
                             <span>✅ Total de operaciones ejecutadas</span>
                             <span style="color:#94a3b8;">·</span>
@@ -765,39 +966,42 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                         <div class="kpi-sub" style="font-size:12px;">⚖️ BALANCE OPERATIVO ATC</div>
                         <div class="kpi-val" style="font-size:26px; padding: 6px 0; color:var(--success);"><span id="atc-val-nombre">🥇 Valentina Castillo</span></div>
                         <div style="background:#f1f5f9; border-radius:8px; padding:6px 14px; margin-top:2px; font-size:12px; font-weight:600; color:var(--text-main); display:inline-flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:center;">
-                            <span>Valentina <span style="color:#0ea5e9; font-weight:900;" id="atc-val-pct">53.3%</span> (<span id="atc-val-ops">3,510</span>)</span>
+                            <span>Valentina <span style="color:#0ea5e9; font-weight:900;" id="atc-val-pct">53.9%</span> (<span id="atc-val-ops">4,020</span>)</span>
                             <span style="color:#94a3b8;">|</span>
-                            <span>Maybeli Rojas <span style="color:#8b5cf6; font-weight:900;" id="atc-may-pct">46.7%</span> (<span id="atc-may-ops">3,073</span>)</span>
+                            <span>Maybeli Rojas <span style="color:#8b5cf6; font-weight:900;" id="atc-may-pct">46.1%</span> (<span id="atc-may-ops">3,432</span>)</span>
                         </div>
                     </div>
                 </div>
                 <div class="grid-2" style="margin-top: 20px;">
                     <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; display:flex; flex-direction:column; align-items:center; text-align:center;">
                         <div style="font-size:13px; font-weight:700; color:#00BCD4; margin-bottom:6px;">
-                            CASHEA (<span id="mix-cashea-pct">51.4</span>% del Mix Digital)
+                            CASHEA (<span id="mix-cashea-pct">51.2</span>% del Mix Digital)
                         </div>
-                        <div style="font-size: 24px; font-weight: 900; color:var(--text-main);" id="dig-cashea-total">3,385</div>
+                        <div style="font-size: 24px; font-weight: 900; color:var(--text-main);" id="dig-cashea-total">3,819</div>
                         <div style="font-size: 14px; color: var(--text-main); margin-top: 6px; font-weight: 600;">
-                            Distribución: <span style="color:#0ea5e9;">Valentina <span id="dig-cashea-val">1,613</span></span> | <span style="color:#8b5cf6;">Maybeli <span id="dig-cashea-may">1,772</span></span>
+                            Distribución: <span style="color:#0ea5e9;">Valentina <span id="dig-cashea-val">1,823</span></span> | <span style="color:#8b5cf6;">Maybeli <span id="dig-cashea-may">1,996</span></span>
                         </div>
                     </div>
                     <div style="background: #f1f5f9; padding: 15px; border-radius: 10px; display:flex; flex-direction:column; align-items:center; text-align:center;">
                         <div style="font-size:13px; font-weight:700; color:#FF6000; margin-bottom:6px;">
-                            MERCADO LIBRE (<span id="mix-ml-pct">48.6</span>% del Mix Digital)
+                            MERCADO LIBRE (<span id="mix-ml-pct">48.8</span>% del Mix Digital)
                         </div>
-                        <div style="font-size: 24px; font-weight: 900; color:var(--text-main);" id="dig-ml-total">3,198</div>
+                        <div style="font-size: 24px; font-weight: 900; color:var(--text-main);" id="dig-ml-total">3,633</div>
                         <div style="font-size: 14px; color: var(--text-main); margin-top: 6px; font-weight: 600;">
-                            Distribución: <span style="color:#0ea5e9;">Valentina <span id="dig-ml-val">1,897</span></span> | <span style="color:#8b5cf6;">Maybeli <span id="dig-ml-may">1,301</span></span>
+                            Distribución: <span style="color:#0ea5e9;">Valentina <span id="dig-ml-val">2,197</span></span> | <span style="color:#8b5cf6;">Maybeli <span id="dig-ml-may">1,436</span></span>
+                        </div>
+                        <div style="font-size: 12px; color: #475569; margin-top: 6px; font-weight: 700;">
+                            Total pedidos ML asesores: <span id="dig-ml-asesores" style="color:#f97316;">271</span>
                         </div>
                     </div>
                 </div>
                 <div style="margin-top: 20px; background: #f8fafc; border-radius: 12px; padding: 10px 14px; text-align: center;">
-                    <div style="font-size: 13px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">Tendencia Mensual de Operaciones Digitales Ene-Jun 2026</div>
+                    <div style="font-size: 13px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">Tendencia Mensual de Operaciones Digitales Ene-Jul 2026</div>
                     <div style="position: relative; width: 100%; max-width: 750px; height: 220px; margin: 0 auto;">
                         <canvas id="chart-trend-cashea-ml" style="width: 100%; height: 100%;"></canvas>
                     </div>
                     <div style="display: flex; justify-content:space-between; padding:0 42px; margin-top:2px; font-size:11px; font-weight:600; color:#475569;">
-                        <span>ENE</span><span>FEB</span><span>MAR</span><span>ABR</span><span>MAY</span><span>JUN</span>
+                        <span>ENE</span><span>FEB</span><span>MAR</span><span>ABR</span><span>MAY</span><span>JUN</span><span>JUL</span>
                     </div>
                     <div style="display: flex; gap: 20px; justify-content: center; margin-top: 6px; font-size: 11px;">
                         <span><span style="display: inline-block; width: 12px; height: 12px; background: #0ea5e9; border-radius: 2px; vertical-align: middle;"></span> CASHEA</span>
@@ -811,15 +1015,15 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                     <div style="display:flex; flex-direction:column; gap:9px;">
                         <div style="background:#eef2ff; border-left:3px solid #0ea5e9; border-radius:6px; padding:9px 12px;">
                             <div style="font-weight:700; color:#0ea5e9; margin-bottom:3px; font-size:13px;">CASHEA</div>
-                            <div style="color:#475569; font-size:12px;">Arrancó liderando en enero (423), alcanzó su pico máximo en marzo (759), pero mostró una tendencia errática con altibajos. Este comportamiento probablemente se deba a la brecha cambiaria existente.</div>
+                            <div style="color:#475569; font-size:12px;">Arrancó liderando en enero (423), alcanzó su pico máximo en marzo (759), pero mostró una tendencia errática con altibajos. En julio cerró en <strong>434 ops</strong>, una leve recuperación frente a junio (429) pero en niveles similares a enero, lejos de su pico de marzo. Este comportamiento probablemente se deba a la brecha cambiaria existente.</div>
                         </div>
                         <div style="background:#fff7ed; border-left:3px solid #f97316; border-radius:6px; padding:9px 12px;">
                             <div style="font-weight:700; color:#f97316; margin-bottom:3px; font-size:13px;">MERCADO LIBRE</div>
-                            <div style="color:#475569; font-size:12px;">Mantuvo un crecimiento sostenido de enero a mayo (423→678) y logró superar a Cashea en mayo (678 vs 626). Este comportamiento probablemente se deba a precios más competitivos frente a Cashea. Mercado Libre tiene obligaciones legales distintas a la plataforma Cashea.</div>
+                            <div style="color:#475569; font-size:12px;">Mantuvo un crecimiento sostenido de enero a mayo (423→678) y logró superar a Cashea en abril (630 vs 589) y mayo (678 vs 626), probablemente por precios más competitivos. En julio los montados por las auxiliares bajaron a <strong>435</strong>, pero sumando los <strong>271 pedidos de asesores</strong> (Igor Rivas 101, Jose Javier Sanabria 168, Alejandro Betancourt 2) el volumen real fue de <strong>706 ops, el más alto del período</strong>. Mercado Libre tiene obligaciones legales distintas a la plataforma Cashea.</div>
                         </div>
                         <div style="background:#f8fafc; border-left:3px solid #64748b; border-radius:6px; padding:9px 12px;">
-                            <div style="font-weight:700; color:#64748b; margin-bottom:3px; font-size:13px;">CIERRE SEMESTRE</div>
-                            <div style="color:#475569; font-size:12px;">Cashea lidera con <strong>3,385 ops (51.4%)</strong> vs Mercado Libre <strong>3,198 ops (48.6%)</strong>. Ambas cayeron en junio por variables externas y menos días de operaciones efectivas.</div>
+                            <div style="font-weight:700; color:#64748b; margin-bottom:3px; font-size:13px;">CIERRE ENERO-JULIO</div>
+                            <div style="color:#475569; font-size:12px;">Cashea acumula <strong>3,819 ops (49.4%)</strong> vs Mercado Libre <strong>3,904 ops (50.6%)</strong> contando los 271 pedidos de asesores sobre sus 3,633 montados; total general <strong>7,723 ops</strong>. Ambos canales cayeron en junio por variables externas y menos días de operaciones efectivas; en julio Cashea se recuperó levemente (434) y ML, sumando asesores, registró su mejor mes del año (706).</div>
                         </div>
                     </div>
                     <div style="margin-top:16px; border-top:1px solid #e2e8f0; padding-top:14px;">
@@ -830,6 +1034,8 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                             <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:5px 9px; font-size:12px; font-weight:500;">📋 Implementar encuestas post-atención (CSAT/NPS) para medir la satisfacción del cliente en cada interacción</span>
                             <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:5px 9px; font-size:12px; font-weight:500;">⏱️ Definir SLA de respuesta por canal (chat, WhatsApp, Telegram) y monitorear cumplimiento semanal</span>
                             <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:5px 9px; font-size:12px; font-weight:500;">📊 Crear un tablero de control de ATC con tiempos de respuesta, tasa de resolución y volumen por Auxiliar de ATC</span>
+                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:5px 9px; font-size:12px; font-weight:500;">👥 Formalizar el canal de pedidos de asesores de Mercado Libre (271 en julio, 38.4% del volumen ML del mes) con un registro único, trazabilidad por asesor y revisión periódica de su rendimiento</span>
+                            <span style="background:#e0f2fe; color:#0369a1; border-radius:5px; padding:5px 9px; font-size:12px; font-weight:500;">📈 Replicar en agosto las prácticas del pico de marzo (Cashea) y de mayo (ML) y monitorear el impacto de la brecha cambiaria para planificar promociones en el canal con mejor desempeño</span>
                         </div>
                     </div>
                 </div>
@@ -842,6 +1048,19 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             <div class="slide-title-text">
                 Indicadores de Transporte Onprotec
                 <button class="btn-update" onclick="actualizar('transporte')"><span class="ico-upd">&#x1f504;</span>Actualizar</button>
+            </div>
+            <div style="background: linear-gradient(135deg, #0f172a 0%, #155e75 60%, #0891b2 100%); border-radius: 18px; padding: 22px 28px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(8,145,178,0.25); position: relative; overflow: hidden;">
+                <div style="position:absolute; top:-40px; right:-30px; width:200px; height:200px; border-radius:50%; background:rgba(255,255,255,0.06);"></div>
+                <div>
+                    <div style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #a5f3fc; margin-bottom: 8px;">🚛 Operaciones de Transporte</div>
+                    <div style="font-size: 22px; font-weight: 900; line-height: 1.3;">Monitoreo de Flota y Desglose Mensual</div>
+                    <div style="font-size: 13px; color: #cffafe; margin-top: 6px; max-width: 620px; line-height: 1.6;">Indicadores de gestión de flota, consumo y distribución mensual del transporte de la organización.</div>
+                </div>
+                <div style="text-align:center; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); padding: 14px 22px; border-radius: 14px; backdrop-filter: blur(4px);">
+                    <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #a5f3fc;">Período Evaluado</div>
+                    <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">Ene-Jul</div>
+                    <div style="font-size: 11px; font-weight: 700; color: #a5f3fc;">2026</div>
+                </div>
             </div>
             <div class="sub-tab">
                 <button class="sub-tab-btn active" onclick="mostrarSubTab(6, 'monitoreo')">Monitoreo de Flota</button>
@@ -907,6 +1126,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                         <div class="bar-3d" style="width:36px;"><div class="bar-3d-val" id="tport-val-ABR" style="color:var(--text-sub);">0</div><div class="bar-3d-body" id="tport-bar-ABR" style="height:4px; width:36px; background:linear-gradient(180deg,#c084fc,#8b5cf6);"></div><div class="bar-3d-label" style="color:var(--text-main);">ABR</div></div>
                         <div class="bar-3d" style="width:36px;"><div class="bar-3d-val" id="tport-val-MAY" style="color:var(--text-sub);">0</div><div class="bar-3d-body" id="tport-bar-MAY" style="height:4px; width:36px; background:linear-gradient(180deg,#f472b6,#ec4899);"></div><div class="bar-3d-label" style="color:var(--text-main);">MAY</div></div>
                         <div class="bar-3d" style="width:36px;"><div class="bar-3d-val" id="tport-val-JUN" style="color:var(--text-sub);">0</div><div class="bar-3d-body" id="tport-bar-JUN" style="height:4px; width:36px; background:linear-gradient(180deg,#22d3ee,#06b6d4);"></div><div class="bar-3d-label" style="color:var(--text-main);">JUN</div></div>
+                        <div class="bar-3d" style="width:36px;"><div class="bar-3d-val" id="tport-val-JUL" style="color:var(--text-sub);">0</div><div class="bar-3d-body" id="tport-bar-JUL" style="height:4px; width:36px; background:linear-gradient(180deg,#fbbf24,#f59e0b);"></div><div class="bar-3d-label" style="color:var(--text-main);">JUL</div></div>
                     </div>
                     <div style="font-size:12px; color:var(--text-main); text-align:right; font-weight:700; max-width:180px; position:relative; z-index:1;" id="tport-best-month-comment"></div>
                 </div>
@@ -914,11 +1134,11 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             </div>
             <div id="sub-panel-6-actividades" class="sub-panel">
             <div style="margin-top:8px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px;">
-                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:14px;">ACTIVIDADES DE TRANSPORTE CON MAYOR PESO (ENE-JUN 2026)</div>
+                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:14px;">ACTIVIDADES DE TRANSPORTE CON MAYOR PESO (ENE-JUL 2026)</div>
                 <div style="display:flex; gap:20px; font-size:15px;">
-                    <div><span style="color:var(--text-sub);">1.</span> <strong>ENVIOS COURIER</strong> <span id="transporte-top1-ops" style="color:var(--success); font-weight:800;">249</span> ops</div>
-                    <div><span style="color:var(--text-sub);">2.</span> <strong>BMP</strong> <span id="transporte-top2-ops" style="color:var(--success); font-weight:800;">172</span> ops</div>
-                    <div><span style="color:var(--text-sub);">3.</span> <strong>DELIVERY</strong> <span id="transporte-top3-ops" style="color:var(--success); font-weight:800;">155</span> ops</div>
+                    <div><span style="color:var(--text-sub);">1.</span> <strong>ENVIOS COURIER</strong> <span id="transporte-top1-ops" style="color:var(--success); font-weight:800;">301</span> ops</div>
+                    <div><span style="color:var(--text-sub);">2.</span> <strong>BMP</strong> <span id="transporte-top2-ops" style="color:var(--success); font-weight:800;">226</span> ops</div>
+                    <div><span style="color:var(--text-sub);">3.</span> <strong>DELIVERY</strong> <span id="transporte-top3-ops" style="color:var(--success); font-weight:800;">181</span> ops</div>
                 </div>
             </div>
             <div style="margin-top:12px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px;">
@@ -933,7 +1153,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             </div>
             <div id="sub-panel-6-productividad" class="sub-panel">
             <div style="margin-top:8px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 14px;">
-                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">ANALISIS DE PRODUCTIVIDAD - CAMIONETA PANEL (ENE-JUN 2026)</div>
+                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">ANALISIS DE PRODUCTIVIDAD - CAMIONETA PANEL (ENE-JUL 2026)</div>
                 <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px;">
                     <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
                         <div style="font-size:10px; color:var(--text-sub); font-weight:600;">OPS ANALIZADAS</div>
@@ -954,7 +1174,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 <div style="display:flex; gap:10px; margin-bottom:10px; background:#f8fafc; border-radius:6px; padding:8px 12px; align-items:center; justify-content:space-between;">
                     <div style="display:flex; align-items:center; gap:8px;">
                         <span style="font-size:11px; font-weight:700; color:var(--text-main);">PERMANENCIA EN TIENDA</span>
-                        <span style="font-size:10px; color:var(--text-sub);">41 ops × 1h15min</span>
+                        <span style="font-size:10px; color:var(--text-sub);">43 ops × 1h15min</span>
                     </div>
                     <div style="display:flex; gap:16px; font-size:12px;">
                         <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-per-tienda-h">51.25h</strong></span>
@@ -962,23 +1182,36 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                         <span><span style="color:var(--text-sub);">% Jornada:</span> <strong style="color:var(--accent);" id="prod-per-tienda-pct">5.4%</strong></span>
                     </div>
                 </div>
-                <div style="background:#f1f5f9; border-radius:6px; padding:10px;">
-                    <div style="display:flex; justify-content:space-between; font-size:10px; color:var(--text-sub); margin-bottom:4px;">
-                        <span>OCUPADO <strong id="prod-pct" style="font-size:12px;">0%</strong></span>
-                        <span>LIBRE <strong id="prod-libre-pct" style="font-size:12px;">0%</strong></span>
+                <div style="display:grid; grid-template-columns:200px 1fr; gap:14px; align-items:center; margin-top:6px;">
+                    <div style="position:relative; width:200px; height:200px;">
+                        <canvas id="prod-dona" width="200" height="200" style="width:200px; height:200px;"></canvas>
+                        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
+                            <div style="font-size:30px; font-weight:900; color:var(--accent);" id="prod-dona-pct">0%</div>
+                            <div style="font-size:9px; color:var(--text-sub); font-weight:700; letter-spacing:1px;">OCUPADO</div>
+                        </div>
                     </div>
-                    <div style="height:24px; background:#e2e8f0; border-radius:6px; overflow:hidden; display:flex;">
-                        <div id="prod-bar-ocupado" style="height:100%; background:#0ea5e9; transition:width 0.8s ease;"></div>
-                        <div id="prod-bar-libre" style="height:100%; background:#10b981; transition:width 0.8s ease;"></div>
-                    </div>
-                    <div style="display:flex; justify-content:space-between; font-size:9px; color:var(--text-sub); margin-top:4px;">
-                        <span>Jornada: 8h · 20 días/mes</span>
-                        <span>Periodo: ENE-JUN 2026 (120 días hábiles)</span>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
+                            <div style="width:26px; height:26px; border-radius:50%; background:#0ea5e9; flex-shrink:0;"></div>
+                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO OCUPADO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-ocu-h">0h</div></div>
+                            <div style="font-size:16px; font-weight:800; color:var(--accent);" id="prod-pct">0%</div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
+                            <div style="width:26px; height:26px; border-radius:50%; background:#10b981; flex-shrink:0;"></div>
+                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO LIBRE</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-libre-h">0h</div></div>
+                            <div style="font-size:16px; font-weight:800; color:#10b981;" id="prod-libre-pct">0%</div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
+                            <div style="width:26px; height:26px; border-radius:50%; background:#f59e0b; flex-shrink:0;"></div>
+                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">PROMEDIO DIARIO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-promedio">0h</div></div>
+                            <div style="font-size:9px; color:var(--text-sub);">jornada 8h · 140 días</div>
+                        </div>
+                        <div style="font-size:9px; color:var(--text-sub); font-weight:600; text-align:right;">Jornada: 8h · 20 días/mes · Periodo ENE-JUL 2026 (140 días hábiles)</div>
                     </div>
                 </div>
             </div>
             <div style="margin-top:12px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 14px;">
-                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">ANALISIS DE PRODUCTIVIDAD - MOTO (JUAN MARQUEZ - ENE-JUN 2026)</div>
+                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">ANALISIS DE PRODUCTIVIDAD - MOTO (JUAN MARQUEZ - ENE-JUL 2026)</div>
                 <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px;">
                     <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
                         <div style="font-size:10px; color:var(--text-sub); font-weight:600;">OPS ANALIZADAS</div>
@@ -999,7 +1232,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 <div style="display:flex; gap:10px; margin-bottom:10px; background:#f8fafc; border-radius:6px; padding:8px 12px; align-items:center; justify-content:space-between;">
                     <div style="display:flex; align-items:center; gap:8px;">
                         <span style="font-size:11px; font-weight:700; color:var(--text-main);">ENVIOS D (DOCUMENTOS Y VALIJA)</span>
-                        <span style="font-size:10px; color:var(--text-sub);">114 ops × 0.5h (2 viajes/día, 1h total)</span>
+                        <span style="font-size:10px; color:var(--text-sub);">136 ops × 0.5h (2 viajes/día, 1h total)</span>
                     </div>
                     <div style="display:flex; gap:16px; font-size:12px;">
                         <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-moto-enviosd-h">57h</strong></span>
@@ -1009,7 +1242,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                 <div style="display:flex; gap:10px; margin-bottom:10px; background:#f8fafc; border-radius:6px; padding:8px 12px; align-items:center; justify-content:space-between;">
                     <div style="display:flex; align-items:center; gap:8px;">
                         <span style="font-size:11px; font-weight:700; color:var(--text-main);">PERMANENCIA EN TIENDA</span>
-                        <span style="font-size:10px; color:var(--text-sub);">28 ops × 1h</span>
+                        <span style="font-size:10px; color:var(--text-sub);">36 ops × 1h</span>
                     </div>
                     <div style="display:flex; gap:16px; font-size:12px;">
                         <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-moto-pentienda-h">28h</strong></span>
@@ -1022,25 +1255,37 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
                         <span style="font-size:10px; color:var(--text-sub);">1h todos los días</span>
                     </div>
                     <div style="display:flex; gap:16px; font-size:12px;">
-                        <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-moto-gasolina-h">120h</strong></span>
+                        <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-moto-gasolina-h">140h</strong></span>
                         <span><span style="color:var(--text-sub);">Diario:</span> <strong style="color:#fbbf24;" id="prod-moto-gasolina-diario">1h</strong></span>
                     </div>
                 </div>
-                <div style="background:#f1f5f9; border-radius:6px; padding:10px;">
-                    <div style="display:flex; justify-content:space-between; font-size:10px; color:var(--text-sub); margin-bottom:4px;">
-                        <span>OCUPADO <strong id="prod-moto-pct" style="font-size:12px;">0%</strong></span>
-                        <span>LIBRE <strong id="prod-moto-libre-pct" style="font-size:12px;">0%</strong></span>
+                <div style="display:grid; grid-template-columns:200px 1fr; gap:14px; align-items:center; margin-top:6px;">
+                    <div style="position:relative; width:200px; height:200px;">
+                        <canvas id="prod-moto-dona" width="200" height="200" style="width:200px; height:200px;"></canvas>
+                        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
+                            <div style="font-size:30px; font-weight:900; color:#ec4899;" id="prod-moto-dona-pct">0%</div>
+                            <div style="font-size:9px; color:var(--text-sub); font-weight:700; letter-spacing:1px;">OCUPADO</div>
+                        </div>
                     </div>
-                    <div style="height:24px; background:#e2e8f0; border-radius:6px; overflow:hidden; display:flex;">
-                        <div id="prod-moto-bar-ocupado" style="height:100%; background:#ec4899; transition:width 0.8s ease;"></div>
-                        <div id="prod-moto-bar-libre" style="height:100%; background:#10b981; transition:width 0.8s ease;"></div>
-                    </div>
-                    <div style="display:flex; justify-content:space-between; font-size:9px; color:var(--text-sub); margin-top:4px;">
-                        <span>Jornada: 8h · 20 días/mes</span>
-                        <span>Periodo: ENE-JUN 2026 (120 días hábiles)</span>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
+                            <div style="width:26px; height:26px; border-radius:50%; background:#ec4899; flex-shrink:0;"></div>
+                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO OCUPADO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-moto-ocu-h">0h</div></div>
+                            <div style="font-size:16px; font-weight:800; color:#ec4899;" id="prod-moto-pct">0%</div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
+                            <div style="width:26px; height:26px; border-radius:50%; background:#10b981; flex-shrink:0;"></div>
+                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO LIBRE</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-moto-libre-h">0h</div></div>
+                            <div style="font-size:16px; font-weight:800; color:#10b981;" id="prod-moto-libre-pct">0%</div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
+                            <div style="width:26px; height:26px; border-radius:50%; background:#f59e0b; flex-shrink:0;"></div>
+                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">PROMEDIO DIARIO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-moto-promedio">0h</div></div>
+                            <div style="font-size:9px; color:var(--text-sub);">incluye gasolina · 140 días</div>
+                        </div>
+                        <div style="font-size:9px; color:var(--text-sub); font-weight:600; text-align:right;">Jornada: 8h · 20 días/mes · Periodo ENE-JUL 2026 (140 días hábiles)</div>
                     </div>
                 </div>
-            </div>
             </div>
             <div class="footer-note">Resultado de operaciones del transporte y analisis de rendimiento de cada unidad segun sus actividades.</div>
         </div>
@@ -1143,7 +1388,9 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             const estilos = {
                 'Yonathan Suniaga': { bg: '#e0f2fe', text: '#0284c7', border: '#7dd3fc' },
                 'Maria Gabriela Molina': { bg: '#fdf2f8', text: '#c026d3', border: '#f5d0fe' },
-                'Yonathan': { bg: '#e0f2fe', text: '#0284c7', border: '#7dd3fc' }
+                'Yonathan': { bg: '#e0f2fe', text: '#0284c7', border: '#7dd3fc' },
+                'Yonathan Onprotec Ing': { bg: '#e0f2fe', text: '#0284c7', border: '#7dd3fc' },
+                'Maria Gabriela Compras': { bg: '#fdf2f8', text: '#c026d3', border: '#f5d0fe' }
             };
             const parts = Object.entries(r).map(([k, v]) => {
                 const s = estilos[k] || { bg: '#f1f5f9', text: '#475569', border: '#cbd5e1' };
@@ -1196,7 +1443,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
     function actualizarVentas(d) {
         if (!d) return;
         const e = _el;
-        const meses = ['ENE','FEB','MAR','ABR','MAY','JUN'];
+        const meses = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL'];
         if (d.total_netas) {
             ['resumen-ventas-total', 'ventas-total'].forEach(id => { if (e(id)) e(id).textContent = '$' + nf(d.total_netas); });
             if (e('ventas-dif')) e('ventas-dif').innerHTML = '2025: $' + nf(d.total_netas_2025 || 0) + ' <span style="color:var(--success);font-weight:700;">' + (d.variacion_pct >= 0 ? '+' : '') + d.variacion_pct + '%</span>';
@@ -1220,7 +1467,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             if (e('ventas-top-fp')) e('ventas-top-fp').textContent = '$' + nf(Math.round(ta.factura_promedio || 0));
             if (ta.tasa_conversion_mensual && e('ventas-top-tc-var')) {
                 const tcMensual = ta.tasa_conversion_mensual;
-                const mesesOrd = ['ENE','FEB','MAR','ABR','MAY','JUN'];
+                const mesesOrd = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL'];
                 let lastVal = null, prevVal = null, lastMes = '', prevMes = '';
                 for (let i = mesesOrd.length - 1; i >= 0; i--) {
                     const v = tcMensual[mesesOrd[i]];
@@ -1237,19 +1484,27 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             }
         }
         if (d.mensual && d.mensual_2025) {
+            const ranked = meses.map(m => ({ m, v: d.mensual[m] || 0 })).sort((a, b) => b.v - a.v);
+            const topMeses = ranked.slice(0, 2).map(x => x.m);
+            const medallas = { [ranked[0]?.m]: '🥇', [ranked[1]?.m]: '🥈' };
             meses.forEach(m => {
                 const actual = d.mensual[m] || 0;
                 const prev = d.mensual_2025[m] || 0;
                 const variacion = prev > 0 ? Math.round((actual - prev) / prev * 1000) / 10 : 0;
                 const arrow = variacion > 0 ? '▲' : '▼';
                 const color = variacion > 0 ? 'var(--success)' : 'var(--accent-rose)';
+                const isTop = topMeses.indexOf(m) !== -1;
+                const wrapEl = e('v-val-' + m) ? e('v-val-' + m).closest('.ventas-speedo-wrap') : null;
+                if (wrapEl) wrapEl.classList.toggle('top-month', isTop);
+                if (e('v-medal-' + m)) e('v-medal-' + m).textContent = medallas[m] || '';
                 if (e('v-val-' + m)) e('v-val-' + m).textContent = '$' + Math.round(actual / 1000) + 'K';
+                if (e('v-tip-' + m)) e('v-tip-' + m).textContent = prev > 0 ? '$' + nf(actual) + ' vs 2025: $' + nf(prev) : '$' + nf(actual);
                 if (e('v-var-' + m)) { e('v-var-' + m).textContent = arrow + ' ' + (variacion >= 0 ? '+' : '') + variacion + '%'; e('v-var-' + m).style.color = color; }
                 const clipX = Math.max(5, Math.min(95, 50 + variacion * 0.7));
                 const angle = Math.max(-80, Math.min(80, variacion * 1.2));
-                const fillColor = variacion > 1 ? '#10b981' : variacion < -1 ? '#dc2626' : '#64748b';
+                const fillColor = isTop ? '#f59e0b' : (variacion > 1 ? '#10b981' : variacion < -1 ? '#dc2626' : '#64748b');
                 if (e('v-fill-' + m)) { e('v-fill-' + m).style.clipPath = 'polygon(0 100%,50% 100%,' + clipX + '% 0,0 0)'; e('v-fill-' + m).style.background = fillColor; }
-                if (e('v-needle-' + m)) e('v-needle-' + m).style.transform = 'translateX(-50%) rotate(' + angle + 'deg)';
+                if (e('v-needle-' + m)) { e('v-needle-' + m).style.transform = 'translateX(-50%) rotate(' + angle + 'deg)'; e('v-needle-' + m).style.background = isTop ? '#b45309' : '#475569'; }
             });
             const analisis = meses.map(m => {
                 const a = d.mensual[m] || 0;
@@ -1309,6 +1564,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             if (e('dig-ml-val')) e('dig-ml-val').textContent = nf(val.total || 0);
             if (e('dig-ml-may')) e('dig-ml-may').textContent = nf(may.total || 0);
         }
+        if (e('dig-ml-asesores') && d.ml_asesores) e('dig-ml-asesores').textContent = nf(d.ml_asesores.total || 0);
         renderTrendCasheaMl(d);
     }
 
@@ -1325,11 +1581,12 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
         ctx.scale(dpr, dpr);
         const pad = { top: 24, right: 20, bottom: 4, left: 40 };
         const cw = W - pad.left - pad.right, ch = H - pad.top - pad.bottom;
-        const meses = ['ENE','FEB','MAR','ABR','MAY','JUN'];
+        const meses = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL'];
         const cashea = (d.cashea || {}).analistas || [];
         const ml = (d.mercado_libre || {}).analistas || [];
         const cs = meses.map((_, i) => cashea.reduce((s, a) => s + (((a.mensual || {})[meses[i]]) || 0), 0));
-        const ms = meses.map((_, i) => ml.reduce((s, a) => s + (((a.mensual || {})[meses[i]]) || 0), 0));
+        const asesores = (d.ml_asesores || {}).mensual || {};
+        const ms = meses.map((_, i) => ml.reduce((s, a) => s + (((a.mensual || {})[meses[i]]) || 0), 0) + (asesores[meses[i]] || 0));
         const allVals = [...cs, ...ms]; const maxVal = Math.max(...allVals, 1);
         const minVal = 0;
         const range = maxVal - minVal;
@@ -1359,10 +1616,24 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
         });
     }
 
+    function dibujarDona(canvas, pct, colorOcu, colorLibre) {
+        if (!canvas || !canvas.getContext) return;
+        const ctx = canvas.getContext('2d');
+        const size = canvas.width, c = size / 2, r = size / 2 - 12, lineW = 30;
+        ctx.clearRect(0, 0, size, size);
+        ctx.lineWidth = lineW; ctx.lineCap = 'round';
+        const start = -Math.PI / 2;
+        const libreEnd = start + (2 * Math.PI) * (pct / 100);
+        ctx.strokeStyle = colorLibre;
+        ctx.beginPath(); ctx.arc(c, c, r, start, start + 2 * Math.PI); ctx.stroke();
+        ctx.strokeStyle = colorOcu;
+        ctx.beginPath(); ctx.arc(c, c, r, start, libreEnd); ctx.stroke();
+    }
+
     function actualizarTransporte(d) {
         if (!d) return;
         const e = _el;
-        const meses = ['ENE','FEB','MAR','ABR','MAY','JUN'];
+        const meses = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL'];
         const rene = d.rene || {};
         const juan = d.juan || {};
         const rTotal = rene.total || 0;
@@ -1390,7 +1661,7 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
         });
         let bestMonth = '', bestVal = 0;
         meses.forEach(m => { if (tportVals[m] > bestVal) { bestVal = tportVals[m]; bestMonth = m; } });
-        const monthNames = {ENE:'Enero',FEB:'Febrero',MAR:'Marzo',ABR:'Abril',MAY:'Mayo',JUN:'Junio'};
+        const monthNames = {ENE:'Enero',FEB:'Febrero',MAR:'Marzo',ABR:'Abril',MAY:'Mayo',JUN:'Junio',JUL:'Julio'};
         const bestComment = e('tport-best-month-comment');
         if (bestComment) bestComment.innerHTML = '🏆 <span style="color:var(--text-main);">' + (monthNames[bestMonth] || bestMonth) + '</span> fue el mes de mayor actividad con <span style="color:var(--text-main);font-weight:800;">' + nf(bestVal) + ' operaciones combinadas</span>';
         const prod = d.productividad || {};
@@ -1400,13 +1671,17 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             if (e('prod-libre')) e('prod-libre').textContent = prod.tiempo_libre_diario_h + 'h';
             if (e('prod-pct')) e('prod-pct').textContent = prod.pct_ocupado + '%';
             if (e('prod-libre-pct')) e('prod-libre-pct').textContent = (100 - prod.pct_ocupado).toFixed(1) + '%';
-            if (e('prod-bar-ocupado')) e('prod-bar-ocupado').style.width = prod.pct_ocupado + '%';
-            if (e('prod-bar-libre')) e('prod-bar-libre').style.width = (100 - prod.pct_ocupado) + '%';
+            const totalH = prod.total_horas || 0;
+            if (e('prod-ocu-h')) e('prod-ocu-h').textContent = nf(Math.round(totalH * 10) / 10) + 'h';
+            if (e('prod-libre-h')) e('prod-libre-h').textContent = nf(Math.round((100 - prod.pct_ocupado) / 100 * prod.jornada_h * prod.dias_habiles_periodo * 10) / 10) + 'h';
+            if (e('prod-dona-pct')) e('prod-dona-pct').textContent = prod.pct_ocupado + '%';
+            dibujarDona(e('prod-dona'), prod.pct_ocupado, '#0ea5e9', '#10b981');
             const perTienda = (prod.detalle || {})["PER.TIENDA"] || 0;
             const perHoras = perTienda * 1.25;
+            const diasProd = prod.dias_habiles_periodo || 120;
             if (e('prod-per-tienda-h')) e('prod-per-tienda-h').textContent = perHoras.toFixed(2) + 'h';
-            if (e('prod-per-tienda-diario')) e('prod-per-tienda-diario').textContent = (perHoras / 120).toFixed(2) + 'h';
-            if (e('prod-per-tienda-pct')) e('prod-per-tienda-pct').textContent = ((perHoras / 120 / 8) * 100).toFixed(1) + '%';
+            if (e('prod-per-tienda-diario')) e('prod-per-tienda-diario').textContent = (perHoras / diasProd).toFixed(2) + 'h';
+            if (e('prod-per-tienda-pct')) e('prod-per-tienda-pct').textContent = ((perHoras / diasProd / 8) * 100).toFixed(1) + '%';
             const detalle = prod.detalle || {};
             const horasPorAct = prod.horas_por_act || {};
             const detEl = e('prod-detalle');
@@ -1425,8 +1700,11 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             if (e2('prod-moto-libre')) e2('prod-moto-libre').textContent = prodMoto.tiempo_libre_diario_h + 'h';
             if (e2('prod-moto-pct')) e2('prod-moto-pct').textContent = prodMoto.pct_ocupado + '%';
             if (e2('prod-moto-libre-pct')) e2('prod-moto-libre-pct').textContent = (100 - prodMoto.pct_ocupado).toFixed(1) + '%';
-            if (e2('prod-moto-bar-ocupado')) e2('prod-moto-bar-ocupado').style.width = prodMoto.pct_ocupado + '%';
-            if (e2('prod-moto-bar-libre')) e2('prod-moto-bar-libre').style.width = (100 - prodMoto.pct_ocupado) + '%';
+            const totalHM = prodMoto.total_horas || 0;
+            if (e2('prod-moto-ocu-h')) e2('prod-moto-ocu-h').textContent = nf(Math.round(totalHM * 10) / 10) + 'h';
+            if (e2('prod-moto-libre-h')) e2('prod-moto-libre-h').textContent = nf(Math.round((100 - prodMoto.pct_ocupado) / 100 * prodMoto.jornada_h * prodMoto.dias_habiles_periodo * 10) / 10) + 'h';
+            if (e2('prod-moto-dona-pct')) e2('prod-moto-dona-pct').textContent = prodMoto.pct_ocupado + '%';
+            dibujarDona(e2('prod-moto-dona'), prodMoto.pct_ocupado, '#ec4899', '#10b981');
             const detMoto = prodMoto.detalle || {};
             const hMoto = prodMoto.horas_por_act || {};
             const detElMoto = e2('prod-moto-detalle');
@@ -1438,14 +1716,15 @@ Este tablero sintetiza las operaciones clave de la organización para el modelo 
             }
             const envD = detMoto["ENVIOS D"] || 0;
             const envDH = envD * 0.5;
+            const diasMoto = prodMoto.dias_habiles_periodo || 120;
             if (e2('prod-moto-enviosd-h')) e2('prod-moto-enviosd-h').textContent = envDH.toFixed(0) + 'h';
-            if (e2('prod-moto-enviosd-diario')) e2('prod-moto-enviosd-diario').textContent = (envDH / 120).toFixed(2) + 'h';
+            if (e2('prod-moto-enviosd-diario')) e2('prod-moto-enviosd-diario').textContent = (envDH / diasMoto).toFixed(2) + 'h';
             const penTienda = detMoto["PER.TIENDA"] || 0;
             if (e2('prod-moto-pentienda-h')) e2('prod-moto-pentienda-h').textContent = penTienda + 'h';
-            if (e2('prod-moto-pentienda-diario')) e2('prod-moto-pentienda-diario').textContent = (penTienda / 120).toFixed(2) + 'h';
-            const gasH = prodMoto.gasolina_total_h || 120;
+            if (e2('prod-moto-pentienda-diario')) e2('prod-moto-pentienda-diario').textContent = (penTienda / diasMoto).toFixed(2) + 'h';
+            const gasH = prodMoto.gasolina_total_h || 140;
             if (e2('prod-moto-gasolina-h')) e2('prod-moto-gasolina-h').textContent = gasH + 'h';
-            if (e2('prod-moto-gasolina-diario')) e2('prod-moto-gasolina-diario').textContent = (gasH / 120).toFixed(0) + 'h';
+            if (e2('prod-moto-gasolina-diario')) e2('prod-moto-gasolina-diario').textContent = (gasH / diasMoto).toFixed(0) + 'h';
         }
         const acts = d.actividades || [];
         const leyenda = e('transporte-leyenda');

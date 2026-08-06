@@ -1,25 +1,25 @@
 {
-  "total_ventas": 2422546,
-  "total_netas": 1933160,
-  "total_netas_2025": 1900651,
-  "total_pedidos": 13618,
-  "variacion_pct": 1.7,
-  "mensual": { "ENE": 184742, "FEB": 367956, "MAR": 402573, "ABR": 330939, "MAY": 331356, "JUN": 315594 },
-  "mensual_2025": { "ENE": 268784, "FEB": 301945, "MAR": 304694, "ABR": 323664, "MAY": 332556, "JUN": 369008 },
+  "total_ventas": 2911874,
+  "total_netas": 2376069,
+  "total_netas_2025": 1898126,
+  "total_pedidos": 17401,
+  "variacion_pct": 25.2,
+  "mensual": { "ENE": 184742, "FEB": 367956, "MAR": 402573, "ABR": 330939, "MAY": 331356, "JUN": 329617, "JUL": 428886 },
+  "mensual_2025": { "ENE": 222801, "FEB": 296672, "MAR": 249022, "ABR": 304999, "MAY": 310769, "JUN": 246355, "JUL": 267508 },
   "top_asesor": {
     "nombre": "Igor Rivas",
-    "ventas": 543404,
-    "ventas_netas": 429736,
-    "pedidos": 2811,
-    "tasa_conversion": 62.5,
-    "tasa_conversion_mensual": { "ENE": 60.5, "FEB": 61.3, "MAR": 61.4, "ABR": 63.0, "MAY": 64.6, "JUN": 64.2 },
-    "factura_promedio": 175.47,
-    "factura_promedio_mensual": { "ENE": 163.36, "FEB": 205.47, "MAR": 188.86, "ABR": 155.42, "MAY": 144.19, "JUN": 195.54 }
+    "ventas": 677835,
+    "ventas_netas": 536046,
+    "pedidos": 3397,
+    "tasa_conversion": 63,
+    "tasa_conversion_mensual": { "ENE": 60.5, "FEB": 61.3, "MAR": 61.4, "ABR": 63.0, "MAY": 64.6, "JUN": 64.6, "JUL": 68.9 },
+    "factura_promedio": 178.05,
+    "factura_promedio_mensual": { "ENE": 163.36, "FEB": 205.47, "MAR": 188.86, "ABR": 155.42, "MAY": 144.19, "JUN": 195.56, "JUL": 193.49 }
   },
   "top_asesores": [
-    { "nombre": "Igor Rivas", "ventas": 543404, "ventas_netas": 429736, "pedidos": 2811, "tasa_conversion": 62.5, "factura_promedio": 175.47 },
-    { "nombre": "Alejandro Betancourt", "ventas": 348916, "ventas_netas": 273952, "pedidos": 1814, "tasa_conversion": 73.6, "factura_promedio": 165.91 },
-    { "nombre": "Jose Javyer Sanabria", "ventas": 266889, "ventas_netas": 209041, "pedidos": 1386, "tasa_conversion": 72.8, "factura_promedio": 136.36 }
+    { "nombre": "Igor Rivas", "ventas": 677835, "ventas_netas": 536046, "pedidos": 3397, "tasa_conversion": 63, "factura_promedio": 178.05 },
+    { "nombre": "Alejandro Betancourt", "ventas": 501768, "ventas_netas": 393967, "pedidos": 2516, "tasa_conversion": 75, "factura_promedio": 166.24 },
+    { "nombre": "Jose Javyer Sanabria", "ventas": 388458, "ventas_netas": 304259, "pedidos": 1983, "tasa_conversion": 73, "factura_promedio": 144.28 }
   ],
-  "periodo": "ENE-JUN 2026"
+  "periodo": "ENE-JUL 2026"
 }

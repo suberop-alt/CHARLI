@@ -1,18 +1,18 @@
 {
-  "periodo": "ENE-JUN 2026",
-  "actualizado": "2026-07-07T10:00:00",
-  "total": 1471,
-  "operaciones": 427,
+  "periodo": "ENE-JUL 2026",
+  "actualizado": "2026-08-04T10:00:00",
+  "total": 1792,
+  "operaciones": 519,
   "mejor_comprador": { "nombre": "Jonathan Suniaga", "operaciones": 205, "odoo_junio": 55 },
   "odoo": {
-    "maria_molina": { "nombre": "M. Molina", "total_ord": 56, "rol": "Coordinadora" },
-    "jonathan_suniaga": { "nombre": "J. Suniaga", "total_ord": 365 }
+    "maria_molina": { "nombre": "M. Molina", "total_ord": 66, "rol": "Coordinadora" },
+    "jonathan_suniaga": { "nombre": "J. Suniaga", "total_ord": 449 }
   },
   "proveedores": [
-    { "nombre": "SEINTEC", "monto": 475, "color": "#2563eb" },
-    { "nombre": "Haovision", "monto": 314, "color": "#0891b2" },
-    { "nombre": "Venepac", "monto": 180, "color": "#0d9488" },
-    { "nombre": "Grupo Plus", "monto": 145, "color": "#8b5cf6" },
-    { "nombre": "Nexusm2", "monto": 88, "color": "#f59e0b" }
+    { "nombre": "SEINTEC", "monto": 483, "color": "#2563eb" },
+    { "nombre": "Haovision", "monto": 411, "color": "#0891b2" },
+    { "nombre": "Venepac", "monto": 225, "color": "#0d9488" },
+    { "nombre": "Nexusm2", "monto": 203, "color": "#8b5cf6" },
+    { "nombre": "Grupo Plus", "monto": 156, "color": "#f59e0b" }
   ]
 }
