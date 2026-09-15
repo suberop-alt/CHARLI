@@ -1535,23 +1535,28 @@
             const medallas = {};
             if (ranked[0]) medallas[ranked[0].m] = '🥇';
             if (ranked[1]) medallas[ranked[1].m] = '🥈';
+            const rankedVar = meses.map(m => {
+                const a = d.mensual[m] || 0, p = d.mensual_2025[m] || 0;
+                return { m, v: p > 0 ? Math.round((a - p) / p * 1000) / 10 : 0 };
+            }).sort((x, y) => y.v - x.v);
+            const mejores = new Set(rankedVar.slice(0, Math.max(1, Math.floor(rankedVar.length * 0.4))).map(x => x.m));
+            const peorM = rankedVar.length ? rankedVar[rankedVar.length - 1].m : null;
             meses.forEach(m => {
                 const actual = d.mensual[m] || 0;
                 const prev = d.mensual_2025[m] || 0;
                 const variacion = prev > 0 ? Math.round((actual - prev) / prev * 1000) / 10 : 0;
                 const arrow = variacion > 0 ? '▲' : '▼';
-                const color = variacion > 0 ? 'var(--success)' : 'var(--accent-rose)';
+                const tierColor = m === peorM && variacion < 0 ? '#dc2626' : mejores.has(m) ? '#10b981' : '#f59e0b';
                 const isTop = topMeses.indexOf(m) !== -1;
                 const wrapEl = e('v-val-' + m) ? e('v-val-' + m).closest('.ventas-speedo-wrap') : null;
                 if (wrapEl) wrapEl.classList.toggle('top-month', isTop);
                 if (e('v-medal-' + m)) e('v-medal-' + m).textContent = medallas[m] || '';
                 if (e('v-val-' + m)) e('v-val-' + m).textContent = '$' + Math.round(actual / 1000) + 'K';
                 if (e('v-tip-' + m)) e('v-tip-' + m).textContent = prev > 0 ? '$' + nf(actual) + ' vs 2025: $' + nf(prev) : '$' + nf(actual);
-                if (e('v-var-' + m)) { e('v-var-' + m).textContent = arrow + ' ' + (variacion >= 0 ? '+' : '') + variacion + '%'; e('v-var-' + m).style.color = color; }
+                if (e('v-var-' + m)) { e('v-var-' + m).textContent = arrow + ' ' + (variacion >= 0 ? '+' : '') + variacion + '%'; e('v-var-' + m).style.color = tierColor; }
                 const clipX = Math.max(5, Math.min(95, 50 + variacion * 0.7));
                 const angle = Math.max(-80, Math.min(80, variacion * 1.2));
-                const fillColor = isTop ? '#f59e0b' : (variacion > 1 ? '#10b981' : variacion < -1 ? '#dc2626' : '#64748b');
-                if (e('v-fill-' + m)) { e('v-fill-' + m).style.clipPath = 'polygon(0 100%,50% 100%,' + clipX + '% 0,0 0)'; e('v-fill-' + m).style.background = fillColor; }
+                if (e('v-fill-' + m)) { e('v-fill-' + m).style.clipPath = 'polygon(0 100%,50% 100%,' + clipX + '% 0,0 0)'; e('v-fill-' + m).style.background = tierColor; }
                 if (e('v-needle-' + m)) { e('v-needle-' + m).style.transform = 'translateX(-50%) rotate(' + angle + 'deg)'; e('v-needle-' + m).style.background = isTop ? '#b45309' : '#475569'; }
             });
             const analisis = meses.map(m => {
