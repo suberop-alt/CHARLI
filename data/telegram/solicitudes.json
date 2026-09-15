@@ -1,0 +1,66 @@
+﻿{
+  "mes": "AGOSTO",
+  "periodo": "2026-08-01 a 2026-08-31",
+  "fuente": "https://pagos.tutecnotienda.site/#/solicitudes",
+  "total_solicitudes": 245,
+  "procesadas_compras": 244,
+  "no_concretadas_ventas": 84,
+  "efectividad_compras": 90.6,
+  "efectividad_metodologia": "Solicitudes con respuesta del proveedor (Completada + No Concretado + Agotado) / Total",
+  "canceladas": 19,
+  "mensajes_contestados": 418,
+  "usuarios_activos": 5,
+  "supervisor": {
+    "nombre": "Armando Muñoz",
+    "rol": "Supervisor de Tienda y Ventas",
+    "solicitudes": 21
+  },
+  "desglose_estados": {
+    "Completada": 30,
+    "Agotado": 108,
+    "No Concretado": 84,
+    "Cancelada": 19,
+    "En Proceso": 3,
+    "Pendiente": 1
+  },
+"top_asesores": [
+    {
+      "nombre": "Luis Daboin",
+      "email": "l.daboin@onprotec.com",
+      "solicitudes": 68
+    },
+    {
+      "nombre": "Jos\u00e9 Sanabria",
+      "email": "j.sanabria@onprotec.com",
+      "solicitudes": 68
+    },
+    {
+      "nombre": "Igor Rivas",
+      "email": "i.rivas@onprotec.com",
+      "solicitudes": 36
+    }
+  ],
+  "top_asesores_historico": [
+    {
+      "nombre": "Jos\u00e9 Sanabria",
+      "email": "j.sanabria@onprotec.com",
+      "solicitudes": 1230
+    },
+    {
+      "nombre": "Luis Daboin",
+      "email": "l.daboin@onprotec.com",
+      "solicitudes": 627
+    },
+    {
+      "nombre": "Alejandro Betancourt",
+      "email": "a.betancourt@onprotec.com",
+      "solicitudes": 553
+    }
+  ],
+  "analista_destacado": {
+    "nombre": "Jonathan Suniaga",
+    "email": "jo.suniaga@onprotec.com",
+    "solicitudes_respondidas": 143,
+    "mensajes": 291
+  }
+}

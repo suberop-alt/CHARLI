@@ -1,23 +1,27 @@
 {
-  "operaciones": 72203,
-  "mensual": { "ENE": 7988, "FEB": 10164, "MAR": 12499, "ABR": 10363, "MAY": 11510, "JUN": 8733, "JUL": 10946 },
-  "actividades": { "BDP": 24712, "DESP": 17159, "ACT_DIV": 11857, "ODA": 6485, "P_ENVIOS": 7723, "RECP": 4272 },
-  "top_auxiliar": { "nombre": "Luis Gavidia", "operaciones": 16384 },
+  "operaciones": 83343,
+  "mensual": { "ENE": 7988, "FEB": 10164, "MAR": 12499, "ABR": 10363, "MAY": 11510, "JUN": 8733, "JUL": 10946, "AGO": 11140 },
+  "actividades": { "BDP": 28526, "DESP": 19984, "ACT_DIV": 13042, "ODA": 7767, "P_ENVIOS": 8784, "RECP": 5245 },
+  "top_auxiliar": { "nombre": "Luis Gavidia", "operaciones": 19109 },
   "almacenistas": [
-    { "nombre": "Luis Gavidia", "total": 16384, "mensual": { "ENE": 1707, "FEB": 2278, "MAR": 2693, "ABR": 2256, "MAY": 2756, "JUN": 2020, "JUL": 2674 } },
-    { "nombre": "Mauricio Sevilla", "total": 16075, "mensual": { "ENE": 1933, "FEB": 2228, "MAR": 2693, "ABR": 2279, "MAY": 2506, "JUN": 1979, "JUL": 2457 } },
-    { "nombre": "Eduardo Bonilla", "total": 13777, "mensual": { "ENE": 1974, "FEB": 2065, "MAR": 2366, "ABR": 1871, "MAY": 1813, "JUN": 1674, "JUL": 2014 } },
-    { "nombre": "Nestor Rodriguez", "total": 12871, "mensual": { "ENE": 1574, "FEB": 1648, "MAR": 2341, "ABR": 1866, "MAY": 2121, "JUN": 1441, "JUL": 1880 } },
-    { "nombre": "Luis Miguel", "total": 11585, "mensual": { "ENE": 548, "FEB": 1693, "MAR": 2148, "ABR": 1839, "MAY": 2068, "JUN": 1368, "JUL": 1921 } }
+    { "nombre": "Luis Gavidia", "total": 19109, "mensual": { "ENE": 1707, "FEB": 2278, "MAR": 2693, "ABR": 2256, "MAY": 2756, "JUN": 2020, "JUL": 2674, "AGO": 2725 } },
+    { "nombre": "Mauricio Sevilla", "total": 18444, "mensual": { "ENE": 1933, "FEB": 2228, "MAR": 2693, "ABR": 2279, "MAY": 2506, "JUN": 1979, "JUL": 2457, "AGO": 2369 } },
+    { "nombre": "Eduardo Bonilla", "total": 16105, "mensual": { "ENE": 1974, "FEB": 2065, "MAR": 2366, "ABR": 1871, "MAY": 1813, "JUN": 1674, "JUL": 2014, "AGO": 2328 } },
+    { "nombre": "Nestor Rodriguez", "total": 14599, "mensual": { "ENE": 1574, "FEB": 1648, "MAR": 2341, "ABR": 1866, "MAY": 2121, "JUN": 1441, "JUL": 1880, "AGO": 1728 } },
+    { "nombre": "Luis Miguel", "total": 13577, "mensual": { "ENE": 548, "FEB": 1693, "MAR": 2148, "ABR": 1839, "MAY": 2068, "JUN": 1368, "JUL": 1921, "AGO": 1992 } }
   ],
   "inventarios_ciclicos": {
-    "cantidad": 4192,
-    "porcentaje": 75.3,
-    "sku_diferencias": 74,
-    "efectividad": 98.2,
+    "cantidad": 7911,
+    "porcentaje": 98.5,
+    "sku_diferencias": 117,
+    "efectividad": 98.5,
     "sku_activos_odoo": 5565,
-    "marcas": ["Hikvision","HiLook","EZVIZ","Dahua","Nexxt","Forza","TP-Link","Mercusys","Wireplus","Onlink","Exceline","Mikrotik","STC","Owire","Power-Fiber","Ruijie/Reyee","Igoto","Beconnect","Ubiquiti","Maxiprint/Epson","Xtech","CDP","Marsriva","Astra","APC","Fantech","Kingston","Western Digital","Seagate","Crucial","Adata","Lucerna","Panduit","Wiretech","Blink","Linksys","Littman","Aksi","Logitech","Primus","Senhaix","Metalnet","Tenda","Logan","DuraLED","Ledplus"],
-    "mensual": { "ENE": 399, "FEB": 191, "MAR": 464, "ABR": 566, "MAY": 391, "JUN": 948, "JUL": 1233 }
+    "marcas": ["Hikvision","DAHUA","EXCELINE","UBIQUITI","WIREPLUS","IGOTO","TP-LINK","MAXIPRINT/ EPSON","FANTECH","BECONNECT","LUCERNA","ONLINK","NEXXT","ASTRA","FORZA","STC","EZVIZ","Ruijie/Reyee","MIKROTIK","LOGITECH","XTECH","HI-LOOK","WIRETECH","GENERICOS","PANDUIT","Kingston","MERCUSYS","Marsriva","APC","Primus","DURALED","CRUCIAL","OWIRE","Seagate","CDP","LEDPLUS","Linksys","AKSI","WESTERN DIGITAL","Littman","Senhaix","Tenda","ADATA","Blink","POWER-FIBER","LOGAN","Metalnet"],
+    "mensual": { "ENE": 707, "FEB": 440, "MAR": 889, "ABR": 937, "MAY": 956, "JUN": 1470, "JUL": 1287, "AGO": 1225 }
   },
-  "sku_activos": 5565
+  "sku_activos": 5565,
+  "almacenista_promedio": {
+    "mensual": { "ENE": 3.684, "FEB": 4.72, "MAR": 5.831, "ABR": 4.815, "MAY": 5.36, "JUN": 4.039, "JUL": 5.22, "AGO": 5.305 },
+    "pico": "MAR 5.831"
+  }
 }
