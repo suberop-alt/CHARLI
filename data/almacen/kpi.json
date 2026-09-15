@@ -1,7 +1,7 @@
 {
   "operaciones": 83343,
   "mensual": { "ENE": 7988, "FEB": 10164, "MAR": 12499, "ABR": 10363, "MAY": 11510, "JUN": 8733, "JUL": 10946, "AGO": 11140 },
-  "actividades": { "BDP": 28526, "DESP": 19984, "ACT_DIV": 13042, "ODA": 7767, "P_ENVIOS": 8784, "RECP": 5245 },
+  "actividades": { "BDP": 28526, "DESP": 19984, "ACT_DIV": 13042, "ODA": 7767, "P_ENVIOS": 8869, "RECP": 5245 },
   "top_auxiliar": { "nombre": "Luis Gavidia", "operaciones": 19109 },
   "almacenistas": [
     { "nombre": "Luis Gavidia", "total": 19109, "mensual": { "ENE": 1707, "FEB": 2278, "MAR": 2693, "ABR": 2256, "MAY": 2756, "JUN": 2020, "JUL": 2674, "AGO": 2725 } },
