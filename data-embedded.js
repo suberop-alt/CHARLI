@@ -28,216 +28,226 @@ window.EMBEDDED_DATA = {
   ]
 },
   ventas: {
-  "total_ventas": 3973260,
-  "total_netas": 3355395,
-  "total_netas_2025": 2541489,
-  "total_pedidos": 26518,
-  "variacion_pct": 32.0,
+  "total_ventas": 4536105.35,
+  "total_netas": 3880148.93,
+  "total_netas_2025": 2876809.3,
+  "total_pedidos": 29623,
+  "variacion_pct": 34.9,
   "mensual": {
-    "ENE": 184742,
-    "FEB": 367956,
-    "MAR": 402573,
-    "ABR": 330939,
-    "MAY": 331356,
-    "JUN": 329617,
-    "JUL": 428886,
-    "AGO": 476292,
-    "SEP": 503034
+    "ENE": 184741.59,
+    "FEB": 367956.17,
+    "MAR": 402572.7,
+    "ABR": 330939.24,
+    "MAY": 331355.76,
+    "JUN": 329616.76,
+    "JUL": 428886.43,
+    "AGO": 476291.6,
+    "SEP": 503034.19,
+    "OCT": 524754.48
   },
   "mensual_2025": {
-    "ENE": 222801,
-    "FEB": 296672,
-    "MAR": 249022,
-    "ABR": 304999,
-    "MAY": 310769,
-    "JUN": 246355,
-    "JUL": 267508,
-    "AGO": 310835,
-    "SEP": 332528
+    "ENE": 222801.22,
+    "FEB": 296672.29,
+    "MAR": 249022.24,
+    "ABR": 304999.46,
+    "MAY": 310768.68,
+    "JUN": 246354.99,
+    "JUL": 267508.26,
+    "AGO": 310834.69,
+    "SEP": 332528.04,
+    "OCT": 335319.43
   },
   "top_asesor": {
-    "nombre": "Alejandro Betancourt",
-    "ventas": 142749,
-    "ventas_netas": 133362,
-    "pedidos": 810,
-    "tasa_conversion": 77.0,
+    "nombre": "Igor Rivas",
+    "ventas": 157325,
+    "ventas_netas": 148150,
+    "pedidos": 631,
+    "tasa_conversion": 70.4,
     "tasa_conversion_mensual": {
-      "ENE": 68.1,
-      "FEB": 71.6,
-      "MAR": 75.7,
-      "ABR": 75.8,
-      "MAY": 74.2,
-      "JUN": 76.9,
-      "JUL": 79.3,
-      "AGO": 80.6,
-      "SEP": 77.0
+      "ENE": 60.5,
+      "FEB": 61.3,
+      "MAR": 61.4,
+      "ABR": 63.0,
+      "MAY": 64.6,
+      "JUN": 64.6,
+      "JUL": 68.9,
+      "AGO": 67.7,
+      "SEP": 71.0,
+      "OCT": 70.4
     },
-    "factura_promedio": 189.13,
+    "factura_promedio": 234.95,
     "factura_promedio_mensual": {
-      "ENE": 117.92,
-      "FEB": 184.75,
-      "MAR": 210.28,
-      "ABR": 150.3,
-      "MAY": 170.89,
-      "JUN": 157.05,
-      "JUL": 172.52,
-      "AGO": 164.85,
-      "SEP": 189.13
+      "ENE": 163.36,
+      "FEB": 205.47,
+      "MAR": 188.86,
+      "ABR": 155.42,
+      "MAY": 144.19,
+      "JUN": 195.56,
+      "JUL": 193.49,
+      "AGO": 203.19,
+      "SEP": 174.9,
+      "OCT": 234.95
     }
   },
   "top_asesores": [
     {
-      "nombre": "Alejandro Betancourt",
-      "ventas": 142749,
-      "ventas_netas": 133362,
-      "pedidos": 810,
-      "tasa_conversion": 77.0,
-      "factura_promedio": 189.13
-    },
-    {
       "nombre": "Igor Rivas",
-      "ventas": 126143,
-      "ventas_netas": 117297,
-      "pedidos": 733,
-      "tasa_conversion": 71.0,
-      "factura_promedio": 174.9
+      "ventas": 157325,
+      "ventas_netas": 148150,
+      "pedidos": 631,
+      "tasa_conversion": 70.4,
+      "factura_promedio": 234.95
     },
     {
-      "nombre": "Jose Javyer Sanabria",
-      "ventas": 100365,
-      "ventas_netas": 94593,
-      "pedidos": 585,
-      "tasa_conversion": 75.4,
-      "factura_promedio": 170.01
+      "nombre": "Yadhira Colmenares",
+      "ventas": 122626,
+      "ventas_netas": 116701,
+      "pedidos": 757,
+      "tasa_conversion": 77.9,
+      "factura_promedio": 154.13
+    },
+    {
+      "nombre": "Alejandro Betancourt",
+      "ventas": 121521,
+      "ventas_netas": 114149,
+      "pedidos": 688,
+      "tasa_conversion": 76.1,
+      "factura_promedio": 165.96
     }
   ],
   "top_asesor_periodo": {
     "nombre": "Alejandro Betancourt",
-    "ventas": 1031832,
-    "ventas_netas": 887476,
-    "pedidos": 6136,
-    "promedio_mensual": 98608,
+    "ventas": 1088607,
+    "ventas_netas": 1001625,
+    "pedidos": 5876,
+    "promedio_mensual": 100162,
     "tasa_conversion": 75.5,
-    "factura_promedio": 168.63
+    "factura_promedio": 168.36
   },
   "top_asesores_periodo": [
     {
       "nombre": "Alejandro Betancourt",
-      "ventas": 1031832,
-      "ventas_netas": 887476,
-      "pedidos": 6136,
+      "ventas": 1088607,
+      "ventas_netas": 1001625,
+      "pedidos": 5876,
       "tasa_conversion": 75.5,
-      "factura_promedio": 168.63
+      "factura_promedio": 168.36
     },
     {
       "nombre": "Igor Rivas",
-      "ventas": 957339,
-      "ventas_netas": 823180,
-      "pedidos": 5329,
-      "tasa_conversion": 64.8,
-      "factura_promedio": 180.49
+      "ventas": 1054600,
+      "ventas_netas": 971330,
+      "pedidos": 5210,
+      "tasa_conversion": 65.3,
+      "factura_promedio": 185.94
     },
     {
       "nombre": "Yadhira Colmenares",
-      "ventas": 755685,
-      "ventas_netas": 657821,
-      "pedidos": 5808,
-      "tasa_conversion": 75.0,
-      "factura_promedio": 129.73
+      "ventas": 829414,
+      "ventas_netas": 774522,
+      "pedidos": 5760,
+      "tasa_conversion": 75.3,
+      "factura_promedio": 132.17
     }
   ],
   "divisa_vendedores": {
     "mensual": {
-      "ENE": 184742,
-      "FEB": 367956,
-      "MAR": 402573,
-      "ABR": 330939,
-      "MAY": 331356,
-      "JUN": 329617,
-      "JUL": 428886,
-      "AGO": 476292,
-      "SEP": 503034
+      "ENE": 225035.34,
+      "FEB": 400123.5,
+      "MAR": 461173.87,
+      "ABR": 362605.56,
+      "MAY": 367880.33,
+      "JUN": 363382.62,
+      "JUL": 441951.64,
+      "AGO": 503253.55,
+      "SEP": 530860.36,
+      "OCT": 556497.91
     },
     "vendedores": [
       {
         "nombre": "Alejandro Betancourt",
-        "total": 887476,
+        "total": 1088606.79,
         "mensual": {
-          "ENE": 41350,
-          "FEB": 89156,
-          "MAR": 116116,
-          "ABR": 94009,
-          "MAY": 99397,
-          "JUN": 77753,
-          "JUL": 117079,
-          "AGO": 119254,
-          "SEP": 133362
+          "ENE": 52251.08,
+          "FEB": 98162.13,
+          "MAR": 134919.26,
+          "ABR": 102672.52,
+          "MAY": 109365.34,
+          "JUN": 85695.21,
+          "JUL": 119344.18,
+          "AGO": 125296.67,
+          "SEP": 139379.65,
+          "OCT": 121520.75
         }
       },
       {
         "nombre": "Igor Rivas",
-        "total": 823180,
+        "total": 1054600.2,
         "mensual": {
-          "ENE": 63083,
-          "FEB": 109322,
-          "MAR": 90047,
-          "ABR": 76100,
-          "MAY": 78089,
-          "JUN": 86106,
-          "JUL": 96630,
-          "AGO": 106506,
-          "SEP": 117297
-        }
-      },
-      {
-        "nombre": "Yadhira Colmenares",
-        "total": 657821,
-        "mensual": {
-          "ENE": 29850,
-          "FEB": 71352,
-          "MAR": 91779,
-          "ABR": 65129,
-          "MAY": 62060,
-          "JUN": 61254,
-          "JUL": 77019,
-          "AGO": 106607,
-          "SEP": 92771
+          "ENE": 76954.06,
+          "FEB": 118526.09,
+          "MAR": 101854.91,
+          "ABR": 81142.91,
+          "MAY": 84189.97,
+          "JUN": 93140.74,
+          "JUL": 100264.78,
+          "AGO": 113743.32,
+          "SEP": 127458.46,
+          "OCT": 157324.96
         }
       },
       {
         "nombre": "Jose Javyer Sanabria",
-        "total": 605367,
+        "total": 742158.38,
         "mensual": {
-          "ENE": 32247,
-          "FEB": 59491,
-          "MAR": 61236,
-          "ABR": 54233,
-          "MAY": 60668,
-          "JUN": 66232,
-          "JUL": 87182,
-          "AGO": 89485,
-          "SEP": 94593
+          "ENE": 36803.47,
+          "FEB": 62267.72,
+          "MAR": 72799.49,
+          "ABR": 60780.59,
+          "MAY": 70080.77,
+          "JUN": 72425.47,
+          "JUL": 90401.92,
+          "AGO": 93728.22,
+          "SEP": 99327.76,
+          "OCT": 83542.97
         }
       },
       {
         "nombre": "Luis Daboin",
-        "total": 381551,
+        "total": 497985.42,
         "mensual": {
-          "ENE": 18212,
-          "FEB": 38635,
-          "MAR": 43395,
-          "ABR": 41468,
-          "MAY": 31142,
-          "JUN": 38272,
-          "JUL": 50976,
-          "AGO": 54440,
-          "SEP": 65011
+          "ENE": 24246.49,
+          "FEB": 42947.62,
+          "MAR": 50648.84,
+          "ABR": 46953.57,
+          "MAY": 35895.14,
+          "JUN": 44496.91,
+          "JUL": 53082.1,
+          "AGO": 58124.64,
+          "SEP": 70106.44,
+          "OCT": 71483.67
+        }
+      },
+      {
+        "nombre": "Yadhira Colmenares",
+        "total": 829413.89,
+        "mensual": {
+          "ENE": 34780.24,
+          "FEB": 78219.94,
+          "MAR": 100951.37,
+          "ABR": 71055.97,
+          "MAY": 68349.11,
+          "JUN": 67624.29,
+          "JUL": 78858.66,
+          "AGO": 112360.7,
+          "SEP": 94588.05,
+          "OCT": 122625.56
         }
       }
     ],
-    "nota": "Montos vendidos (neto ajustado por DIC), distribuidos sobre el consolidado empresa: Factura Bs / (1+DIC) + Nota es Divisa $"
+    "nota": "Venta total facturada por asesor: Factura fiscal + Nota es Divisa"
   },
-  "periodo": "ENE-SEP 2026"
+  "periodo": "ENE-OCT 2026"
 },
   telegram: {
   "total_mensajes": 5654,
