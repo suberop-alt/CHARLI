@@ -253,8 +253,8 @@
                 <div class="hover-zoom" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:20px 18px; position:relative; overflow:hidden; border-top:4px solid #0891b2;">
                     <div style="position:absolute; top:14px; right:14px; font-size:22px;">💰</div>
                     <div style="font-size:10px; font-weight:800; color:#64748b; letter-spacing:1px; text-transform:uppercase;">Compras de Inversión</div>
-                    <div style="font-size:32px; font-weight:900; color:var(--text-main); margin:8px 0 2px;" id="resumen-compras-total">$2,443K</div>
-                    <div style="font-size:11px; color:var(--text-sub); font-weight:600;">712 órdenes de compra</div>
+                    <div style="font-size:32px; font-weight:900; color:var(--text-main); margin:8px 0 2px;" id="resumen-compras-total">$2,973K</div>
+                    <div style="font-size:11px; color:var(--text-sub); font-weight:600;"><span id="resumen-compras-ops">818</span> órdenes de compra</div>
                     <div style="margin-top:10px; display:flex; align-items:center; gap:6px; background:#e0f2fe; color:#0369a1; border-radius:6px; padding:4px 10px; width:fit-content; font-size:11px; font-weight:700;">▲ Ene-Oct 2026</div>
                 </div>
                 <div class="hover-zoom" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:14px; padding:20px 18px; position:relative; overflow:hidden; border-top:4px solid #10b981;">
@@ -1574,7 +1574,9 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
             const v = '$' + nf(d.total) + 'K';
             ['compras-inv-total', 'resumen-compras-total'].forEach(id => { if (e(id)) e(id).textContent = v; });
         }
-        if (d.operaciones != null && e('compras-ops-total')) e('compras-ops-total').textContent = nf(d.operaciones);
+        if (d.operaciones != null) {
+            ['compras-ops-total', 'resumen-compras-ops'].forEach(id => { if (e(id)) e(id).textContent = nf(d.operaciones); });
+        }
         const provs = d.proveedores || [];
         const maxM = Math.max(...provs.map(p => p.monto), 1);
         provs.slice(0, 5).forEach((p, i) => {
