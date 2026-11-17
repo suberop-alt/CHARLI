@@ -2,16 +2,16 @@
 // Ejecutar: powershell -ExecutionPolicy Bypass .\build.ps1
 window.EMBEDDED_DATA = {
   resumen: {
-  "comprasInversion": 2443474,
+  "comprasInversion": 2972550,
   "indiceExactitud": 98.6,
   "enviosRegistrados": 10186,
   "ventasNetas": null
 },
   compras: {
-  "periodo": "ENE-SEP 2026",
-  "actualizado": "2026-10-14T09:00:00",
-  "total": 2443,
-  "operaciones": 712,
+  "periodo": "ENE-OCT 2026",
+  "actualizado": "2026-11-17T12:31:00",
+  "total": 2973,
+  "operaciones": 818,
   "mejor_comprador": { "nombre": "Jonathan Suniaga", "operaciones": 610, "odoo_junio": 55 },
   "odoo": {
     "periodo": "ENE-SEP 2026",
@@ -20,11 +20,11 @@ window.EMBEDDED_DATA = {
     "samuel_sanchez": { "nombre": "S. Sanchez", "total_ord": 11, "total_lineas": 81, "rol": "Nuevo (desde 22/sep)" }
   },
   "proveedores": [
-    { "nombre": "SEINTEC", "monto": 608, "color": "#2563eb" },
-    { "nombre": "Nexusm2", "monto": 479, "color": "#8b5cf6" },
-    { "nombre": "Haovision", "monto": 429, "color": "#0891b2" },
-    { "nombre": "Venepac", "monto": 287, "color": "#0d9488" },
-    { "nombre": "Grupo Plus", "monto": 168, "color": "#f59e0b" }
+    { "nombre": "SEINTEC", "monto": 677, "color": "#3b82f6" },
+    { "nombre": "Haovision", "monto": 628, "color": "#0891b2" },
+    { "nombre": "Nexusm2", "monto": 586, "color": "#8b5cf6" },
+    { "nombre": "Venepac", "monto": 315, "color": "#0d9488" },
+    { "nombre": "Grupo Plus", "monto": 169, "color": "#f59e0b" }
   ]
 },
   ventas: {
