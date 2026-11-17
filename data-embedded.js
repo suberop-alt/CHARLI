@@ -9,15 +9,15 @@ window.EMBEDDED_DATA = {
 },
   compras: {
   "periodo": "ENE-OCT 2026",
-  "actualizado": "2026-11-17T12:31:00",
+  "actualizado": "2026-11-17T12:44:32",
   "total": 2973,
   "operaciones": 818,
-  "mejor_comprador": { "nombre": "Jonathan Suniaga", "operaciones": 610, "odoo_junio": 55 },
+  "mejor_comprador": { "nombre": "Jonathan Suniaga", "operaciones": 673, "odoo_junio": 55 },
   "odoo": {
-    "periodo": "ENE-SEP 2026",
-    "jonathan_suniaga": { "nombre": "J. Suniaga", "total_ord": 610, "total_lineas": 4588, "rol": "Analista de Compras" },
-    "maria_molina": { "nombre": "M. Molina", "total_ord": 88, "total_lineas": 676, "rol": "Coordinador de Compras" },
-    "samuel_sanchez": { "nombre": "S. Sanchez", "total_ord": 11, "total_lineas": 81, "rol": "Nuevo (desde 22/sep)" }
+    "periodo": "ENE-OCT 2026",
+    "jonathan_suniaga": { "nombre": "J. Suniaga", "total_ord": 673, "total_lineas": 5016, "rol": "Analista de Compras" },
+    "maria_molina": { "nombre": "M. Molina", "total_ord": 94, "total_lineas": 697, "rol": "Coordinador de Compras" },
+    "samuel_sanchez": { "nombre": "S. Sanchez", "total_ord": 51, "total_lineas": 503, "rol": "Nuevo (desde 22/sep)" }
   },
   "proveedores": [
     { "nombre": "SEINTEC", "monto": 677, "color": "#3b82f6" },
