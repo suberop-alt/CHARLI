@@ -3,7 +3,7 @@
 window.EMBEDDED_DATA = {
   resumen: {
   "comprasInversion": 2972550,
-  "indiceExactitud": 98.6,
+  "indiceExactitud": 98.7,
   "enviosRegistrados": 10186,
   "ventasNetas": null
 },
@@ -408,10 +408,10 @@ window.EMBEDDED_DATA = {
   }
  ],
  "inventarios_ciclicos": {
-  "cantidad": 9531,
-  "porcentaje": 98.6,
-  "sku_diferencias": 133,
-  "efectividad": 98.6,
+  "cantidad": 10528,
+  "porcentaje": 98.7,
+  "sku_diferencias": 135,
+  "efectividad": 98.7,
   "sku_activos_odoo": 5565,
   "marcas": [
    "Hikvision",
