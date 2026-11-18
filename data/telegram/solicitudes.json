@@ -1,66 +1,66 @@
 {
-  "mes": "SEPTIEMBRE",
-  "periodo": "2026-09-01 a 2026-09-30",
-  "fuente": "https://pagos.tutecnotienda.site/#/dashboard-solicitudes",
-  "total_solicitudes": 254,
-  "procesadas_compras": 254,
-  "no_concretadas_ventas": 91,
-  "efectividad_compras": 94.9,
+  "mes": "OCTUBRE",
+  "periodo": "2026-10-01 a 2026-10-31",
+  "fuente": "https://pagos.tutecnotienda.site/#/solicitudes",
+  "total_solicitudes": 291,
+  "procesadas_compras": 291,
+  "no_concretadas_ventas": 109,
+  "efectividad_compras": 91.8,
   "efectividad_metodologia": "Solicitudes con respuesta del proveedor (Completada + No Concretado + Agotado) / Total",
-  "canceladas": 3,
-  "mensajes_contestados": 553,
-  "usuarios_activos": 6,
+  "canceladas": 6,
+  "mensajes_contestados": 719,
+  "usuarios_activos": 7,
   "supervisor": {
-    "nombre": "Armando MuÃ±oz",
+    "nombre": "Armando Muñoz",
     "rol": "Supervisor de Tienda y Ventas",
-    "solicitudes": 4
+    "solicitudes": 3
   },
   "desglose_estados": {
-    "Completada": 29,
-    "Agotado": 121,
-    "No Concretado": 91,
-    "Cancelada": 3,
-    "En Proceso": 10,
+    "Completada": 30,
+    "Agotado": 128,
+    "No Concretado": 109,
+    "Cancelada": 6,
+    "En Proceso": 18,
     "Pendiente": 0
   },
   "top_asesores": [
     {
+      "nombre": "José Sanabria",
+      "email": "j.sanabria@onprotec.com",
+      "solicitudes": 99
+    },
+    {
       "nombre": "Luis Daboin",
       "email": "l.daboin@onprotec.com",
-      "solicitudes": 79
+      "solicitudes": 85
     },
     {
-      "nombre": "Alejandro Betancourt",
-      "email": "a.betancourt@onprotec.com",
-      "solicitudes": 59
-    },
-    {
-      "nombre": "JosÃ© Sanabria",
-      "email": "j.sanabria@onprotec.com",
-      "solicitudes": 58
+      "nombre": "Igor Rivas",
+      "email": "i.rivas@onprotec.com",
+      "solicitudes": 43
     }
   ],
   "top_asesores_historico": [
     {
       "nombre": "José Sanabria",
       "email": "j.sanabria@onprotec.com",
-      "solicitudes": 1288
+      "solicitudes": 1387
     },
     {
       "nombre": "Luis Daboin",
       "email": "l.daboin@onprotec.com",
-      "solicitudes": 706
+      "solicitudes": 791
     },
     {
       "nombre": "Alejandro Betancourt",
       "email": "a.betancourt@onprotec.com",
-      "solicitudes": 612
+      "solicitudes": 644
     }
   ],
   "analista_destacado": {
-    "nombre": "Jonathan Suniaga",
-    "email": "jo.suniaga@onprotec.com",
-    "solicitudes_respondidas": 156,
-    "mensajes": 357
+    "nombre": "Samuel Sanchez",
+    "email": "s.sanchez@onprotec.com",
+    "solicitudes_respondidas": 129,
+    "mensajes": 395
   }
 }
