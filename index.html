@@ -1294,7 +1294,7 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
 
             <div class="flota-grid" style="display:grid; grid-template-columns:1.12fr 0.88fr; gap:16px; align-items:stretch;">
                 <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
-                <div style="position:relative; background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; overflow:hidden; box-shadow:0 3px 12px rgba(15,23,42,0.06);">
+                <div style="position:relative; background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; overflow:hidden; box-shadow:0 3px 12px rgba(15,23,42,0.06); display:flex; flex-direction:column; justify-content:center; flex:1 1 auto;">
                     <div style="position:absolute; left:0; top:0; bottom:0; width:5px; background:linear-gradient(180deg,#7c3aed,#a78bfa);"></div>
                     <div style="display:flex; align-items:center; gap:14px; padding:16px 16px 12px 18px;">
                         <div style="position:relative; flex:0 0 auto;">
@@ -1326,7 +1326,7 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
                         <div style="font-size:8.5px; color:var(--text-sub); font-weight:700; margin-top:3px;">participación sobre el total de operaciones de la flota</div>
                     </div>
                 </div>
-                <div style="position:relative; background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; overflow:hidden; box-shadow:0 3px 12px rgba(15,23,42,0.06);">
+                <div style="position:relative; background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; overflow:hidden; box-shadow:0 3px 12px rgba(15,23,42,0.06); display:flex; flex-direction:column; justify-content:center; flex:1 1 auto;">
                     <div style="position:absolute; left:0; top:0; bottom:0; width:5px; background:linear-gradient(180deg,#0ea5e9,#38bdf8);"></div>
                     <div style="display:flex; align-items:center; gap:14px; padding:16px 16px 12px 18px;">
                         <div style="position:relative; flex:0 0 auto;">
@@ -1388,7 +1388,31 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
                             </div>
                         </div>
                     </div>
-                    <div style="position:relative; display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px; margin-top:auto;">
+                    <div style="position:relative; border-top:1px solid rgba(255,255,255,0.16); padding-top:10px; display:flex; flex-direction:column; gap:9px;">
+                        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:8px;">
+                            <span style="font-size:8.5px; font-weight:900; letter-spacing:1.2px; color:#a5f3fc;">OCUPACIÓN DE JORNADA</span>
+                            <span style="font-size:8px; font-weight:800; color:#cffafe;">jornada 8h</span>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:7px;">
+                            <span style="font-size:9px; font-weight:800; color:#e0f2fe; width:74px; flex:0 0 auto;">🚐 Camioneta</span>
+                            <div style="flex:1; height:6px; background:rgba(255,255,255,0.14); border-radius:99px; overflow:hidden;">
+                                <div id="transporte-ocu-rene-bar" style="height:100%; width:89.4%; border-radius:99px; background:linear-gradient(90deg,#c4b5fd,#ffffff); transition:width .6s ease;"></div>
+                            </div>
+                            <span id="transporte-ocu-rene-val" style="font-size:9px; font-weight:900; width:34px; text-align:right; flex:0 0 auto;">89.4%</span>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:7px;">
+                            <span style="font-size:9px; font-weight:800; color:#e0f2fe; width:74px; flex:0 0 auto;">🛵 Moto</span>
+                            <div style="flex:1; height:6px; background:rgba(255,255,255,0.14); border-radius:99px; overflow:hidden;">
+                                <div id="transporte-ocu-juan-bar" style="height:100%; width:56.3%; border-radius:99px; background:linear-gradient(90deg,#7dd3fc,#ffffff); transition:width .6s ease;"></div>
+                            </div>
+                            <span id="transporte-ocu-juan-val" style="font-size:9px; font-weight:900; width:34px; text-align:right; flex:0 0 auto;">56.3%</span>
+                        </div>
+                        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.16); border-radius:9px; padding:6px 9px;">
+                            <span style="font-size:8px; font-weight:900; letter-spacing:0.8px; color:#a5f3fc; flex:0 0 auto;">ACTIVIDAD LÍDER</span>
+                            <span id="transporte-act-lider" style="font-size:9px; font-weight:800; color:#ffffff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">ENVIOS COURIER · 427 ops (23.6%)</span>
+                        </div>
+                    </div>
+                    <div style="position:relative; display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px;">
                     <div style="background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.16); border-radius:10px; padding:7px 6px; text-align:center; min-width:0;">
                         <div id="transporte-total-ops" style="font-size:14px; font-weight:900; line-height:1.1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">1,816</div>
                         <div style="font-size:7.5px; font-weight:900; color:#a5f3fc; letter-spacing:0.4px; margin-top:3px;">OPS TOTALES</div>
@@ -2216,6 +2240,8 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
             if (e('prod-libre-h')) e('prod-libre-h').textContent = nf(Math.round((100 - prod.pct_ocupado) / 100 * prod.jornada_h * prod.dias_habiles_periodo * 10) / 10) + 'h';
             if (e('prod-dona-pct')) e('prod-dona-pct').textContent = prod.pct_ocupado + '%';
             dibujarDona(e('prod-dona'), prod.pct_ocupado, '#0ea5e9', '#10b981');
+            if (e('transporte-ocu-rene-bar')) e('transporte-ocu-rene-bar').style.width = prod.pct_ocupado + '%';
+            setTxt('transporte-ocu-rene-val', prod.pct_ocupado + '%');
             const perTienda = (prod.detalle || {})["PER.TIENDA"] || 0;
             const perHoras = perTienda * 1.25;
             const diasProd = prod.dias_habiles_periodo || 120;
@@ -2245,6 +2271,8 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
             if (e2('prod-moto-libre-h')) e2('prod-moto-libre-h').textContent = nf(Math.round((100 - prodMoto.pct_ocupado) / 100 * prodMoto.jornada_h * prodMoto.dias_habiles_periodo * 10) / 10) + 'h';
             if (e2('prod-moto-dona-pct')) e2('prod-moto-dona-pct').textContent = prodMoto.pct_ocupado + '%';
             dibujarDona(e2('prod-moto-dona'), prodMoto.pct_ocupado, '#ec4899', '#10b981');
+            if (e2('transporte-ocu-juan-bar')) e2('transporte-ocu-juan-bar').style.width = prodMoto.pct_ocupado + '%';
+            setTxt('transporte-ocu-juan-val', prodMoto.pct_ocupado + '%');
             const detMoto = prodMoto.detalle || {};
             const hMoto = prodMoto.horas_por_act || {};
             const detElMoto = e2('prod-moto-detalle');
@@ -2267,6 +2295,10 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
             if (e2('prod-moto-gasolina-diario')) e2('prod-moto-gasolina-diario').textContent = (gasH / diasMoto).toFixed(0) + 'h';
         }
         const acts = d.actividades || [];
+        if (acts.length > 0) {
+            const topAct = acts[0];
+            setTxt('transporte-act-lider', topAct.codigo + ' · ' + nf(topAct.total) + ' ops (' + topAct.pct + '%)');
+        }
         const leyenda = e('transporte-leyenda');
         if (leyenda && acts.length > 0) {
             const maxOps = Math.max(...acts.map(a => a.total), 1);
