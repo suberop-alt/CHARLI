@@ -492,16 +492,16 @@ window.EMBEDDED_DATA = {
  }
 },
   envios: {
- "total_general": 9915,
+ "total_general": 10964,
  "meta": 5000,
  "cashea": {
-  "total": 4684,
-  "porcentaje": 48.6,
+  "total": 5118,
+  "porcentaje": 47.9,
   "color": "#0ea5e9",
   "analistas": [
    {
     "nombre": "Maybeli Rojas",
-    "total": 2389,
+    "total": 2618,
     "mensual": {
      "ENE": 177,
      "FEB": 291,
@@ -511,12 +511,13 @@ window.EMBEDDED_DATA = {
      "JUN": 276,
      "JUL": 224,
      "AGO": 221,
-     "SEP": 172
+     "SEP": 172,
+     "OCT": 229
     }
    },
    {
     "nombre": "Valentina Castillo",
-    "total": 2295,
+    "total": 2500,
     "mensual": {
      "ENE": 246,
      "FEB": 268,
@@ -526,19 +527,20 @@ window.EMBEDDED_DATA = {
      "JUN": 153,
      "JUL": 210,
      "AGO": 214,
-     "SEP": 258
+     "SEP": 258,
+     "OCT": 205
     }
    }
   ]
  },
  "mercado_libre": {
-  "total": 4960,
-  "porcentaje": 51.4,
+  "total": 5575,
+  "porcentaje": 52.1,
   "color": "#0284c7",
   "analistas": [
    {
     "nombre": "Maybeli Rojas",
-    "total": 2098,
+    "total": 2404,
     "mensual": {
      "ENE": 172,
      "FEB": 188,
@@ -548,12 +550,13 @@ window.EMBEDDED_DATA = {
      "JUN": 201,
      "JUL": 135,
      "AGO": 359,
-     "SEP": 303
+     "SEP": 303,
+     "OCT": 306
     }
    },
    {
     "nombre": "Valentina Castillo",
-    "total": 2862,
+    "total": 3171,
     "mensual": {
      "ENE": 251,
      "FEB": 274,
@@ -563,7 +566,8 @@ window.EMBEDDED_DATA = {
      "JUN": 292,
      "JUL": 300,
      "AGO": 352,
-     "SEP": 313
+     "SEP": 313,
+     "OCT": 309
     }
    }
   ]
@@ -579,7 +583,8 @@ window.EMBEDDED_DATA = {
    "JUN": 0,
    "JUL": 271,
    "AGO": 0,
-   "SEP": 0
+   "SEP": 0,
+   "OCT": 0
   },
   "detalle": {
    "Alejandro Betancourt": 2,
@@ -589,13 +594,13 @@ window.EMBEDDED_DATA = {
  },
  "mejor_analista": {
   "nombre": "Valentina Castillo",
-  "operaciones": 5157
+  "operaciones": 5671
  },
- "periodo": "ENE-SEP 2026",
- "actualizado": "2026-10-15"
+ "periodo": "ENE-OCT 2026",
+ "actualizado": "2026-11-18"
 },
   atc: {
-  "total": 9915,
+  "total": 10964,
   "mensual": [
     846,
     1021,
@@ -605,10 +610,11 @@ window.EMBEDDED_DATA = {
     922,
     1140,
     1146,
-    1046
+    1046,
+    1049
   ],
   "valentina": {
-    "total": 5157,
+    "total": 5671,
     "mensual": [
       497,
       542,
@@ -618,11 +624,12 @@ window.EMBEDDED_DATA = {
       445,
       510,
       566,
-      571
+      571,
+      514
     ]
   },
   "maybeli": {
-    "total": 4487,
+    "total": 5022,
     "mensual": [
       349,
       479,
@@ -632,7 +639,8 @@ window.EMBEDDED_DATA = {
       477,
       359,
       580,
-      475
+      475,
+      535
     ]
   }
 },
