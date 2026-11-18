@@ -1486,25 +1486,83 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
             </div>
         </div>
         <div id="sub-panel-6-actividades" class="sub-panel">
-            <div style="margin-top:8px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px;">
-                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:14px;">ACTIVIDADES DE TRANSPORTE CON MAYOR PESO (ENE-OCT 2026)</div>
-                <div style="display:flex; gap:20px; font-size:15px;">
-                    <div><span style="color:var(--text-sub);">1.</span> <strong>ENVIOS COURIER</strong> <span id="transporte-top1-ops" style="color:var(--success); font-weight:800;">427</span> ops</div>
-                    <div><span style="color:var(--text-sub);">2.</span> <strong>BMP</strong> <span id="transporte-top2-ops" style="color:var(--success); font-weight:800;">357</span> ops</div>
-                    <div><span style="color:var(--text-sub);">3.</span> <strong>DELIVERY</strong> <span id="transporte-top3-ops" style="color:var(--success); font-weight:800;">276</span> ops</div>
+            <div style="margin-top:4px; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap:12px;">
+                <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #f59e0b; border-radius:12px; padding:11px 13px 12px; box-shadow:0 2px 8px rgba(15,23,42,0.05);">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                        <span style="display:inline-flex; align-items:center; background:#fef3c7; color:#b45309; border-radius:20px; padding:2px 8px; font-size:8px; font-weight:900; letter-spacing:0.9px;">TOP 1</span>
+                        <div style="display:flex; align-items:baseline; gap:3px;">
+                            <span id="transporte-top1-ops" style="font-size:20px; font-weight:900; color:#b45309; line-height:1;">427</span>
+                            <span style="font-size:8px; font-weight:800; color:var(--text-sub);">OPS</span>
+                        </div>
+                    </div>
+                    <div id="transporte-top1-cod" style="font-size:12.5px; font-weight:900; color:var(--text-main); margin-top:7px; line-height:1.2;">ENVIOS COURIER</div>
+                    <div id="transporte-top1-desc" style="font-size:9.5px; color:var(--text-sub); font-weight:600; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Envíos de Mercancía · Venta Digital</div>
+                    <div style="display:flex; align-items:center; gap:7px; margin-top:9px;">
+                        <div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;">
+                            <div id="transporte-top1-bar" style="height:100%; width:100%; border-radius:99px; background:linear-gradient(90deg,#fbbf24,#f59e0b); transition:width .5s;"></div>
+                        </div>
+                        <span id="transporte-top1-pct" style="font-size:9.5px; font-weight:900; color:#b45309; width:36px; text-align:right;">23.6%</span>
+                    </div>
+                </div>
+                <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #94a3b8; border-radius:12px; padding:11px 13px 12px; box-shadow:0 2px 8px rgba(15,23,42,0.05);">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                        <span style="display:inline-flex; align-items:center; background:#f1f5f9; color:#475569; border-radius:20px; padding:2px 8px; font-size:8px; font-weight:900; letter-spacing:0.9px;">TOP 2</span>
+                        <div style="display:flex; align-items:baseline; gap:3px;">
+                            <span id="transporte-top2-ops" style="font-size:20px; font-weight:900; color:#475569; line-height:1;">357</span>
+                            <span style="font-size:8px; font-weight:800; color:var(--text-sub);">OPS</span>
+                        </div>
+                    </div>
+                    <div id="transporte-top2-cod" style="font-size:12.5px; font-weight:900; color:var(--text-main); margin-top:7px; line-height:1.2;">BMP</div>
+                    <div id="transporte-top2-desc" style="font-size:9.5px; color:var(--text-sub); font-weight:600; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Búsqueda de Mercancía en Proveedor</div>
+                    <div style="display:flex; align-items:center; gap:7px; margin-top:9px;">
+                        <div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;">
+                            <div id="transporte-top2-bar" style="height:100%; width:84%; border-radius:99px; background:linear-gradient(90deg,#cbd5e1,#94a3b8); transition:width .5s;"></div>
+                        </div>
+                        <span id="transporte-top2-pct" style="font-size:9.5px; font-weight:900; color:#475569; width:36px; text-align:right;">19.7%</span>
+                    </div>
+                </div>
+                <div style="background:#ffffff; border:1px solid #e2e8f0; border-top:3px solid #ea580c; border-radius:12px; padding:11px 13px 12px; box-shadow:0 2px 8px rgba(15,23,42,0.05);">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                        <span style="display:inline-flex; align-items:center; background:#ffedd5; color:#c2410c; border-radius:20px; padding:2px 8px; font-size:8px; font-weight:900; letter-spacing:0.9px;">TOP 3</span>
+                        <div style="display:flex; align-items:baseline; gap:3px;">
+                            <span id="transporte-top3-ops" style="font-size:20px; font-weight:900; color:#c2410c; line-height:1;">276</span>
+                            <span style="font-size:8px; font-weight:800; color:var(--text-sub);">OPS</span>
+                        </div>
+                    </div>
+                    <div id="transporte-top3-cod" style="font-size:12.5px; font-weight:900; color:var(--text-main); margin-top:7px; line-height:1.2;">DELIVERY</div>
+                    <div id="transporte-top3-desc" style="font-size:9.5px; color:var(--text-sub); font-weight:600; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Delivery a Clientes</div>
+                    <div style="display:flex; align-items:center; gap:7px; margin-top:9px;">
+                        <div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;">
+                            <div id="transporte-top3-bar" style="height:100%; width:65%; border-radius:99px; background:linear-gradient(90deg,#fdba74,#ea580c); transition:width .5s;"></div>
+                        </div>
+                        <span id="transporte-top3-pct" style="font-size:9.5px; font-weight:900; color:#c2410c; width:36px; text-align:right;">15.2%</span>
+                    </div>
                 </div>
             </div>
-            <div style="margin-top:12px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px;">
-                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">LEYENDA DE ACTIVIDADES OPERACIONALES DE TRANSPORTE</div>
-                <div id="transporte-leyenda" style="display:grid; grid-template-columns:1fr 2fr 80px 60px; gap:4px 10px; font-size:11px; align-items:center;">
-                    <div style="font-weight:700; color:var(--text-sub); border-bottom:1px solid #e2e8f0; padding-bottom:4px;">CODIGO</div>
-                    <div style="font-weight:700; color:var(--text-sub); border-bottom:1px solid #e2e8f0; padding-bottom:4px;">DESCRIPCION</div>
-                    <div style="font-weight:700; color:var(--text-sub); border-bottom:1px solid #e2e8f0; padding-bottom:4px; text-align:right;">OPS</div>
-                    <div style="font-weight:700; color:var(--text-sub); border-bottom:1px solid #e2e8f0; padding-bottom:4px; text-align:right;">%</div>
+
+            <div style="margin-top:12px; background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(15,23,42,0.05);">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; padding:11px 14px; background:#f8fafc; border-bottom:1px solid #e2e8f0;">
+                    <div style="min-width:0;">
+                        <div style="font-size:10.5px; font-weight:900; letter-spacing:1px; color:var(--text-main);">LEYENDA DE ACTIVIDADES OPERACIONALES DE TRANSPORTE</div>
+                        <div style="font-size:9px; font-weight:600; color:var(--text-sub); margin-top:1px;">Participación sobre el total de operaciones registradas · ENE–OCT 2026</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
+                        <span style="display:inline-flex; align-items:baseline; gap:5px; background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:8.5px; font-weight:900; letter-spacing:0.5px; color:var(--text-sub);">ACTIVIDADES <strong id="tport-leyenda-count" style="font-size:11px; font-weight:900; color:var(--text-main);">9</strong></span>
+                        <span style="display:inline-flex; align-items:baseline; gap:5px; background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:8.5px; font-weight:900; letter-spacing:0.5px; color:var(--text-sub);">OPS TOTALES <strong id="tport-leyenda-total" style="font-size:11px; font-weight:900; color:#0891b2;">1,812</strong></span>
+                    </div>
+                </div>
+                <div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; padding:7px 14px; background:#fbfcfe; border-bottom:1px solid #eef2f6; font-size:8.5px; font-weight:900; letter-spacing:0.8px; color:#94a3b8;">
+                    <div>#</div>
+                    <div>CÓDIGO</div>
+                    <div>DESCRIPCIÓN</div>
+                    <div style="text-align:right;">OPS</div>
+                    <div style="text-align:right;">PARTICIPACIÓN</div>
+                </div>
+                <div id="transporte-leyenda" style="display:flex; flex-direction:column;"><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#fef3c7; color:#b45309; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">1</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">ENVIOS COURIER</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Envíos de Mercancía · Venta Digital</div><div style="text-align:right; font-size:12px; font-weight:900; color:#b45309;">427</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:100%; border-radius:99px; background:linear-gradient(90deg,#fbbf24,#f59e0b); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:#b45309; width:36px; text-align:right;">23.6%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#e2e8f0; color:#475569; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">2</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">BMP</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Búsqueda de Mercancía en Proveedor</div><div style="text-align:right; font-size:12px; font-weight:900; color:#475569;">357</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:84%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:#475569; width:36px; text-align:right;">19.7%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#ffedd5; color:#c2410c; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">3</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">DELIVERY</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Delivery a Clientes</div><div style="text-align:right; font-size:12px; font-weight:900; color:#c2410c;">276</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:65%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:#c2410c; width:36px; text-align:right;">15.2%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#f1f5f9; color:#64748b; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">4</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">ACT.DIV.</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Actividades Diversas</div><div style="text-align:right; font-size:12px; font-weight:900; color:var(--text-main);">232</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:54%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:var(--text-sub); width:36px; text-align:right;">12.8%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#f1f5f9; color:#64748b; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">5</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">ENVIOS D</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Envíos de Documentos</div><div style="text-align:right; font-size:12px; font-weight:900; color:var(--text-main);">194</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:45%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:var(--text-sub); width:36px; text-align:right;">10.7%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#f1f5f9; color:#64748b; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">6</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">TRANSP.PERSONAL</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Transporte de Personal</div><div style="text-align:right; font-size:12px; font-weight:900; color:var(--text-main);">126</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:30%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:var(--text-sub); width:36px; text-align:right;">7.0%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#f1f5f9; color:#64748b; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">7</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">PER.TIENDA</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Permanencia en Tienda</div><div style="text-align:right; font-size:12px; font-weight:900; color:var(--text-main);">104</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:24%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:var(--text-sub); width:36px; text-align:right;">5.7%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#f1f5f9; color:#64748b; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">8</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">REPOS.MERCANCIA</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Reposición de Mercancía</div><div style="text-align:right; font-size:12px; font-weight:900; color:var(--text-main);">51</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:12%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:var(--text-sub); width:36px; text-align:right;">2.8%</span></div></div><div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;"><div style="width:22px; height:22px; border-radius:7px; background:#f1f5f9; color:#64748b; font-size:10px; font-weight:900; display:flex; align-items:center; justify-content:center;">9</div><div style="font-size:10.5px; font-weight:900; color:var(--text-main); letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">MANT TRANSP</div><div style="font-size:10px; color:var(--text-sub); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Mantenimiento de Transporte</div><div style="text-align:right; font-size:12px; font-weight:900; color:var(--text-main);">45</div><div style="display:flex; align-items:center; gap:7px;"><div style="flex:1; height:6px; background:#eef2f7; border-radius:99px; overflow:hidden;"><div style="height:100%; width:11%; border-radius:99px; background:linear-gradient(90deg,#22d3ee,#0891b2); transition:width .5s;"></div></div><span style="font-size:10px; font-weight:900; color:var(--text-sub); width:36px; text-align:right;">2.5%</span></div></div>
                 </div>
             </div>
-            </div>
-            <div id="sub-panel-6-productividad" class="sub-panel">
+        </div>
+        <div id="sub-panel-6-productividad" class="sub-panel">
             <div style="margin-top:8px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 14px;">
                 <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">ANALISIS DE PRODUCTIVIDAD - CAMIONETA PANEL (ENE-OCT 2026)</div>
                 <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px;">
@@ -2346,18 +2404,52 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
         const acts = d.actividades || [];
         if (acts.length > 0) {
             const topAct = acts[0];
-            setTxt('transporte-act-lider', topAct.codigo + ' · ' + nf(topAct.total) + ' ops (' + topAct.pct + '%)');
+            setTxt('transporte-act-lider', topAct.codigo + ' · ' + nf(topAct.total) + ' ops (' + Number(topAct.pct).toFixed(1) + '%)');
         }
+        const descAcento = {
+            'ENVIOS COURIER': 'Envíos de Mercancía · Venta Digital',
+            'BMP': 'Búsqueda de Mercancía en Proveedor',
+            'DELIVERY': 'Delivery a Clientes',
+            'ACT.DIV.': 'Actividades Diversas',
+            'ENVIOS D': 'Envíos de Documentos',
+            'TRANSP.PERSONAL': 'Transporte de Personal',
+            'PER.TIENDA': 'Permanencia en Tienda',
+            'REPOS.MERCANCIA': 'Reposición de Mercancía',
+            'MANT TRANSP': 'Mantenimiento de Transporte'
+        };
         const leyenda = e('transporte-leyenda');
         if (leyenda && acts.length > 0) {
             const maxOps = Math.max(...acts.map(a => a.total), 1);
-            leyenda.innerHTML = '<div style="font-weight:700;color:var(--text-sub);border-bottom:1px solid #e2e8f0;padding-bottom:4px;">CODIGO</div><div style="font-weight:700;color:var(--text-sub);border-bottom:1px solid #e2e8f0;padding-bottom:4px;">DESCRIPCION</div><div style="font-weight:700;color:var(--text-sub);border-bottom:1px solid #e2e8f0;padding-bottom:4px;text-align:right;">OPS</div><div style="font-weight:700;color:var(--text-sub);border-bottom:1px solid #e2e8f0;padding-bottom:4px;text-align:right;">%</div>' +
-            acts.map(a =>
-                '<div style="font-weight:600;color:var(--text-main);">' + a.codigo + '</div>' +
-                '<div style="color:var(--text-sub);">' + a.descripcion + '</div>' +
-                '<div style="text-align:right;font-weight:700;color:var(--success);">' + nf(a.total) + '</div>' +
-                '<div style="text-align:right;display:flex;align-items:center;gap:4px;justify-content:flex-end;"><span style="font-weight:600;color:var(--text-main);">' + a.pct + '%</span><div style="width:30px;height:6px;background:#e2e8f0;border-radius:3px;overflow:hidden;"><div style="height:100%;width:' + Math.max(2, (a.total/maxOps)*100) + '%;background:var(--accent);border-radius:3px;"></div></div></div>'
-            ).join('');
+            const topBg = ['#fef3c7', '#e2e8f0', '#ffedd5'];
+            const topFg = ['#b45309', '#475569', '#c2410c'];
+            leyenda.innerHTML = acts.map((a, i) => {
+                const pct = Number(a.pct).toFixed(1);
+                const w = Math.max(2, Math.round(a.total / maxOps * 100));
+                const esTop = i < 3;
+                const bg = esTop ? topBg[i] : '#f1f5f9';
+                const fg = esTop ? topFg[i] : '#64748b';
+                const bar = i === 0 ? 'linear-gradient(90deg,#fbbf24,#f59e0b)' : 'linear-gradient(90deg,#22d3ee,#0891b2)';
+                return '<div style="display:grid; grid-template-columns:34px 146px minmax(110px,1fr) 64px 132px; gap:12px; align-items:center; padding:8px 14px; border-bottom:1px solid #eef2f6;">' +
+                    '<div style="width:22px;height:22px;border-radius:7px;background:' + bg + ';color:' + fg + ';font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;">' + (i + 1) + '</div>' +
+                    '<div style="font-size:10.5px;font-weight:900;color:var(--text-main);letter-spacing:0.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + a.codigo + '</div>' +
+                    '<div style="font-size:10px;color:var(--text-sub);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + (descAcento[a.codigo] || a.descripcion) + '</div>' +
+                    '<div style="text-align:right;font-size:12px;font-weight:900;color:' + (esTop ? fg : 'var(--text-main)') + ';">' + nf(a.total) + '</div>' +
+                    '<div style="display:flex;align-items:center;gap:7px;">' +
+                    '<div style="flex:1;height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:' + w + '%;border-radius:99px;background:' + bar + ';transition:width .5s;"></div></div>' +
+                    '<span style="font-size:10px;font-weight:900;color:' + (esTop ? fg : 'var(--text-sub)') + ';width:36px;text-align:right;">' + pct + '%</span>' +
+                    '</div></div>';
+            }).join('');
+            acts.slice(0, 3).forEach((a, i) => {
+                const n = i + 1;
+                setTxt('transporte-top' + n + '-cod', a.codigo);
+                setTxt('transporte-top' + n + '-desc', descAcento[a.codigo] || a.descripcion);
+                setTxt('transporte-top' + n + '-ops', nf(a.total));
+                setTxt('transporte-top' + n + '-pct', Number(a.pct).toFixed(1) + '%');
+                const bar = e('transporte-top' + n + '-bar');
+                if (bar) bar.style.width = Math.max(2, Math.round(a.total / maxOps * 100)) + '%';
+            });
+            setTxt('tport-leyenda-count', String(acts.length));
+            setTxt('tport-leyenda-total', nf(acts.reduce((s, a) => s + a.total, 0)));
         }
     }
 
