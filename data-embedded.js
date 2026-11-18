@@ -2,10 +2,10 @@
 // Ejecutar: powershell -ExecutionPolicy Bypass .\build.ps1
 window.EMBEDDED_DATA = {
   resumen: {
-  "comprasInversion": 2972550,
-  "indiceExactitud": 98.7,
-  "enviosRegistrados": 10186,
-  "ventasNetas": null
+ "comprasInversion": 2972550,
+ "indiceExactitud": 98.7,
+ "enviosRegistrados": 10457,
+ "ventasNetas": null
 },
   compras: {
   "periodo": "ENE-OCT 2026",
@@ -270,15 +270,15 @@ window.EMBEDDED_DATA = {
   "efectividad": 6.4
 },
   almacen: {
- "operaciones": 105080,
+ "operaciones": 105351,
  "mensual": {
-  "ENE": 7736,
-  "FEB": 9912,
-  "MAR": 12241,
-  "ABR": 10111,
-  "MAY": 11264,
-  "JUN": 8482,
-  "JUL": 10946,
+  "ENE": 7768,
+  "FEB": 9946,
+  "MAR": 12279,
+  "ABR": 10158,
+  "MAY": 11315,
+  "JUN": 8519,
+  "JUL": 10978,
   "AGO": 11142,
   "SEP": 11140,
   "OCT": 12106
@@ -289,16 +289,16 @@ window.EMBEDDED_DATA = {
   "DESP": 26193,
   "ODA": 10403,
   "ACT_DIV": 15712,
-  "P_ENVIOS": 10186
+  "P_ENVIOS": 10457
  },
  "envios_mensual": {
-  "ENE": 707,
-  "FEB": 785,
-  "MAR": 1142,
-  "ABR": 1181,
-  "MAY": 1268,
-  "JUN": 864,
-  "JUL": 1135,
+  "ENE": 739,
+  "FEB": 819,
+  "MAR": 1180,
+  "ABR": 1228,
+  "MAY": 1319,
+  "JUN": 901,
+  "JUL": 1167,
   "AGO": 1061,
   "SEP": 986,
   "OCT": 1057
