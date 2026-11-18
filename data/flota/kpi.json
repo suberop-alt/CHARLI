@@ -1,41 +1,174 @@
 {
   "productividad_moto": {
-    "actividades_analizadas": ["ENVIOS D","BMP","DELIVERY","ACT.DIV.","TRANSP.PERSONAL","PER.TIENDA","MANT TRANSP","ENVIOS COURIER"],
-    "total_ops": 705,
-    "detalle": {"ENVIOS D": 174, "BMP": 121, "DELIVERY": 109, "ACT.DIV.": 135, "TRANSP.PERSONAL": 48, "PER.TIENDA": 43, "MANT TRANSP": 18, "ENVIOS COURIER": 57},
-    "horas_por_act": {"ENVIOS D":0.5,"BMP":1.5,"DELIVERY":1,"ACT.DIV.":1,"TRANSP.PERSONAL":0.42,"PER.TIENDA":1,"MANT TRANSP":0.62,"ENVIOS COURIER":1},
+    "actividades_analizadas": [
+      "ENVIOS D",
+      "BMP",
+      "DELIVERY",
+      "ACT.DIV.",
+      "TRANSP.PERSONAL",
+      "PER.TIENDA",
+      "MANT TRANSP",
+      "ENVIOS COURIER"
+    ],
+    "total_ops": 786,
+    "detalle": {
+      "ENVIOS D": 194,
+      "BMP": 129,
+      "DELIVERY": 119,
+      "ACT.DIV.": 158,
+      "TRANSP.PERSONAL": 57,
+      "PER.TIENDA": 45,
+      "MANT TRANSP": 22,
+      "ENVIOS COURIER": 62
+    },
+    "horas_por_act": {
+      "ENVIOS D": 0.5,
+      "BMP": 1.5,
+      "DELIVERY": 1,
+      "ACT.DIV.": 1,
+      "TRANSP.PERSONAL": 0.42,
+      "PER.TIENDA": 1,
+      "MANT TRANSP": 0.62,
+      "ENVIOS COURIER": 1
+    },
     "gasolina_h_dia": 1,
-    "gasolina_total_h": 183,
-    "total_horas": 826.8,
-    "dias_habiles_periodo": 183,
-    "promedio_diario_h": 4.52,
+    "gasolina_total_h": 203,
+    "total_horas": 915.1,
+    "dias_habiles_periodo": 203,
+    "promedio_diario_h": 4.51,
     "jornada_h": 8,
-    "tiempo_libre_diario_h": 3.48,
-    "pct_ocupado": 56.5
+    "tiempo_libre_diario_h": 3.49,
+    "pct_ocupado": 56.3
   },
-  "rene": { "total": 904, "mensual": { "ENE": 58, "FEB": 81, "MAR": 97, "ABR": 95, "MAY": 96, "JUN": 112, "JUL": 124, "AGO": 121, "SEP": 120 }, "actividad_principal": "ENVIOS COURIER", "act_ops": 330, "act_pct": 36.5 },
-  "juan": { "total": 705, "mensual": { "ENE": 62, "FEB": 79, "MAR": 89, "ABR": 74, "MAY": 81, "JUN": 72, "JUL": 88, "AGO": 75, "SEP": 85 }, "actividad_principal": "ENVIOS D", "act_ops": 174, "act_pct": 24.7 },
+  "rene": {
+    "total": 1030,
+    "mensual": {
+      "ENE": 58,
+      "FEB": 81,
+      "MAR": 97,
+      "ABR": 95,
+      "MAY": 96,
+      "JUN": 112,
+      "JUL": 124,
+      "AGO": 121,
+      "SEP": 120,
+      "OCT": 126
+    },
+    "actividad_principal": "ENVIOS COURIER",
+    "act_ops": 365,
+    "act_pct": 35.4
+  },
+  "juan": {
+    "total": 786,
+    "mensual": {
+      "ENE": 62,
+      "FEB": 79,
+      "MAR": 89,
+      "ABR": 74,
+      "MAY": 81,
+      "JUN": 72,
+      "JUL": 88,
+      "AGO": 75,
+      "SEP": 85,
+      "OCT": 81
+    },
+    "actividad_principal": "ENVIOS D",
+    "act_ops": 194,
+    "act_pct": 24.7
+  },
   "productividad": {
-    "actividades_analizadas": ["ENVIOS COURIER","DELIVERY","REPOS.MERCANCIA","TRANSP.PERSONAL","ACT.DIV.","BMP","MANT TRANSP","PER.TIENDA"],
-    "total_ops": 900,
-    "detalle": {"ENVIOS COURIER": 330, "DELIVERY": 134, "REPOS.MERCANCIA": 37, "TRANSP.PERSONAL": 64, "ACT.DIV.": 71, "BMP": 189, "MANT TRANSP": 20, "PER.TIENDA": 55},
-    "horas_por_act": {"ENVIOS COURIER":1.5,"DELIVERY":1,"REPOS.MERCANCIA":1,"TRANSP.PERSONAL":1,"ACT.DIV.":1,"BMP":2,"MANT TRANSP":1,"PER.TIENDA":1.25},
-    "total_horas": 1267.8,
-    "dias_habiles_periodo": 183,
-    "promedio_diario_h": 6.93,
+    "actividades_analizadas": [
+      "ENVIOS COURIER",
+      "DELIVERY",
+      "REPOS.MERCANCIA",
+      "TRANSP.PERSONAL",
+      "ACT.DIV.",
+      "BMP",
+      "MANT TRANSP",
+      "PER.TIENDA"
+    ],
+    "total_ops": 1026,
+    "detalle": {
+      "ENVIOS COURIER": 365,
+      "DELIVERY": 157,
+      "REPOS.MERCANCIA": 51,
+      "TRANSP.PERSONAL": 69,
+      "ACT.DIV.": 74,
+      "BMP": 228,
+      "MANT TRANSP": 23,
+      "PER.TIENDA": 59
+    },
+    "horas_por_act": {
+      "ENVIOS COURIER": 1.5,
+      "DELIVERY": 1,
+      "REPOS.MERCANCIA": 1,
+      "TRANSP.PERSONAL": 1,
+      "ACT.DIV.": 1,
+      "BMP": 2,
+      "MANT TRANSP": 1,
+      "PER.TIENDA": 1.25
+    },
+    "total_horas": 1451.3,
+    "dias_habiles_periodo": 203,
+    "promedio_diario_h": 7.15,
     "jornada_h": 8,
-    "tiempo_libre_diario_h": 1.07,
-    "pct_ocupado": 86.6
+    "tiempo_libre_diario_h": 0.85,
+    "pct_ocupado": 89.4
   },
   "actividades": [
-    { "codigo": "ENVIOS COURIER", "descripcion": "Envios de Mercancia Venta Digital", "total": 387, "pct": 24.1 },
-    { "codigo": "BMP", "descripcion": "Busqueda de Mercancia Proveedor", "total": 310, "pct": 19.3 },
-    { "codigo": "DELIVERY", "descripcion": "Delivery Clientes", "total": 243, "pct": 15.1 },
-    { "codigo": "ACT.DIV.", "descripcion": "Actividades Diversas", "total": 206, "pct": 12.8 },
-    { "codigo": "ENVIOS D", "descripcion": "Envios de Documentos", "total": 174, "pct": 10.8 },
-    { "codigo": "TRANSP.PERSONAL", "descripcion": "Transporte de Personal", "total": 112, "pct": 7.0 },
-    { "codigo": "PER.TIENDA", "descripcion": "Permanencia en Tienda", "total": 98, "pct": 6.1 },
-    { "codigo": "MANT TRANSP", "descripcion": "Mantenimiento Transporte", "total": 38, "pct": 2.4 },
-    { "codigo": "REPOS.MERCANCIA", "descripcion": "Reposicion de Mercancia", "total": 37, "pct": 2.3 }
+    {
+      "codigo": "ENVIOS COURIER",
+      "descripcion": "Envios de Mercancia Venta Digital",
+      "total": 427,
+      "pct": 23.6
+    },
+    {
+      "codigo": "BMP",
+      "descripcion": "Busqueda de Mercancia Proveedor",
+      "total": 357,
+      "pct": 19.7
+    },
+    {
+      "codigo": "DELIVERY",
+      "descripcion": "Delivery Clientes",
+      "total": 276,
+      "pct": 15.2
+    },
+    {
+      "codigo": "ACT.DIV.",
+      "descripcion": "Actividades Diversas",
+      "total": 232,
+      "pct": 12.8
+    },
+    {
+      "codigo": "ENVIOS D",
+      "descripcion": "Envios de Documentos",
+      "total": 194,
+      "pct": 10.7
+    },
+    {
+      "codigo": "TRANSP.PERSONAL",
+      "descripcion": "Transporte de Personal",
+      "total": 126,
+      "pct": 7.0
+    },
+    {
+      "codigo": "PER.TIENDA",
+      "descripcion": "Permanencia en Tienda",
+      "total": 104,
+      "pct": 5.7
+    },
+    {
+      "codigo": "REPOS.MERCANCIA",
+      "descripcion": "Reposicion de Mercancia",
+      "total": 51,
+      "pct": 2.8
+    },
+    {
+      "codigo": "MANT TRANSP",
+      "descripcion": "Mantenimiento Transporte",
+      "total": 45,
+      "pct": 2.5
+    }
   ]
 }
