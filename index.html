@@ -1563,142 +1563,119 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
             </div>
         </div>
         <div id="sub-panel-6-productividad" class="sub-panel">
-            <div style="margin-top:8px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 14px;">
-                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">ANALISIS DE PRODUCTIVIDAD - CAMIONETA PANEL (ENE-OCT 2026)</div>
-                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px;">
-                    <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
-                        <div style="font-size:10px; color:var(--text-sub); font-weight:600;">OPS ANALIZADAS</div>
-                        <div style="font-size:22px; font-weight:900; color:var(--accent);" id="prod-total-ops">0</div>
-                        <div id="prod-detalle" style="font-size:9px; color:var(--text-sub);"></div>
+            <div style="margin-top:4px; background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; padding:13px 15px 13px; box-shadow:0 2px 10px rgba(15,23,42,0.05);">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                    <div style="display:flex; align-items:center; gap:9px; min-width:0;">
+                        <div style="width:30px;height:30px;border-radius:9px;background:#e0f2fe;display:flex;align-items:center;justify-content:center;font-size:15px;flex:0 0 auto;">ðŸš</div>
+                        <div style="min-width:0;">
+                            <div style="font-size:11px;font-weight:900;letter-spacing:0.9px;color:var(--text-main);">ANÃLISIS DE PRODUCTIVIDAD Â· CAMIONETA PANEL</div>
+                            <div style="font-size:9px;font-weight:600;color:var(--text-sub);margin-top:1px;">Rene Â· ENEâ€“OCT 2026 Â· 203 dÃ­as hÃ¡biles Â· jornada de 8 h</div>
+                        </div>
                     </div>
-                    <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
-                        <div style="font-size:10px; color:var(--text-sub); font-weight:600;">PROMEDIO DIARIO</div>
-                        <div style="font-size:22px; font-weight:900; color:#fbbf24;" id="prod-promedio">0</div>
-                        <div style="font-size:9px; color:var(--text-sub);">horas / día (1h x operación)</div>
-                    </div>
-                    <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
-                        <div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO LIBRE</div>
-                        <div style="font-size:22px; font-weight:900; color:var(--success);" id="prod-libre">0</div>
-                        <div style="font-size:9px; color:var(--text-sub);">horas / día disponibles</div>
+                    <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
+                        <span style="display:inline-flex;align-items:baseline;gap:5px;background:#e0f2fe;border:1px solid #a5f3fc;border-radius:20px;padding:3px 10px;font-size:8.5px;font-weight:900;letter-spacing:0.5px;color:#0e7490;">OCUPACIÃ“N <strong id="prod-pct" style="font-size:11px;font-weight:900;color:#0e7490;">89.4%</strong></span>
+                        <span style="display:inline-flex;align-items:baseline;gap:5px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:20px;padding:3px 10px;font-size:8.5px;font-weight:900;letter-spacing:0.5px;color:#047857;">LIBRE <strong id="prod-libre-pct" style="font-size:11px;font-weight:900;color:#047857;">10.6%</strong></span>
                     </div>
                 </div>
-                <div style="display:flex; gap:10px; margin-bottom:10px; background:#f8fafc; border-radius:6px; padding:8px 12px; align-items:center; justify-content:space-between;">
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="font-size:11px; font-weight:700; color:var(--text-main);">PERMANENCIA EN TIENDA</span>
-                        <span style="font-size:10px; color:var(--text-sub);">59 ops × 1h15min</span>
+
+                <div style="display:grid; grid-template-columns:172px minmax(0,1fr); gap:13px; margin-top:11px; align-items:stretch;">
+                    <div style="background:#fbfcfe; border:1px solid #eef2f6; border-radius:12px; padding:10px 8px 9px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                        <div style="position:relative; width:150px; height:150px;">
+                            <canvas id="prod-dona" width="150" height="150" style="width:150px; height:150px;"></canvas>
+                            <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
+                                <div style="font-size:26px; font-weight:900; color:#0e7490; line-height:1;" id="prod-dona-pct">89.4%</div>
+                                <div style="font-size:8px; color:var(--text-sub); font-weight:900; letter-spacing:1.1px; margin-top:3px;">OCUPADO</div>
+                            </div>
+                        </div>
+                        <div style="font-size:8.5px; font-weight:700; color:var(--text-sub); text-align:center; margin-top:5px;">
+                            <strong id="prod-ocu-h" style="color:var(--text-main);font-weight:900;">1,451.3h</strong> ocupadas Â·
+                            <strong id="prod-libre-h" style="color:var(--text-main);font-weight:900;">172.1h</strong> libres
+                        </div>
                     </div>
-                    <div style="display:flex; gap:16px; font-size:12px;">
-                        <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-per-tienda-h">73.75h</strong></span>
-                        <span><span style="color:var(--text-sub);">Diario:</span> <strong style="color:#fbbf24;" id="prod-per-tienda-diario">0.36h</strong></span>
-                        <span><span style="color:var(--text-sub);">% Jornada:</span> <strong style="color:var(--accent);" id="prod-per-tienda-pct">4.5%</strong></span>
+
+                    <div style="display:flex; flex-direction:column; gap:9px; min-width:0;">
+                        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:9px;">
+                            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:11px;padding:8px 10px 9px;"><div style="font-size:8px;font-weight:900;letter-spacing:0.8px;color:#94a3b8;">OPS ANALIZADAS</div><div style="font-size:19px;font-weight:900;color:#0e7490;line-height:1.15;margin-top:2px;"><span id="prod-total-ops">1,026</span></div><div style="font-size:8.5px;font-weight:600;color:var(--text-sub);margin-top:1px;">8 actividades Â· 203 dÃ­as</div></div>
+                            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:11px;padding:8px 10px 9px;"><div style="font-size:8px;font-weight:900;letter-spacing:0.8px;color:#94a3b8;">PROMEDIO DIARIO</div><div style="font-size:19px;font-weight:900;color:#b45309;line-height:1.15;margin-top:2px;"><span id="prod-promedio">7.15h</span></div><div style="font-size:8.5px;font-weight:600;color:var(--text-sub);margin-top:1px;">horas / dÃ­a Â· jornada 8 h</div></div>
+                            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:11px;padding:8px 10px 9px;"><div style="font-size:8px;font-weight:900;letter-spacing:0.8px;color:#94a3b8;">TIEMPO LIBRE</div><div style="font-size:19px;font-weight:900;color:#047857;line-height:1.15;margin-top:2px;"><span id="prod-libre">0.85h</span></div><div style="font-size:8.5px;font-weight:600;color:var(--text-sub);margin-top:1px;">horas / dÃ­a disponibles</div></div>
+                        </div>
+                        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:9px 12px 10px; flex:1;">
+                            <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding-bottom:7px; border-bottom:1px solid #eef2f6;">
+                                <div style="min-width:0;">
+                                    <div style="font-size:9px; font-weight:900; letter-spacing:0.9px; color:var(--text-main);">COMPOSICIÃ“N DEL TIEMPO OCUPADO POR ACTIVIDAD</div>
+                                    <div style="font-size:8.5px; font-weight:600; color:var(--text-sub); margin-top:1px;">Horas = operaciones Ã— duraciÃ³n estÃ¡ndar de cada actividad</div>
+                                </div>
+                                <span style="display:inline-flex;align-items:baseline;gap:5px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:3px 9px;font-size:8px;font-weight:900;letter-spacing:0.5px;color:var(--text-sub);white-space:nowrap;">TOTAL <strong id="prod-total-h" style="font-size:10.5px;font-weight:900;color:#0e7490;">1,451.3h</strong></span>
+                            </div>
+                            <div id="prod-desglose" style="display:flex; flex-direction:column; gap:3px; margin-top:7px;"><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">ENVIOS COURIER</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">365 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:100%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">547.5h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">37.7%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">BMP</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">228 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:83%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">456h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">31.4%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">DELIVERY</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">157 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:29%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">157h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">10.8%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">ACT.DIV.</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">74 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:14%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">74h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">5.1%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">PER.TIENDA</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">59 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:13%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">73.8h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">5.1%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">TRANSP.PERSONAL</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">69 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:13%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">69h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">4.8%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">REPOS.MERCANCIA</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">51 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:9%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">51h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">3.5%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">MANT TRANSP</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">23 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:4%;border-radius:99px;background:linear-gradient(90deg,#38bdf8,#0369a1);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">23h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">1.6%</div></div></div>
+                        </div>
                     </div>
                 </div>
-                <div style="display:grid; grid-template-columns:200px 1fr; gap:14px; align-items:center; margin-top:6px;">
-                    <div style="position:relative; width:200px; height:200px;">
-                        <canvas id="prod-dona" width="200" height="200" style="width:200px; height:200px;"></canvas>
-                        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
-                            <div style="font-size:30px; font-weight:900; color:var(--accent);" id="prod-dona-pct">0%</div>
-                            <div style="font-size:9px; color:var(--text-sub); font-weight:700; letter-spacing:1px;">OCUPADO</div>
-                        </div>
-                    </div>
-                    <div style="display:flex; flex-direction:column; gap:10px;">
-                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
-                            <div style="width:26px; height:26px; border-radius:50%; background:#0ea5e9; flex-shrink:0;"></div>
-                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO OCUPADO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-ocu-h">0h</div></div>
-                            <div style="font-size:16px; font-weight:800; color:var(--accent);" id="prod-pct">0%</div>
-                        </div>
-                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
-                            <div style="width:26px; height:26px; border-radius:50%; background:#10b981; flex-shrink:0;"></div>
-                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO LIBRE</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-libre-h">0h</div></div>
-                            <div style="font-size:16px; font-weight:800; color:#10b981;" id="prod-libre-pct">0%</div>
-                        </div>
-                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
-                            <div style="width:26px; height:26px; border-radius:50%; background:#f59e0b; flex-shrink:0;"></div>
-                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">PROMEDIO DIARIO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-promedio">0h</div></div>
-                            <div style="font-size:9px; color:var(--text-sub);">jornada 8h · 203 días</div>
-                        </div>
-                        <div style="font-size:9px; color:var(--text-sub); font-weight:600; text-align:right;">Jornada: 8h · 20 días/mes · Periodo ENE-OCT 2026 (203 días hábiles)</div>
-                    </div>
+                                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:9px; padding-top:8px; border-top:1px solid #eef2f6;">
+                    <span style="font-size:8.5px; font-weight:900; letter-spacing:0.8px; color:#94a3b8;">SUPUESTO Â· PERMANENCIA EN TIENDA</span>
+                    <span style="font-size:9px; font-weight:700; color:var(--text-sub);">59 ops Ã— 1h15min = <strong id="prod-per-tienda-h" style="color:var(--text-main);font-weight:900;">73.75h</strong> Â· <strong id="prod-per-tienda-diario" style="color:var(--text-main);font-weight:900;">0.36h</strong>/dÃ­a Â· <strong id="prod-per-tienda-pct" style="color:#0e7490;font-weight:900;">4.5%</strong> de la jornada</span>
                 </div>
             </div>
-            <div style="margin-top:12px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px 14px;">
-                <div class="kpi-sub" style="font-weight:700; margin-bottom:8px; font-size:13px;">ANALISIS DE PRODUCTIVIDAD - MOTO (JUAN MARQUEZ - ENE-OCT 2026)</div>
-                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:10px;">
-                    <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
-                        <div style="font-size:10px; color:var(--text-sub); font-weight:600;">OPS ANALIZADAS</div>
-                        <div style="font-size:22px; font-weight:900; color:var(--accent);" id="prod-moto-total-ops">0</div>
-                        <div id="prod-moto-detalle" style="font-size:9px; color:var(--text-sub);"></div>
-                    </div>
-                    <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
-                        <div style="font-size:10px; color:var(--text-sub); font-weight:600;">PROMEDIO DIARIO</div>
-                        <div style="font-size:22px; font-weight:900; color:#fbbf24;" id="prod-moto-promedio">0</div>
-                        <div style="font-size:9px; color:var(--text-sub);">horas / día (incluye gasolina)</div>
-                    </div>
-                    <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
-                        <div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO LIBRE</div>
-                        <div style="font-size:22px; font-weight:900; color:var(--success);" id="prod-moto-libre">0</div>
-                        <div style="font-size:9px; color:var(--text-sub);">horas / día disponibles</div>
-                    </div>
-                </div>
-                <div style="display:flex; gap:10px; margin-bottom:10px; background:#f8fafc; border-radius:6px; padding:8px 12px; align-items:center; justify-content:space-between;">
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="font-size:11px; font-weight:700; color:var(--text-main);">ENVIOS D (DOCUMENTOS Y VALIJA)</span>
-                        <span style="font-size:10px; color:var(--text-sub);">194 ops × 0.5h (2 viajes/día, 1h total)</span>
-                    </div>
-                    <div style="display:flex; gap:16px; font-size:12px;">
-                        <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-moto-enviosd-h">97h</strong></span>
-                        <span><span style="color:var(--text-sub);">Diario:</span> <strong style="color:#fbbf24;" id="prod-moto-enviosd-diario">0.48h</strong></span>
-                    </div>
-                </div>
-                <div style="display:flex; gap:10px; margin-bottom:10px; background:#f8fafc; border-radius:6px; padding:8px 12px; align-items:center; justify-content:space-between;">
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="font-size:11px; font-weight:700; color:var(--text-main);">PERMANENCIA EN TIENDA</span>
-                        <span style="font-size:10px; color:var(--text-sub);">45 ops × 1h</span>
-                    </div>
-                    <div style="display:flex; gap:16px; font-size:12px;">
-                        <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-moto-pentienda-h">45h</strong></span>
-                        <span><span style="color:var(--text-sub);">Diario:</span> <strong style="color:#fbbf24;" id="prod-moto-pentienda-diario">0.22h</strong></span>
-                    </div>
-                </div>
-                <div style="display:flex; gap:10px; margin-bottom:10px; background:#f8fafc; border-radius:6px; padding:8px 12px; align-items:center; justify-content:space-between;">
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="font-size:11px; font-weight:700; color:var(--text-main);">GASOLINA</span>
-                        <span style="font-size:10px; color:var(--text-sub);">1h todos los días</span>
-                    </div>
-                    <div style="display:flex; gap:16px; font-size:12px;">
-                        <span><span style="color:var(--text-sub);">Total:</span> <strong style="color:#fbbf24;" id="prod-moto-gasolina-h">203h</strong></span>
-                        <span><span style="color:var(--text-sub);">Diario:</span> <strong style="color:#fbbf24;" id="prod-moto-gasolina-diario">1h</strong></span>
-                    </div>
-                </div>
-                <div style="display:grid; grid-template-columns:200px 1fr; gap:14px; align-items:center; margin-top:6px;">
-                    <div style="position:relative; width:200px; height:200px;">
-                        <canvas id="prod-moto-dona" width="200" height="200" style="width:200px; height:200px;"></canvas>
-                        <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
-                            <div style="font-size:30px; font-weight:900; color:#ec4899;" id="prod-moto-dona-pct">0%</div>
-                            <div style="font-size:9px; color:var(--text-sub); font-weight:700; letter-spacing:1px;">OCUPADO</div>
+
+            <div style="margin-top:4px; background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; padding:13px 15px 13px; box-shadow:0 2px 10px rgba(15,23,42,0.05);">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                    <div style="display:flex; align-items:center; gap:9px; min-width:0;">
+                        <div style="width:30px;height:30px;border-radius:9px;background:#fce7f3;display:flex;align-items:center;justify-content:center;font-size:15px;flex:0 0 auto;">ðŸ›µ</div>
+                        <div style="min-width:0;">
+                            <div style="font-size:11px;font-weight:900;letter-spacing:0.9px;color:var(--text-main);">ANÃLISIS DE PRODUCTIVIDAD Â· MOTO</div>
+                            <div style="font-size:9px;font-weight:600;color:var(--text-sub);margin-top:1px;">Juan MÃ¡rquez Â· ENEâ€“OCT 2026 Â· 203 dÃ­as hÃ¡biles Â· jornada de 8 h</div>
                         </div>
                     </div>
-                    <div style="display:flex; flex-direction:column; gap:10px;">
-                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
-                            <div style="width:26px; height:26px; border-radius:50%; background:#ec4899; flex-shrink:0;"></div>
-                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO OCUPADO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-moto-ocu-h">0h</div></div>
-                            <div style="font-size:16px; font-weight:800; color:#ec4899;" id="prod-moto-pct">0%</div>
-                        </div>
-                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
-                            <div style="width:26px; height:26px; border-radius:50%; background:#10b981; flex-shrink:0;"></div>
-                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">TIEMPO LIBRE</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-moto-libre-h">0h</div></div>
-                            <div style="font-size:16px; font-weight:800; color:#10b981;" id="prod-moto-libre-pct">0%</div>
-                        </div>
-                        <div style="display:flex; align-items:center; gap:8px; background:#f1f5f9; border-radius:8px; padding:8px 10px;">
-                            <div style="width:26px; height:26px; border-radius:50%; background:#f59e0b; flex-shrink:0;"></div>
-                            <div style="flex:1;"><div style="font-size:10px; color:var(--text-sub); font-weight:600;">PROMEDIO DIARIO</div><div style="font-size:17px; font-weight:800; color:var(--text-main);" id="prod-moto-promedio">0h</div></div>
-                            <div style="font-size:9px; color:var(--text-sub);">incluye gasolina · 203 días</div>
-                        </div>
-                        <div style="font-size:9px; color:var(--text-sub); font-weight:600; text-align:right;">Jornada: 8h · 20 días/mes · Periodo ENE-OCT 2026 (203 días hábiles)</div>
+                    <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
+                        <span style="display:inline-flex;align-items:baseline;gap:5px;background:#fce7f3;border:1px solid #fbcfe8;border-radius:20px;padding:3px 10px;font-size:8.5px;font-weight:900;letter-spacing:0.5px;color:#be185d;">OCUPACIÃ“N <strong id="prod-moto-pct" style="font-size:11px;font-weight:900;color:#be185d;">56.3%</strong></span>
+                        <span style="display:inline-flex;align-items:baseline;gap:5px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:20px;padding:3px 10px;font-size:8.5px;font-weight:900;letter-spacing:0.5px;color:#047857;">LIBRE <strong id="prod-moto-libre-pct" style="font-size:11px;font-weight:900;color:#047857;">43.7%</strong></span>
                     </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:172px minmax(0,1fr); gap:13px; margin-top:11px; align-items:stretch;">
+                    <div style="background:#fbfcfe; border:1px solid #eef2f6; border-radius:12px; padding:10px 8px 9px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                        <div style="position:relative; width:150px; height:150px;">
+                            <canvas id="prod-moto-dona" width="150" height="150" style="width:150px; height:150px;"></canvas>
+                            <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
+                                <div style="font-size:26px; font-weight:900; color:#be185d; line-height:1;" id="prod-moto-dona-pct">56.3%</div>
+                                <div style="font-size:8px; color:var(--text-sub); font-weight:900; letter-spacing:1.1px; margin-top:3px;">OCUPADO</div>
+                            </div>
+                        </div>
+                        <div style="font-size:8.5px; font-weight:700; color:var(--text-sub); text-align:center; margin-top:5px;">
+                            <strong id="prod-moto-ocu-h" style="color:var(--text-main);font-weight:900;">915.1h</strong> ocupadas Â·
+                            <strong id="prod-moto-libre-h" style="color:var(--text-main);font-weight:900;">709.7h</strong> libres
+                        </div>
+                    </div>
+
+                    <div style="display:flex; flex-direction:column; gap:9px; min-width:0;">
+                        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:9px;">
+                            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:11px;padding:8px 10px 9px;"><div style="font-size:8px;font-weight:900;letter-spacing:0.8px;color:#94a3b8;">OPS ANALIZADAS</div><div style="font-size:19px;font-weight:900;color:#be185d;line-height:1.15;margin-top:2px;"><span id="prod-moto-total-ops">786</span></div><div style="font-size:8.5px;font-weight:600;color:var(--text-sub);margin-top:1px;">8 actividades Â· 203 dÃ­as</div></div>
+                            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:11px;padding:8px 10px 9px;"><div style="font-size:8px;font-weight:900;letter-spacing:0.8px;color:#94a3b8;">PROMEDIO DIARIO</div><div style="font-size:19px;font-weight:900;color:#b45309;line-height:1.15;margin-top:2px;"><span id="prod-moto-promedio">4.51h</span></div><div style="font-size:8.5px;font-weight:600;color:var(--text-sub);margin-top:1px;">horas / dÃ­a Â· incluye gasolina</div></div>
+                            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:11px;padding:8px 10px 9px;"><div style="font-size:8px;font-weight:900;letter-spacing:0.8px;color:#94a3b8;">TIEMPO LIBRE</div><div style="font-size:19px;font-weight:900;color:#047857;line-height:1.15;margin-top:2px;"><span id="prod-moto-libre">3.49h</span></div><div style="font-size:8.5px;font-weight:600;color:var(--text-sub);margin-top:1px;">horas / dÃ­a disponibles</div></div>
+                        </div>
+                        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:9px 12px 10px; flex:1;">
+                            <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding-bottom:7px; border-bottom:1px solid #eef2f6;">
+                                <div style="min-width:0;">
+                                    <div style="font-size:9px; font-weight:900; letter-spacing:0.9px; color:var(--text-main);">COMPOSICIÃ“N DEL TIEMPO OCUPADO POR ACTIVIDAD</div>
+                                    <div style="font-size:8.5px; font-weight:600; color:var(--text-sub); margin-top:1px;">Horas = operaciones Ã— duraciÃ³n estÃ¡ndar de cada actividad</div>
+                                </div>
+                                <span style="display:inline-flex;align-items:baseline;gap:5px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:3px 9px;font-size:8px;font-weight:900;letter-spacing:0.5px;color:var(--text-sub);white-space:nowrap;">TOTAL <strong id="prod-moto-total-h" style="font-size:10.5px;font-weight:900;color:#be185d;">915.1h</strong></span>
+                            </div>
+                            <div id="prod-moto-desglose" style="display:flex; flex-direction:column; gap:3px; margin-top:7px;"><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">GASOLINA</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">â€”</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:100%;border-radius:99px;background:linear-gradient(90deg,#cbd5e1,#94a3b8);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">203h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">22.2%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">BMP</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">129 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:95%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">193.5h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">21.1%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">ACT.DIV.</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">158 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:78%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">158h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">17.3%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">DELIVERY</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">119 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:59%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">119h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">13.0%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">ENVIOS D</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">194 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:48%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">97h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">10.6%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">ENVIOS COURIER</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">62 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:31%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">62h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">6.8%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">PER.TIENDA</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">45 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:22%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">45h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">4.9%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">TRANSP.PERSONAL</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">57 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:12%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">23.9h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">2.6%</div></div><div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;"><div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">MANT TRANSP</div><div style="font-size:8.5px;font-weight:700;color:#94a3b8;">22 ops</div><div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:7%;border-radius:99px;background:linear-gradient(90deg,#f9a8d4,#ec4899);"></div></div><div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">13.6h</div><div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">1.5%</div></div></div>
+                        </div>
+                    </div>
+                </div>
+                                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:9px; padding-top:8px; border-top:1px solid #eef2f6;">
+                    <span style="font-size:8.5px; font-weight:900; letter-spacing:0.8px; color:#94a3b8;">SUPUESTOS DEL CÃLCULO</span>
+                    <span style="font-size:9px; font-weight:700; color:var(--text-sub); display:flex; gap:14px; flex-wrap:wrap;">
+                        <span>ENVÃOS D Â· 2 viajes/dÃ­a (0.5h c/u): <strong id="prod-moto-enviosd-h" style="color:var(--text-main);font-weight:900;">97h</strong> Â· <strong id="prod-moto-enviosd-diario" style="color:var(--text-main);font-weight:900;">0.48h</strong>/dÃ­a</span>
+                        <span>TIENDA 1h: <strong id="prod-moto-pentienda-h" style="color:var(--text-main);font-weight:900;">45h</strong> Â· <strong id="prod-moto-pentienda-diario" style="color:var(--text-main);font-weight:900;">0.22h</strong>/dÃ­a</span>
+                        <span>GASOLINA 1h/dÃ­a: <strong id="prod-moto-gasolina-h" style="color:var(--text-main);font-weight:900;">203h</strong> Â· <strong id="prod-moto-gasolina-diario" style="color:var(--text-main);font-weight:900;">1h</strong>/dÃ­a</span>
+                    </span>
                 </div>
             </div>
-            <div class="footer-note">Resultado de operaciones del transporte y analisis de rendimiento de cada unidad segun sus actividades.</div>
+
+        <div class="footer-note">Resultado de operaciones del transporte y analisis de rendimiento de cada unidad segun sus actividades.</div>
         </div>
 
     </div>
@@ -2221,7 +2198,7 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
     function dibujarDona(canvas, pct, colorOcu, colorLibre) {
         if (!canvas || !canvas.getContext) return;
         const ctx = canvas.getContext('2d');
-        const size = canvas.width, c = size / 2, r = size / 2 - 12, lineW = 30;
+        const size = canvas.width, c = size / 2, lineW = Math.max(12, Math.round(size * 0.12)), r = size / 2 - lineW / 2 - 5;
         ctx.clearRect(0, 0, size, size);
         ctx.lineWidth = lineW; ctx.lineCap = 'round';
         const start = -Math.PI / 2;
@@ -2230,6 +2207,30 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
         ctx.beginPath(); ctx.arc(c, c, r, start, start + 2 * Math.PI); ctx.stroke();
         ctx.strokeStyle = colorOcu;
         ctx.beginPath(); ctx.arc(c, c, r, start, libreEnd); ctx.stroke();
+    }
+
+    function renderProdDesglose(elId, detalle, horas, totalH, gasH, color) {
+        const el = document.getElementById(elId);
+        if (!el || !detalle) return;
+        const items = Object.keys(detalle).map(k => ({ k: k, ops: detalle[k], h: detalle[k] * ((horas || {})[k] || 1) }));
+        if (gasH > 0) items.push({ k: 'GASOLINA', ops: null, h: gasH });
+        items.sort((a, b) => b.h - a.h);
+        const maxH = Math.max.apply(null, items.map(i => i.h).concat([1]));
+        const tot = totalH || items.reduce((s, i) => s + i.h, 0) || 1;
+        const fh = v => { const r = Math.round(v * 10) / 10; return (Number.isInteger(r) ? r : r.toFixed(1)) + 'h'; };
+        el.innerHTML = items.map(i => {
+            const w = Math.max(2, Math.round(i.h / maxH * 100));
+            const grad = i.k === 'GASOLINA'
+                ? 'linear-gradient(90deg,#cbd5e1,#94a3b8)'
+                : (color === '#ec4899' ? 'linear-gradient(90deg,#f9a8d4,#ec4899)' : 'linear-gradient(90deg,#38bdf8,#0369a1)');
+            return '<div style="display:grid;grid-template-columns:96px 56px minmax(60px,1fr) 60px 44px;gap:9px;align-items:center;">' +
+                '<div style="font-size:9px;font-weight:800;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + i.k + '</div>' +
+                '<div style="font-size:8.5px;font-weight:700;color:#94a3b8;">' + (i.ops === null ? '—' : nf(i.ops) + ' ops') + '</div>' +
+                '<div style="height:6px;background:#eef2f7;border-radius:99px;overflow:hidden;"><div style="height:100%;width:' + w + '%;border-radius:99px;background:' + grad + ';"></div></div>' +
+                '<div style="font-size:9.5px;font-weight:900;color:var(--text-main);text-align:right;">' + fh(i.h) + '</div>' +
+                '<div style="font-size:9px;font-weight:800;color:var(--text-sub);text-align:right;">' + (i.h / tot * 100).toFixed(1) + '%</div>' +
+                '</div>';
+        }).join('');
     }
 
     function dibujarTportChart(meses, vals) {
@@ -2337,69 +2338,55 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
         setTxt('tport-chip-mejor', (monthNames[bestMonth] || bestMonth).slice(0, 3).toUpperCase() + ' ' + nf(bestVal));
         const prod = d.productividad || {};
         if (prod.total_ops) {
-            if (e('prod-total-ops')) e('prod-total-ops').textContent = nf(prod.total_ops) + ' ops';
-            if (e('prod-promedio')) e('prod-promedio').textContent = prod.promedio_diario_h + 'h';
-            if (e('prod-libre')) e('prod-libre').textContent = prod.tiempo_libre_diario_h + 'h';
-            if (e('prod-pct')) e('prod-pct').textContent = prod.pct_ocupado + '%';
-            if (e('prod-libre-pct')) e('prod-libre-pct').textContent = (100 - prod.pct_ocupado).toFixed(1) + '%';
-            const totalH = prod.total_horas || 0;
-            if (e('prod-ocu-h')) e('prod-ocu-h').textContent = nf(Math.round(totalH * 10) / 10) + 'h';
-            if (e('prod-libre-h')) e('prod-libre-h').textContent = nf(Math.round((100 - prod.pct_ocupado) / 100 * prod.jornada_h * prod.dias_habiles_periodo * 10) / 10) + 'h';
-            if (e('prod-dona-pct')) e('prod-dona-pct').textContent = prod.pct_ocupado + '%';
+            setTxt('prod-total-ops', nf(prod.total_ops));
+            setTxt('prod-promedio', prod.promedio_diario_h + 'h');
+            setTxt('prod-libre', prod.tiempo_libre_diario_h + 'h');
+            setTxt('prod-pct', prod.pct_ocupado + '%');
+            setTxt('prod-libre-pct', (100 - prod.pct_ocupado).toFixed(1) + '%');
+            setTxt('prod-dona-pct', prod.pct_ocupado + '%');
+            const totalHC = prod.total_horas || 0;
+            setTxt('prod-ocu-h', nf(Math.round(totalHC * 10) / 10) + 'h');
+            setTxt('prod-total-h', nf(Math.round(totalHC * 10) / 10) + 'h');
+            setTxt('prod-libre-h', nf(Math.round((100 - prod.pct_ocupado) / 100 * prod.jornada_h * prod.dias_habiles_periodo * 10) / 10) + 'h');
             dibujarDona(e('prod-dona'), prod.pct_ocupado, '#0ea5e9', '#10b981');
             if (e('transporte-ocu-rene-bar')) e('transporte-ocu-rene-bar').style.width = prod.pct_ocupado + '%';
             setTxt('transporte-ocu-rene-val', prod.pct_ocupado + '%');
+            renderProdDesglose('prod-desglose', prod.detalle, prod.horas_por_act, prod.total_horas, 0, '#0ea5e9');
             const perTienda = (prod.detalle || {})["PER.TIENDA"] || 0;
-            const perHoras = perTienda * 1.25;
-            const diasProd = prod.dias_habiles_periodo || 120;
-            if (e('prod-per-tienda-h')) e('prod-per-tienda-h').textContent = perHoras.toFixed(2) + 'h';
-            if (e('prod-per-tienda-diario')) e('prod-per-tienda-diario').textContent = (perHoras / diasProd).toFixed(2) + 'h';
-            if (e('prod-per-tienda-pct')) e('prod-per-tienda-pct').textContent = ((perHoras / diasProd / 8) * 100).toFixed(1) + '%';
-            const detalle = prod.detalle || {};
-            const horasPorAct = prod.horas_por_act || {};
-            const detEl = e('prod-detalle');
-            if (detEl) {
-                detEl.textContent = Object.entries(detalle).map(([k, v]) => {
-                    const h = horasPorAct[k] || 1;
-                    return h !== 1 ? k + ': ' + nf(v) + ' ops (' + nf(Math.round(v * h * 100) / 100) + 'h)' : k + ': ' + nf(v);
-                }).join(' · ');
-            }
+            const perHoras = perTienda * ((prod.horas_por_act || {})["PER.TIENDA"] || 1.25);
+            const diasProd = prod.dias_habiles_periodo || 203;
+            setTxt('prod-per-tienda-h', perHoras.toFixed(2) + 'h');
+            setTxt('prod-per-tienda-diario', (perHoras / diasProd).toFixed(2) + 'h');
+            setTxt('prod-per-tienda-pct', ((perHoras / diasProd / 8) * 100).toFixed(1) + '%');
         }
         const prodMoto = d.productividad_moto || {};
         if (prodMoto.total_ops) {
             const e2 = id => document.getElementById(id);
-            if (e2('prod-moto-total-ops')) e2('prod-moto-total-ops').textContent = nf(prodMoto.total_ops) + ' ops';
-            if (e2('prod-moto-promedio')) e2('prod-moto-promedio').textContent = prodMoto.promedio_diario_h + 'h';
-            if (e2('prod-moto-libre')) e2('prod-moto-libre').textContent = prodMoto.tiempo_libre_diario_h + 'h';
-            if (e2('prod-moto-pct')) e2('prod-moto-pct').textContent = prodMoto.pct_ocupado + '%';
-            if (e2('prod-moto-libre-pct')) e2('prod-moto-libre-pct').textContent = (100 - prodMoto.pct_ocupado).toFixed(1) + '%';
+            setTxt('prod-moto-total-ops', nf(prodMoto.total_ops));
+            setTxt('prod-moto-promedio', prodMoto.promedio_diario_h + 'h');
+            setTxt('prod-moto-libre', prodMoto.tiempo_libre_diario_h + 'h');
+            setTxt('prod-moto-pct', prodMoto.pct_ocupado + '%');
+            setTxt('prod-moto-libre-pct', (100 - prodMoto.pct_ocupado).toFixed(1) + '%');
+            setTxt('prod-moto-dona-pct', prodMoto.pct_ocupado + '%');
             const totalHM = prodMoto.total_horas || 0;
-            if (e2('prod-moto-ocu-h')) e2('prod-moto-ocu-h').textContent = nf(Math.round(totalHM * 10) / 10) + 'h';
-            if (e2('prod-moto-libre-h')) e2('prod-moto-libre-h').textContent = nf(Math.round((100 - prodMoto.pct_ocupado) / 100 * prodMoto.jornada_h * prodMoto.dias_habiles_periodo * 10) / 10) + 'h';
-            if (e2('prod-moto-dona-pct')) e2('prod-moto-dona-pct').textContent = prodMoto.pct_ocupado + '%';
+            setTxt('prod-moto-ocu-h', nf(Math.round(totalHM * 10) / 10) + 'h');
+            setTxt('prod-moto-total-h', nf(Math.round(totalHM * 10) / 10) + 'h');
+            setTxt('prod-moto-libre-h', nf(Math.round((100 - prodMoto.pct_ocupado) / 100 * prodMoto.jornada_h * prodMoto.dias_habiles_periodo * 10) / 10) + 'h');
             dibujarDona(e2('prod-moto-dona'), prodMoto.pct_ocupado, '#ec4899', '#10b981');
             if (e2('transporte-ocu-juan-bar')) e2('transporte-ocu-juan-bar').style.width = prodMoto.pct_ocupado + '%';
             setTxt('transporte-ocu-juan-val', prodMoto.pct_ocupado + '%');
+            renderProdDesglose('prod-moto-desglose', prodMoto.detalle, prodMoto.horas_por_act, prodMoto.total_horas, prodMoto.gasolina_total_h || 0, '#ec4899');
             const detMoto = prodMoto.detalle || {};
-            const hMoto = prodMoto.horas_por_act || {};
-            const detElMoto = e2('prod-moto-detalle');
-            if (detElMoto) {
-                detElMoto.textContent = Object.entries(detMoto).map(([k, v]) => {
-                    const h = hMoto[k] || 1;
-                    return h !== 1 ? k + ': ' + nf(v) + ' ops (' + nf(Math.round(v * h * 100) / 100) + 'h)' : k + ': ' + nf(v);
-                }).join(' · ');
-            }
-            const envD = detMoto["ENVIOS D"] || 0;
-            const envDH = envD * 0.5;
-            const diasMoto = prodMoto.dias_habiles_periodo || 120;
-            if (e2('prod-moto-enviosd-h')) e2('prod-moto-enviosd-h').textContent = envDH.toFixed(0) + 'h';
-            if (e2('prod-moto-enviosd-diario')) e2('prod-moto-enviosd-diario').textContent = (envDH / diasMoto).toFixed(2) + 'h';
+            const diasMoto = prodMoto.dias_habiles_periodo || 203;
+            const envDH = (detMoto["ENVIOS D"] || 0) * 0.5;
+            setTxt('prod-moto-enviosd-h', Math.round(envDH) + 'h');
+            setTxt('prod-moto-enviosd-diario', (envDH / diasMoto).toFixed(2) + 'h');
             const penTienda = detMoto["PER.TIENDA"] || 0;
-            if (e2('prod-moto-pentienda-h')) e2('prod-moto-pentienda-h').textContent = penTienda + 'h';
-            if (e2('prod-moto-pentienda-diario')) e2('prod-moto-pentienda-diario').textContent = (penTienda / diasMoto).toFixed(2) + 'h';
-            const gasH = prodMoto.gasolina_total_h || 140;
-            if (e2('prod-moto-gasolina-h')) e2('prod-moto-gasolina-h').textContent = gasH + 'h';
-            if (e2('prod-moto-gasolina-diario')) e2('prod-moto-gasolina-diario').textContent = (gasH / diasMoto).toFixed(0) + 'h';
+            setTxt('prod-moto-pentienda-h', penTienda + 'h');
+            setTxt('prod-moto-pentienda-diario', (penTienda / diasMoto).toFixed(2) + 'h');
+            const gasH = prodMoto.gasolina_total_h || 0;
+            setTxt('prod-moto-gasolina-h', Math.round(gasH) + 'h');
+            setTxt('prod-moto-gasolina-diario', Math.round(gasH / diasMoto) + 'h');
         }
         const acts = d.actividades || [];
         if (acts.length > 0) {
