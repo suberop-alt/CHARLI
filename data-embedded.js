@@ -4,7 +4,7 @@ window.EMBEDDED_DATA = {
   resumen: {
  "comprasInversion": 2972550,
  "indiceExactitud": 98.7,
- "enviosRegistrados": 10457,
+ "enviosRegistrados": 10964,
  "ventasNetas": null
 },
   compras: {
@@ -270,18 +270,18 @@ window.EMBEDDED_DATA = {
   "efectividad": 6.4
 },
   almacen: {
- "operaciones": 105351,
+ "operaciones": 105858,
  "mensual": {
-  "ENE": 7768,
-  "FEB": 9946,
-  "MAR": 12279,
-  "ABR": 10158,
-  "MAY": 11315,
-  "JUN": 8519,
-  "JUL": 10978,
-  "AGO": 11142,
-  "SEP": 11140,
-  "OCT": 12106
+  "ENE": 7804,
+  "FEB": 9986,
+  "MAR": 12336,
+  "ABR": 10217,
+  "MAY": 11379,
+  "JUN": 8563,
+  "JUL": 11035,
+  "AGO": 11193,
+  "SEP": 11188,
+  "OCT": 12157
  },
  "actividades": {
   "BDP": 35797,
@@ -289,19 +289,19 @@ window.EMBEDDED_DATA = {
   "DESP": 26193,
   "ODA": 10403,
   "ACT_DIV": 15712,
-  "P_ENVIOS": 10457
+  "P_ENVIOS": 10964
  },
  "envios_mensual": {
-  "ENE": 739,
-  "FEB": 819,
-  "MAR": 1180,
-  "ABR": 1228,
-  "MAY": 1319,
-  "JUN": 901,
-  "JUL": 1167,
-  "AGO": 1061,
-  "SEP": 986,
-  "OCT": 1057
+  "ENE": 775,
+  "FEB": 859,
+  "MAR": 1237,
+  "ABR": 1287,
+  "MAY": 1383,
+  "JUN": 945,
+  "JUL": 1224,
+  "AGO": 1112,
+  "SEP": 1034,
+  "OCT": 1108
  },
  "despacho_mensual": {
   "ENE": 1768,
