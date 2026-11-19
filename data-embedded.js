@@ -353,7 +353,7 @@ window.EMBEDDED_DATA = {
    }
   },
   {
-   "nombre": "Nestor Rodriguez",
+   "nombre": "Néstor Rodríguez",
    "total": 18853,
    "mensual": {
     "ENE": 1574,
@@ -383,7 +383,7 @@ window.EMBEDDED_DATA = {
    }
   },
   {
-   "nombre": "Luis Miguel",
+   "nombre": "Luis Miguel Miranda",
    "total": 17826,
    "mensual": {
     "ENE": 548,
