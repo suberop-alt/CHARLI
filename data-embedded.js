@@ -669,7 +669,7 @@ window.EMBEDDED_DATA = {
     },
     "horas_por_act": {
       "ENVIOS D": 0.5,
-      "BMP": 1.5,
+      "BMP": 2,
       "DELIVERY": 1,
       "ACT.DIV.": 1,
       "TRANSP.PERSONAL": 0.42,
