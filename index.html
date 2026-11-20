@@ -190,18 +190,19 @@
         .bar { width: 100%; max-width: 40px; border-radius: 4px 4px 0 0; min-height: 4px; transition: height 0.6s ease; }
         .bar-label { font-size: 10px; font-weight: 800; color: var(--text-sub); margin-top: 6px; letter-spacing: 0.5px; }
         .sub-tab { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
-        .sub-tab-btn { background: #ffffff; border: 1px solid #e2e8f0; color: var(--text-sub); padding: 9px 18px; border-radius: 8px; cursor: pointer; font-family: inherit; font-size: 12.5px; font-weight: 700; transition: all 0.2s; }
+        .sub-tab-btn { background: #ffffff; border: 1px solid #e2e8f0; color: var(--text-sub); padding: 13px 22px; border-radius: 9px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 800; transition: all 0.2s; }
         .sub-tab-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
         #slide-5 .sub-tab { gap: 6px; }
-        #slide-5 .sub-tab-btn { padding: 8px 14px; font-size: 12px; }
+        #slide-5 .sub-tab-btn { padding: 12px 8px; font-size: 13px; }
         @keyframes subTabNudge {
-            0%, 100% { transform: translateX(0) rotate(0deg); }
-            20% { transform: translateX(-3px) rotate(-1.2deg); }
-            40% { transform: translateX(3px) rotate(1.2deg); }
-            60% { transform: translateX(-2px) rotate(-0.8deg); }
-            80% { transform: translateX(2px) rotate(0.6deg); }
+            0%, 100% { transform: translateX(0) rotate(0deg); box-shadow: none; }
+            15% { transform: translateX(-5px) rotate(-2.5deg); box-shadow: 0 4px 12px rgba(14,116,144,0.28); }
+            30% { transform: translateX(5px) rotate(2.5deg); }
+            45% { transform: translateX(-4px) rotate(-2deg); box-shadow: 0 4px 12px rgba(14,116,144,0.28); }
+            60% { transform: translateX(4px) rotate(2deg); }
+            75% { transform: translateX(-2px) rotate(-1deg); }
         }
-        .sub-tab-btn.nudge { animation: subTabNudge 0.65s ease-in-out both; }
+        .sub-tab-btn.nudge { animation: subTabNudge 0.8s ease-in-out 2; position: relative; z-index: 2; }
         @media (prefers-reduced-motion: reduce) { .sub-tab-btn.nudge { animation: none; } }
         .sub-panel { display: none; }
         .sub-panel.active { display: block; }
@@ -2183,12 +2184,12 @@ Los KPIs de asesores revelan la mecÃ¡nica interna: en octubre el equipo promediÃ
                 tab.classList.remove('nudge');
                 tab.style.animationDelay = '';
                 void tab.offsetWidth;
-                tab.style.animationDelay = (i * 70) + 'ms';
+                tab.style.animationDelay = (i * 90) + 'ms';
                 tab.classList.add('nudge');
                 setTimeout(() => {
                     tab.classList.remove('nudge');
                     tab.style.animationDelay = '';
-                }, 800 + i * 70);
+                }, 1900 + i * 90);
             });
         }
         function showSlide(slideNumber) {
