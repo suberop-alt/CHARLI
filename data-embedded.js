@@ -677,8 +677,8 @@ window.EMBEDDED_DATA = {
       "MANT TRANSP": 0.62,
       "ENVIOS COURIER": 1
     },
-    "gasolina_h_dia": 1,
-    "gasolina_total_h": 203,
+    "gasolina_h_dia": 0.125,
+    "gasolina_total_h": 25.4,
     "total_horas": 915.1,
     "dias_habiles_periodo": 203,
     "promedio_diario_h": 4.51,

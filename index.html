@@ -2187,7 +2187,7 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
                     <span style="font-size:9px; font-weight:700; color:var(--text-sub); display:flex; gap:14px; flex-wrap:wrap;">
                         <span>ENVÍOS D · 2 viajes/día (0.5h c/u): <strong id="prod-moto-enviosd-h" style="color:var(--text-main);font-weight:900;">97h</strong> · <strong id="prod-moto-enviosd-diario" style="color:var(--text-main);font-weight:900;">0.48h</strong>/día</span>
                         <span>TIENDA 1h: <strong id="prod-moto-pentienda-h" style="color:var(--text-main);font-weight:900;">45h</strong> · <strong id="prod-moto-pentienda-diario" style="color:var(--text-main);font-weight:900;">0.22h</strong>/día</span>
-                        <span>GASOLINA 1h/día: <strong id="prod-moto-gasolina-h" style="color:var(--text-main);font-weight:900;">203h</strong> · <strong id="prod-moto-gasolina-diario" style="color:var(--text-main);font-weight:900;">1h</strong>/día</span>
+                        <span>GASOLINA aprox. 15 min c/2 días: <strong id="prod-moto-gasolina-h" style="color:var(--text-main);font-weight:900;">≈25h</strong> · <strong id="prod-moto-gasolina-diario" style="color:var(--text-main);font-weight:900;">≈7.5 min</strong>/día</span>
                     </span>
                 </div>
             </div>
@@ -3020,8 +3020,8 @@ Los KPIs de asesores revelan la mecánica interna: en octubre el equipo promedi�
             setTxt('prod-moto-pentienda-h', penTienda + 'h');
             setTxt('prod-moto-pentienda-diario', (penTienda / diasMoto).toFixed(2) + 'h');
             const gasH = prodMoto.gasolina_total_h || 0;
-            setTxt('prod-moto-gasolina-h', Math.round(gasH) + 'h');
-            setTxt('prod-moto-gasolina-diario', Math.round(gasH / diasMoto) + 'h');
+            setTxt('prod-moto-gasolina-h', '≈' + Math.round(gasH) + 'h');
+            setTxt('prod-moto-gasolina-diario', '≈' + (gasH / diasMoto * 60).toFixed(1) + ' min');
         }
         const acts = d.actividades || [];
         if (acts.length > 0) {
